@@ -1,0 +1,180 @@
+
+
+================================================================
+== Vivado HLS Report for 'SubBytes'
+================================================================
+* Date:           Wed May 13 21:28:52 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 4.527 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       57|       57| 0.570 us | 0.570 us |   57|   57|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- SubBytes_label1   |       56|       56|        14|          -|          -|     4|    no    |
+        | + SubBytes_label0  |       12|       12|         3|          -|          -|     4|    no    |
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 
+5 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 6 [1/1] (1.35ns)   --->   "br label %1" [NIST-KATs/aes.c:275]   --->   Operation 6 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%i_0 = phi i3 [ 0, %0 ], [ %i, %SubBytes_label1_end ]"   --->   Operation 7 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (1.00ns)   --->   "%icmp_ln275 = icmp eq i3 %i_0, -4" [NIST-KATs/aes.c:275]   --->   Operation 8 'icmp' 'icmp_ln275' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.34ns)   --->   "%i = add i3 %i_0, 1" [NIST-KATs/aes.c:275]   --->   Operation 10 'add' 'i' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %icmp_ln275, label %4, label %SubBytes_label1_begin" [NIST-KATs/aes.c:275]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str4107) nounwind" [NIST-KATs/aes.c:276]   --->   Operation 12 'specloopname' <Predicate = (!icmp_ln275)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str4107) nounwind" [NIST-KATs/aes.c:276]   --->   Operation 13 'specregionbegin' 'tmp' <Predicate = (!icmp_ln275)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln277 = zext i3 %i_0 to i6" [NIST-KATs/aes.c:277]   --->   Operation 14 'zext' 'zext_ln277' <Predicate = (!icmp_ln275)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.35ns)   --->   "br label %2" [NIST-KATs/aes.c:277]   --->   Operation 15 'br' <Predicate = (!icmp_ln275)> <Delay = 1.35>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/aes.c:282]   --->   Operation 16 'ret' <Predicate = (icmp_ln275)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.30>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ 0, %SubBytes_label1_begin ], [ %j, %3 ]"   --->   Operation 17 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (1.00ns)   --->   "%icmp_ln277 = icmp eq i3 %j_0, -4" [NIST-KATs/aes.c:277]   --->   Operation 18 'icmp' 'icmp_ln277' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%empty_118 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 19 'speclooptripcount' 'empty_118' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (1.34ns)   --->   "%j = add i3 %j_0, 1" [NIST-KATs/aes.c:277]   --->   Operation 20 'add' 'j' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %icmp_ln277, label %SubBytes_label1_end, label %3" [NIST-KATs/aes.c:277]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_9 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %j_0, i2 0)" [NIST-KATs/aes.c:279]   --->   Operation 22 'bitconcatenate' 'tmp_9' <Predicate = (!icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln279 = zext i5 %tmp_9 to i6" [NIST-KATs/aes.c:279]   --->   Operation 23 'zext' 'zext_ln279' <Predicate = (!icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.54ns)   --->   "%add_ln279 = add i6 %zext_ln277, %zext_ln279" [NIST-KATs/aes.c:279]   --->   Operation 24 'add' 'add_ln279' <Predicate = (!icmp_ln277)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln279_1 = zext i6 %add_ln279 to i64" [NIST-KATs/aes.c:279]   --->   Operation 25 'zext' 'zext_ln279_1' <Predicate = (!icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 %zext_ln279_1" [NIST-KATs/aes.c:279]   --->   Operation 26 'getelementptr' 'state_addr' <Predicate = (!icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 27 [2/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 27 'load' 'state_load' <Predicate = (!icmp_ln277)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty_119 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str4107, i32 %tmp) nounwind" [NIST-KATs/aes.c:281]   --->   Operation 28 'specregionend' 'empty_119' <Predicate = (icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "br label %1" [NIST-KATs/aes.c:275]   --->   Operation 29 'br' <Predicate = (icmp_ln277)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.52>
+ST_4 : Operation 30 [1/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 30 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%zext_ln279_2 = zext i8 %state_load to i64" [NIST-KATs/aes.c:279]   --->   Operation 31 'zext' 'zext_ln279_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%sbox_addr = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln279_2" [NIST-KATs/aes.c:279]   --->   Operation 32 'getelementptr' 'sbox_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [2/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 33 'load' 'sbox_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 5 <SV = 4> <Delay = 4.52>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str5108) nounwind" [NIST-KATs/aes.c:278]   --->   Operation 34 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 35 'load' 'sbox_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 36 [1/1] (1.75ns)   --->   "store i8 %sbox_load, i8* %state_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 36 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "br label %2" [NIST-KATs/aes.c:277]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', NIST-KATs/aes.c:275) [6]  (1.35 ns)
+
+ <State 2>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', NIST-KATs/aes.c:277) [17]  (1.35 ns)
+
+ <State 3>: 3.3ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', NIST-KATs/aes.c:277) [17]  (0 ns)
+	'add' operation ('add_ln279', NIST-KATs/aes.c:279) [26]  (1.55 ns)
+	'getelementptr' operation ('state_addr', NIST-KATs/aes.c:279) [28]  (0 ns)
+	'load' operation ('state_load', NIST-KATs/aes.c:279) on array 'state' [29]  (1.75 ns)
+
+ <State 4>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('state_load', NIST-KATs/aes.c:279) on array 'state' [29]  (1.75 ns)
+	'getelementptr' operation ('sbox_addr', NIST-KATs/aes.c:279) [31]  (0 ns)
+	'load' operation ('sbox_load', NIST-KATs/aes.c:279) on array 'sbox' [32]  (2.77 ns)
+
+ <State 5>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('sbox_load', NIST-KATs/aes.c:279) on array 'sbox' [32]  (2.77 ns)
+	'store' operation ('store_ln279', NIST-KATs/aes.c:279) of variable 'sbox_load', NIST-KATs/aes.c:279 on array 'state' [33]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

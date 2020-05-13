@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="tree.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\tree.c"/>
+    <originFiles name="rng.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\NIST-KATs\rng.c"/>
+    <originFiles name="picnic_types.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\picnic_types.c"/>
+    <originFiles name="picnic_impl.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\picnic_impl.c"/>
+    <originFiles name="picnic2_impl.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\picnic2_impl.c"/>
+    <originFiles name="picnic.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\picnic.c"/>
+    <originFiles name="lowmc_constants.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\lowmc_constants.c"/>
+    <originFiles name="hash.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\hash.c"/>
+    <originFiles name="api.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\api.c"/>
+    <originFiles name="aes.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\NIST-KATs\aes.c"/>
+    <originFiles name="KeccakSpongeWidth1600.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\sha3\KeccakSpongeWidth1600.c"/>
+    <originFiles name="KeccakP-1600-reference.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\sha3\KeccakP-1600-reference.c"/>
+    <originFiles name="KeccakHash.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\sha3\KeccakHash.c"/>
+  </source>
+  <testbench>
+    <originFiles name="newtest_sign_2.c" path="D:\VLSI_Optimized_Models\project16-master_Optimized_Latency\newtest_sign_2.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

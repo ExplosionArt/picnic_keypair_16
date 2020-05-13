@@ -1,0 +1,433 @@
+
+
+================================================================
+== Vivado HLS Report for 'MixColumns'
+================================================================
+* Date:           Sat May  9 23:49:01 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 4.955 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       15|       15| 0.150 us | 0.150 us |   15|   15|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.75>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 0" [NIST-KATs/aes.c:317]   --->   Operation 17 'getelementptr' 'state_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%state_addr_12 = getelementptr [16 x i8]* %state, i64 0, i64 1" [NIST-KATs/aes.c:318]   --->   Operation 18 'getelementptr' 'state_addr_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [NIST-KATs/aes.c:317]   --->   Operation 19 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 20 [2/2] (1.75ns)   --->   "%state_load_13 = load i8* %state_addr_12, align 1" [NIST-KATs/aes.c:318]   --->   Operation 20 'load' 'state_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%state_addr_13 = getelementptr [16 x i8]* %state, i64 0, i64 2" [NIST-KATs/aes.c:318]   --->   Operation 21 'getelementptr' 'state_addr_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%state_addr_14 = getelementptr [16 x i8]* %state, i64 0, i64 3" [NIST-KATs/aes.c:318]   --->   Operation 22 'getelementptr' 'state_addr_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [NIST-KATs/aes.c:317]   --->   Operation 23 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 24 [1/2] (1.75ns)   --->   "%state_load_13 = load i8* %state_addr_12, align 1" [NIST-KATs/aes.c:318]   --->   Operation 24 'load' 'state_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 25 [2/2] (1.75ns)   --->   "%state_load_14 = load i8* %state_addr_13, align 1" [NIST-KATs/aes.c:318]   --->   Operation 25 'load' 'state_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 26 [2/2] (1.75ns)   --->   "%state_load_15 = load i8* %state_addr_14, align 1" [NIST-KATs/aes.c:318]   --->   Operation 26 'load' 'state_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%state_addr_1 = getelementptr [16 x i8]* %state, i64 0, i64 4" [NIST-KATs/aes.c:317]   --->   Operation 27 'getelementptr' 'state_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%state_addr_15 = getelementptr [16 x i8]* %state, i64 0, i64 5" [NIST-KATs/aes.c:318]   --->   Operation 28 'getelementptr' 'state_addr_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/2] (1.75ns)   --->   "%state_load_14 = load i8* %state_addr_13, align 1" [NIST-KATs/aes.c:318]   --->   Operation 29 'load' 'state_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 30 [1/2] (1.75ns)   --->   "%state_load_15 = load i8* %state_addr_14, align 1" [NIST-KATs/aes.c:318]   --->   Operation 30 'load' 'state_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 31 [2/2] (1.75ns)   --->   "%state_load_16 = load i8* %state_addr_1, align 1" [NIST-KATs/aes.c:317]   --->   Operation 31 'load' 'state_load_16' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 32 [2/2] (1.75ns)   --->   "%state_load_1 = load i8* %state_addr_15, align 1" [NIST-KATs/aes.c:318]   --->   Operation 32 'load' 'state_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%state_addr_16 = getelementptr [16 x i8]* %state, i64 0, i64 6" [NIST-KATs/aes.c:318]   --->   Operation 33 'getelementptr' 'state_addr_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%state_addr_17 = getelementptr [16 x i8]* %state, i64 0, i64 7" [NIST-KATs/aes.c:318]   --->   Operation 34 'getelementptr' 'state_addr_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/2] (1.75ns)   --->   "%state_load_16 = load i8* %state_addr_1, align 1" [NIST-KATs/aes.c:317]   --->   Operation 35 'load' 'state_load_16' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 36 [1/2] (1.75ns)   --->   "%state_load_1 = load i8* %state_addr_15, align 1" [NIST-KATs/aes.c:318]   --->   Operation 36 'load' 'state_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 37 [2/2] (1.75ns)   --->   "%state_load_17 = load i8* %state_addr_16, align 1" [NIST-KATs/aes.c:318]   --->   Operation 37 'load' 'state_load_17' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 38 [2/2] (1.75ns)   --->   "%state_load_18 = load i8* %state_addr_17, align 1" [NIST-KATs/aes.c:318]   --->   Operation 38 'load' 'state_load_18' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 5 <SV = 4> <Delay = 1.75>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%state_addr_2 = getelementptr [16 x i8]* %state, i64 0, i64 8" [NIST-KATs/aes.c:317]   --->   Operation 39 'getelementptr' 'state_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%state_addr_18 = getelementptr [16 x i8]* %state, i64 0, i64 9" [NIST-KATs/aes.c:318]   --->   Operation 40 'getelementptr' 'state_addr_18' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/2] (1.75ns)   --->   "%state_load_17 = load i8* %state_addr_16, align 1" [NIST-KATs/aes.c:318]   --->   Operation 41 'load' 'state_load_17' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 42 [1/2] (1.75ns)   --->   "%state_load_18 = load i8* %state_addr_17, align 1" [NIST-KATs/aes.c:318]   --->   Operation 42 'load' 'state_load_18' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 43 [2/2] (1.75ns)   --->   "%state_load_19 = load i8* %state_addr_2, align 1" [NIST-KATs/aes.c:317]   --->   Operation 43 'load' 'state_load_19' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 44 [2/2] (1.75ns)   --->   "%state_load_2 = load i8* %state_addr_18, align 1" [NIST-KATs/aes.c:318]   --->   Operation 44 'load' 'state_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%state_addr_19 = getelementptr [16 x i8]* %state, i64 0, i64 10" [NIST-KATs/aes.c:318]   --->   Operation 45 'getelementptr' 'state_addr_19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%state_addr_20 = getelementptr [16 x i8]* %state, i64 0, i64 11" [NIST-KATs/aes.c:318]   --->   Operation 46 'getelementptr' 'state_addr_20' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/2] (1.75ns)   --->   "%state_load_19 = load i8* %state_addr_2, align 1" [NIST-KATs/aes.c:317]   --->   Operation 47 'load' 'state_load_19' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 48 [1/2] (1.75ns)   --->   "%state_load_2 = load i8* %state_addr_18, align 1" [NIST-KATs/aes.c:318]   --->   Operation 48 'load' 'state_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 49 [2/2] (1.75ns)   --->   "%state_load_20 = load i8* %state_addr_19, align 1" [NIST-KATs/aes.c:318]   --->   Operation 49 'load' 'state_load_20' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 50 [2/2] (1.75ns)   --->   "%state_load_21 = load i8* %state_addr_20, align 1" [NIST-KATs/aes.c:318]   --->   Operation 50 'load' 'state_load_21' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 7 <SV = 6> <Delay = 1.75>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%state_addr_3 = getelementptr [16 x i8]* %state, i64 0, i64 12" [NIST-KATs/aes.c:317]   --->   Operation 51 'getelementptr' 'state_addr_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%state_addr_21 = getelementptr [16 x i8]* %state, i64 0, i64 13" [NIST-KATs/aes.c:318]   --->   Operation 52 'getelementptr' 'state_addr_21' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/2] (1.75ns)   --->   "%state_load_20 = load i8* %state_addr_19, align 1" [NIST-KATs/aes.c:318]   --->   Operation 53 'load' 'state_load_20' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 54 [1/2] (1.75ns)   --->   "%state_load_21 = load i8* %state_addr_20, align 1" [NIST-KATs/aes.c:318]   --->   Operation 54 'load' 'state_load_21' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 55 [2/2] (1.75ns)   --->   "%state_load_22 = load i8* %state_addr_3, align 1" [NIST-KATs/aes.c:317]   --->   Operation 55 'load' 'state_load_22' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 56 [2/2] (1.75ns)   --->   "%state_load_3 = load i8* %state_addr_21, align 1" [NIST-KATs/aes.c:318]   --->   Operation 56 'load' 'state_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 8 <SV = 7> <Delay = 1.75>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%state_addr_22 = getelementptr [16 x i8]* %state, i64 0, i64 14" [NIST-KATs/aes.c:318]   --->   Operation 57 'getelementptr' 'state_addr_22' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (0.00ns)   --->   "%state_addr_23 = getelementptr [16 x i8]* %state, i64 0, i64 15" [NIST-KATs/aes.c:318]   --->   Operation 58 'getelementptr' 'state_addr_23' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 59 [1/2] (1.75ns)   --->   "%state_load_22 = load i8* %state_addr_3, align 1" [NIST-KATs/aes.c:317]   --->   Operation 59 'load' 'state_load_22' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 60 [1/2] (1.75ns)   --->   "%state_load_3 = load i8* %state_addr_21, align 1" [NIST-KATs/aes.c:318]   --->   Operation 60 'load' 'state_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 61 [2/2] (1.75ns)   --->   "%state_load_23 = load i8* %state_addr_22, align 1" [NIST-KATs/aes.c:318]   --->   Operation 61 'load' 'state_load_23' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 62 [2/2] (1.75ns)   --->   "%state_load_24 = load i8* %state_addr_23, align 1" [NIST-KATs/aes.c:318]   --->   Operation 62 'load' 'state_load_24' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 9 <SV = 8> <Delay = 4.95>
+ST_9 : Operation 63 [1/1] (0.80ns)   --->   "%xor_ln318 = xor i8 %state_load_13, %state_load" [NIST-KATs/aes.c:318]   --->   Operation 63 'xor' 'xor_ln318' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 64 [1/1] (0.80ns)   --->   "%xor_ln318_1 = xor i8 %state_load_14, %xor_ln318" [NIST-KATs/aes.c:318]   --->   Operation 64 'xor' 'xor_ln318_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 65 [1/1] (0.80ns)   --->   "%xor_ln318_2 = xor i8 %state_load_15, %xor_ln318_1" [NIST-KATs/aes.c:318]   --->   Operation 65 'xor' 'xor_ln318_2' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_1)   --->   "%shl_ln306 = shl i8 %xor_ln318, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 66 'shl' 'shl_ln306' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_1)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln318, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 67 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_1)   --->   "%select_ln306 = select i1 %tmp, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 68 'select' 'select_ln306' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_1)   --->   "%xor_ln319 = xor i8 %state_load, %select_ln306" [NIST-KATs/aes.c:319]   --->   Operation 69 'xor' 'xor_ln319' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_1)   --->   "%xor_ln319_2 = xor i8 %shl_ln306, %xor_ln318_2" [NIST-KATs/aes.c:319]   --->   Operation 70 'xor' 'xor_ln319_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 71 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln319_1 = xor i8 %xor_ln319_2, %xor_ln319" [NIST-KATs/aes.c:319]   --->   Operation 71 'xor' 'xor_ln319_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 72 [1/1] (1.75ns)   --->   "store i8 %xor_ln319_1, i8* %state_addr, align 1" [NIST-KATs/aes.c:319]   --->   Operation 72 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 73 [1/1] (0.80ns)   --->   "%xor_ln320_3 = xor i8 %state_load_14, %state_load_13" [NIST-KATs/aes.c:320]   --->   Operation 73 'xor' 'xor_ln320_3' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_1)   --->   "%shl_ln306_1 = shl i8 %xor_ln320_3, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 74 'shl' 'shl_ln306_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_1)   --->   "%tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln320_3, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 75 'bitselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_1)   --->   "%select_ln306_1 = select i1 %tmp_21, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 76 'select' 'select_ln306_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_1)   --->   "%xor_ln320 = xor i8 %state_load_13, %select_ln306_1" [NIST-KATs/aes.c:320]   --->   Operation 77 'xor' 'xor_ln320' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_1)   --->   "%xor_ln320_2 = xor i8 %shl_ln306_1, %xor_ln318_2" [NIST-KATs/aes.c:320]   --->   Operation 78 'xor' 'xor_ln320_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 79 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln320_1 = xor i8 %xor_ln320_2, %xor_ln320" [NIST-KATs/aes.c:320]   --->   Operation 79 'xor' 'xor_ln320_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 80 [1/1] (1.75ns)   --->   "store i8 %xor_ln320_1, i8* %state_addr_12, align 1" [NIST-KATs/aes.c:320]   --->   Operation 80 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 81 [1/1] (0.80ns)   --->   "%xor_ln321_3 = xor i8 %state_load_15, %state_load_14" [NIST-KATs/aes.c:321]   --->   Operation 81 'xor' 'xor_ln321_3' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_1)   --->   "%shl_ln306_2 = shl i8 %xor_ln321_3, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 82 'shl' 'shl_ln306_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_1)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln321_3, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 83 'bitselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 84 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_1)   --->   "%select_ln306_2 = select i1 %tmp_22, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 84 'select' 'select_ln306_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_1)   --->   "%xor_ln321 = xor i8 %state_load_14, %select_ln306_2" [NIST-KATs/aes.c:321]   --->   Operation 85 'xor' 'xor_ln321' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_1)   --->   "%xor_ln321_2 = xor i8 %shl_ln306_2, %xor_ln318_2" [NIST-KATs/aes.c:321]   --->   Operation 86 'xor' 'xor_ln321_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 87 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln321_1 = xor i8 %xor_ln321_2, %xor_ln321" [NIST-KATs/aes.c:321]   --->   Operation 87 'xor' 'xor_ln321_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 88 [1/1] (0.80ns)   --->   "%xor_ln322_1 = xor i8 %state_load_15, %state_load" [NIST-KATs/aes.c:322]   --->   Operation 88 'xor' 'xor_ln322_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322)   --->   "%shl_ln306_3 = shl i8 %xor_ln322_1, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 89 'shl' 'shl_ln306_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln322_1, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 90 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322)   --->   "%select_ln306_3 = select i1 %tmp_23, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 91 'select' 'select_ln306_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322)   --->   "%xor_ln322_3 = xor i8 %shl_ln306_3, %xor_ln318_1" [NIST-KATs/aes.c:322]   --->   Operation 92 'xor' 'xor_ln322_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 93 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln322 = xor i8 %xor_ln322_3, %select_ln306_3" [NIST-KATs/aes.c:322]   --->   Operation 93 'xor' 'xor_ln322' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 94 [1/2] (1.75ns)   --->   "%state_load_23 = load i8* %state_addr_22, align 1" [NIST-KATs/aes.c:318]   --->   Operation 94 'load' 'state_load_23' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 95 [1/2] (1.75ns)   --->   "%state_load_24 = load i8* %state_addr_23, align 1" [NIST-KATs/aes.c:318]   --->   Operation 95 'load' 'state_load_24' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 10 <SV = 9> <Delay = 1.75>
+ST_10 : Operation 96 [1/1] (1.75ns)   --->   "store i8 %xor_ln321_1, i8* %state_addr_13, align 1" [NIST-KATs/aes.c:321]   --->   Operation 96 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_10 : Operation 97 [1/1] (1.75ns)   --->   "store i8 %xor_ln322, i8* %state_addr_14, align 1" [NIST-KATs/aes.c:322]   --->   Operation 97 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 11 <SV = 10> <Delay = 4.95>
+ST_11 : Operation 98 [1/1] (0.80ns)   --->   "%xor_ln318_9 = xor i8 %state_load_1, %state_load_16" [NIST-KATs/aes.c:318]   --->   Operation 98 'xor' 'xor_ln318_9' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 99 [1/1] (0.80ns)   --->   "%xor_ln318_3 = xor i8 %state_load_17, %xor_ln318_9" [NIST-KATs/aes.c:318]   --->   Operation 99 'xor' 'xor_ln318_3' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 100 [1/1] (0.80ns)   --->   "%xor_ln318_4 = xor i8 %state_load_18, %xor_ln318_3" [NIST-KATs/aes.c:318]   --->   Operation 100 'xor' 'xor_ln318_4' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_5)   --->   "%shl_ln306_4 = shl i8 %xor_ln318_9, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 101 'shl' 'shl_ln306_4' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_5)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln318_9, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 102 'bitselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_5)   --->   "%select_ln306_4 = select i1 %tmp_24, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 103 'select' 'select_ln306_4' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 104 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_5)   --->   "%xor_ln319_3 = xor i8 %state_load_16, %select_ln306_4" [NIST-KATs/aes.c:319]   --->   Operation 104 'xor' 'xor_ln319_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 105 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_5)   --->   "%xor_ln319_4 = xor i8 %shl_ln306_4, %xor_ln318_4" [NIST-KATs/aes.c:319]   --->   Operation 105 'xor' 'xor_ln319_4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 106 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln319_5 = xor i8 %xor_ln319_4, %xor_ln319_3" [NIST-KATs/aes.c:319]   --->   Operation 106 'xor' 'xor_ln319_5' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 107 [1/1] (1.75ns)   --->   "store i8 %xor_ln319_5, i8* %state_addr_1, align 1" [NIST-KATs/aes.c:319]   --->   Operation 107 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_11 : Operation 108 [1/1] (0.80ns)   --->   "%xor_ln320_7 = xor i8 %state_load_17, %state_load_1" [NIST-KATs/aes.c:320]   --->   Operation 108 'xor' 'xor_ln320_7' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_6)   --->   "%shl_ln306_5 = shl i8 %xor_ln320_7, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 109 'shl' 'shl_ln306_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_6)   --->   "%tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln320_7, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 110 'bitselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_6)   --->   "%select_ln306_5 = select i1 %tmp_25, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 111 'select' 'select_ln306_5' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_6)   --->   "%xor_ln320_4 = xor i8 %state_load_1, %select_ln306_5" [NIST-KATs/aes.c:320]   --->   Operation 112 'xor' 'xor_ln320_4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_6)   --->   "%xor_ln320_5 = xor i8 %shl_ln306_5, %xor_ln318_4" [NIST-KATs/aes.c:320]   --->   Operation 113 'xor' 'xor_ln320_5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 114 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln320_6 = xor i8 %xor_ln320_5, %xor_ln320_4" [NIST-KATs/aes.c:320]   --->   Operation 114 'xor' 'xor_ln320_6' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 115 [1/1] (1.75ns)   --->   "store i8 %xor_ln320_6, i8* %state_addr_15, align 1" [NIST-KATs/aes.c:320]   --->   Operation 115 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_11 : Operation 116 [1/1] (0.80ns)   --->   "%xor_ln321_7 = xor i8 %state_load_18, %state_load_17" [NIST-KATs/aes.c:321]   --->   Operation 116 'xor' 'xor_ln321_7' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 117 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_6)   --->   "%shl_ln306_6 = shl i8 %xor_ln321_7, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 117 'shl' 'shl_ln306_6' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 118 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_6)   --->   "%tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln321_7, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 118 'bitselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_6)   --->   "%select_ln306_6 = select i1 %tmp_26, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 119 'select' 'select_ln306_6' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_6)   --->   "%xor_ln321_4 = xor i8 %state_load_17, %select_ln306_6" [NIST-KATs/aes.c:321]   --->   Operation 120 'xor' 'xor_ln321_4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_6)   --->   "%xor_ln321_5 = xor i8 %shl_ln306_6, %xor_ln318_4" [NIST-KATs/aes.c:321]   --->   Operation 121 'xor' 'xor_ln321_5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 122 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln321_6 = xor i8 %xor_ln321_5, %xor_ln321_4" [NIST-KATs/aes.c:321]   --->   Operation 122 'xor' 'xor_ln321_6' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 123 [1/1] (0.80ns)   --->   "%xor_ln322_5 = xor i8 %state_load_18, %state_load_16" [NIST-KATs/aes.c:322]   --->   Operation 123 'xor' 'xor_ln322_5' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 124 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_2)   --->   "%shl_ln306_7 = shl i8 %xor_ln322_5, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 124 'shl' 'shl_ln306_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_2)   --->   "%tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln322_5, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 125 'bitselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_2)   --->   "%select_ln306_7 = select i1 %tmp_27, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 126 'select' 'select_ln306_7' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_2)   --->   "%xor_ln322_7 = xor i8 %shl_ln306_7, %xor_ln318_3" [NIST-KATs/aes.c:322]   --->   Operation 127 'xor' 'xor_ln322_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 128 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln322_2 = xor i8 %xor_ln322_7, %select_ln306_7" [NIST-KATs/aes.c:322]   --->   Operation 128 'xor' 'xor_ln322_2' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 1.75>
+ST_12 : Operation 129 [1/1] (1.75ns)   --->   "store i8 %xor_ln321_6, i8* %state_addr_16, align 1" [NIST-KATs/aes.c:321]   --->   Operation 129 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_12 : Operation 130 [1/1] (1.75ns)   --->   "store i8 %xor_ln322_2, i8* %state_addr_17, align 1" [NIST-KATs/aes.c:322]   --->   Operation 130 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 13 <SV = 12> <Delay = 4.95>
+ST_13 : Operation 131 [1/1] (0.80ns)   --->   "%xor_ln318_10 = xor i8 %state_load_2, %state_load_19" [NIST-KATs/aes.c:318]   --->   Operation 131 'xor' 'xor_ln318_10' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 132 [1/1] (0.80ns)   --->   "%xor_ln318_5 = xor i8 %state_load_20, %xor_ln318_10" [NIST-KATs/aes.c:318]   --->   Operation 132 'xor' 'xor_ln318_5' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 133 [1/1] (0.80ns)   --->   "%xor_ln318_6 = xor i8 %state_load_21, %xor_ln318_5" [NIST-KATs/aes.c:318]   --->   Operation 133 'xor' 'xor_ln318_6' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_6)   --->   "%shl_ln306_8 = shl i8 %xor_ln318_10, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 134 'shl' 'shl_ln306_8' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_6)   --->   "%tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln318_10, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 135 'bitselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 136 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_6)   --->   "%select_ln306_8 = select i1 %tmp_28, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 136 'select' 'select_ln306_8' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_6)   --->   "%xor_ln319_8 = xor i8 %state_load_19, %select_ln306_8" [NIST-KATs/aes.c:319]   --->   Operation 137 'xor' 'xor_ln319_8' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_6)   --->   "%xor_ln319_9 = xor i8 %shl_ln306_8, %xor_ln318_6" [NIST-KATs/aes.c:319]   --->   Operation 138 'xor' 'xor_ln319_9' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 139 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln319_6 = xor i8 %xor_ln319_9, %xor_ln319_8" [NIST-KATs/aes.c:319]   --->   Operation 139 'xor' 'xor_ln319_6' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 140 [1/1] (1.75ns)   --->   "store i8 %xor_ln319_6, i8* %state_addr_2, align 1" [NIST-KATs/aes.c:319]   --->   Operation 140 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 141 [1/1] (0.80ns)   --->   "%xor_ln320_12 = xor i8 %state_load_20, %state_load_2" [NIST-KATs/aes.c:320]   --->   Operation 141 'xor' 'xor_ln320_12' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 142 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_8)   --->   "%shl_ln306_9 = shl i8 %xor_ln320_12, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 142 'shl' 'shl_ln306_9' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_8)   --->   "%tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln320_12, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 143 'bitselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 144 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_8)   --->   "%select_ln306_9 = select i1 %tmp_29, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 144 'select' 'select_ln306_9' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_8)   --->   "%xor_ln320_9 = xor i8 %state_load_2, %select_ln306_9" [NIST-KATs/aes.c:320]   --->   Operation 145 'xor' 'xor_ln320_9' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_8)   --->   "%xor_ln320_11 = xor i8 %shl_ln306_9, %xor_ln318_6" [NIST-KATs/aes.c:320]   --->   Operation 146 'xor' 'xor_ln320_11' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 147 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln320_8 = xor i8 %xor_ln320_11, %xor_ln320_9" [NIST-KATs/aes.c:320]   --->   Operation 147 'xor' 'xor_ln320_8' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 148 [1/1] (1.75ns)   --->   "store i8 %xor_ln320_8, i8* %state_addr_18, align 1" [NIST-KATs/aes.c:320]   --->   Operation 148 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 149 [1/1] (0.80ns)   --->   "%xor_ln321_12 = xor i8 %state_load_21, %state_load_20" [NIST-KATs/aes.c:321]   --->   Operation 149 'xor' 'xor_ln321_12' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_8)   --->   "%shl_ln306_10 = shl i8 %xor_ln321_12, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 150 'shl' 'shl_ln306_10' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 151 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_8)   --->   "%tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln321_12, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 151 'bitselect' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_8)   --->   "%select_ln306_10 = select i1 %tmp_30, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 152 'select' 'select_ln306_10' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_8)   --->   "%xor_ln321_9 = xor i8 %state_load_20, %select_ln306_10" [NIST-KATs/aes.c:321]   --->   Operation 153 'xor' 'xor_ln321_9' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_8)   --->   "%xor_ln321_11 = xor i8 %shl_ln306_10, %xor_ln318_6" [NIST-KATs/aes.c:321]   --->   Operation 154 'xor' 'xor_ln321_11' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 155 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln321_8 = xor i8 %xor_ln321_11, %xor_ln321_9" [NIST-KATs/aes.c:321]   --->   Operation 155 'xor' 'xor_ln321_8' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 156 [1/1] (0.80ns)   --->   "%xor_ln322_8 = xor i8 %state_load_21, %state_load_19" [NIST-KATs/aes.c:322]   --->   Operation 156 'xor' 'xor_ln322_8' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 157 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_4)   --->   "%shl_ln306_11 = shl i8 %xor_ln322_8, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 157 'shl' 'shl_ln306_11' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_4)   --->   "%tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln322_8, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 158 'bitselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_4)   --->   "%select_ln306_11 = select i1 %tmp_31, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 159 'select' 'select_ln306_11' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 160 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_4)   --->   "%xor_ln322_9 = xor i8 %shl_ln306_11, %xor_ln318_5" [NIST-KATs/aes.c:322]   --->   Operation 160 'xor' 'xor_ln322_9' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 161 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln322_4 = xor i8 %xor_ln322_9, %select_ln306_11" [NIST-KATs/aes.c:322]   --->   Operation 161 'xor' 'xor_ln322_4' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 1.75>
+ST_14 : Operation 162 [1/1] (1.75ns)   --->   "store i8 %xor_ln321_8, i8* %state_addr_19, align 1" [NIST-KATs/aes.c:321]   --->   Operation 162 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 163 [1/1] (1.75ns)   --->   "store i8 %xor_ln322_4, i8* %state_addr_20, align 1" [NIST-KATs/aes.c:322]   --->   Operation 163 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 15 <SV = 14> <Delay = 4.95>
+ST_15 : Operation 164 [1/1] (0.80ns)   --->   "%xor_ln318_11 = xor i8 %state_load_3, %state_load_22" [NIST-KATs/aes.c:318]   --->   Operation 164 'xor' 'xor_ln318_11' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 165 [1/1] (0.80ns)   --->   "%xor_ln318_7 = xor i8 %state_load_23, %xor_ln318_11" [NIST-KATs/aes.c:318]   --->   Operation 165 'xor' 'xor_ln318_7' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 166 [1/1] (0.80ns)   --->   "%xor_ln318_8 = xor i8 %state_load_24, %xor_ln318_7" [NIST-KATs/aes.c:318]   --->   Operation 166 'xor' 'xor_ln318_8' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 167 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_7)   --->   "%shl_ln306_12 = shl i8 %xor_ln318_11, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 167 'shl' 'shl_ln306_12' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 168 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_7)   --->   "%tmp_32 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln318_11, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 168 'bitselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 169 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_7)   --->   "%select_ln306_12 = select i1 %tmp_32, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:319]   --->   Operation 169 'select' 'select_ln306_12' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_7)   --->   "%xor_ln319_10 = xor i8 %state_load_22, %select_ln306_12" [NIST-KATs/aes.c:319]   --->   Operation 170 'xor' 'xor_ln319_10' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node xor_ln319_7)   --->   "%xor_ln319_11 = xor i8 %shl_ln306_12, %xor_ln318_8" [NIST-KATs/aes.c:319]   --->   Operation 171 'xor' 'xor_ln319_11' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 172 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln319_7 = xor i8 %xor_ln319_11, %xor_ln319_10" [NIST-KATs/aes.c:319]   --->   Operation 172 'xor' 'xor_ln319_7' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 173 [1/1] (1.75ns)   --->   "store i8 %xor_ln319_7, i8* %state_addr_3, align 1" [NIST-KATs/aes.c:319]   --->   Operation 173 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 174 [1/1] (0.80ns)   --->   "%xor_ln320_15 = xor i8 %state_load_23, %state_load_3" [NIST-KATs/aes.c:320]   --->   Operation 174 'xor' 'xor_ln320_15' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_10)   --->   "%shl_ln306_13 = shl i8 %xor_ln320_15, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 175 'shl' 'shl_ln306_13' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_10)   --->   "%tmp_33 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln320_15, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 176 'bitselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_10)   --->   "%select_ln306_13 = select i1 %tmp_33, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:320]   --->   Operation 177 'select' 'select_ln306_13' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 178 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_10)   --->   "%xor_ln320_13 = xor i8 %state_load_3, %select_ln306_13" [NIST-KATs/aes.c:320]   --->   Operation 178 'xor' 'xor_ln320_13' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 179 [1/1] (0.00ns) (grouped into LUT with out node xor_ln320_10)   --->   "%xor_ln320_14 = xor i8 %shl_ln306_13, %xor_ln318_8" [NIST-KATs/aes.c:320]   --->   Operation 179 'xor' 'xor_ln320_14' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 180 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln320_10 = xor i8 %xor_ln320_14, %xor_ln320_13" [NIST-KATs/aes.c:320]   --->   Operation 180 'xor' 'xor_ln320_10' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 181 [1/1] (1.75ns)   --->   "store i8 %xor_ln320_10, i8* %state_addr_21, align 1" [NIST-KATs/aes.c:320]   --->   Operation 181 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 182 [1/1] (0.80ns)   --->   "%xor_ln321_15 = xor i8 %state_load_24, %state_load_23" [NIST-KATs/aes.c:321]   --->   Operation 182 'xor' 'xor_ln321_15' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 183 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_10)   --->   "%shl_ln306_14 = shl i8 %xor_ln321_15, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 183 'shl' 'shl_ln306_14' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 184 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_10)   --->   "%tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln321_15, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 184 'bitselect' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_10)   --->   "%select_ln306_14 = select i1 %tmp_34, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:321]   --->   Operation 185 'select' 'select_ln306_14' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_10)   --->   "%xor_ln321_13 = xor i8 %state_load_23, %select_ln306_14" [NIST-KATs/aes.c:321]   --->   Operation 186 'xor' 'xor_ln321_13' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 187 [1/1] (0.00ns) (grouped into LUT with out node xor_ln321_10)   --->   "%xor_ln321_14 = xor i8 %shl_ln306_14, %xor_ln318_8" [NIST-KATs/aes.c:321]   --->   Operation 187 'xor' 'xor_ln321_14' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 188 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln321_10 = xor i8 %xor_ln321_14, %xor_ln321_13" [NIST-KATs/aes.c:321]   --->   Operation 188 'xor' 'xor_ln321_10' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 189 [1/1] (0.80ns)   --->   "%xor_ln322_10 = xor i8 %state_load_24, %state_load_22" [NIST-KATs/aes.c:322]   --->   Operation 189 'xor' 'xor_ln322_10' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 190 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_6)   --->   "%shl_ln306_15 = shl i8 %xor_ln322_10, 1" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 190 'shl' 'shl_ln306_15' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 191 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_6)   --->   "%tmp_35 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %xor_ln322_10, i32 7)" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 191 'bitselect' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 192 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_6)   --->   "%select_ln306_15 = select i1 %tmp_35, i8 27, i8 0" [NIST-KATs/aes.c:306->NIST-KATs/aes.c:322]   --->   Operation 192 'select' 'select_ln306_15' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 193 [1/1] (0.00ns) (grouped into LUT with out node xor_ln322_6)   --->   "%xor_ln322_11 = xor i8 %shl_ln306_15, %xor_ln318_7" [NIST-KATs/aes.c:322]   --->   Operation 193 'xor' 'xor_ln322_11' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 194 [1/1] (0.80ns) (out node of the LUT)   --->   "%xor_ln322_6 = xor i8 %xor_ln322_11, %select_ln306_15" [NIST-KATs/aes.c:322]   --->   Operation 194 'xor' 'xor_ln322_6' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 1.75>
+ST_16 : Operation 195 [1/1] (1.75ns)   --->   "store i8 %xor_ln321_10, i8* %state_addr_22, align 1" [NIST-KATs/aes.c:321]   --->   Operation 195 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 196 [1/1] (1.75ns)   --->   "store i8 %xor_ln322_6, i8* %state_addr_23, align 1" [NIST-KATs/aes.c:322]   --->   Operation 196 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 197 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/aes.c:324]   --->   Operation 197 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr', NIST-KATs/aes.c:317) [2]  (0 ns)
+	'load' operation ('state_load', NIST-KATs/aes.c:317) on array 'state' [18]  (1.75 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_13', NIST-KATs/aes.c:318) [4]  (0 ns)
+	'load' operation ('state_load_14', NIST-KATs/aes.c:318) on array 'state' [20]  (1.75 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_1', NIST-KATs/aes.c:317) [6]  (0 ns)
+	'load' operation ('state_load_16', NIST-KATs/aes.c:317) on array 'state' [55]  (1.75 ns)
+
+ <State 4>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_16', NIST-KATs/aes.c:318) [8]  (0 ns)
+	'load' operation ('state_load_17', NIST-KATs/aes.c:318) on array 'state' [57]  (1.75 ns)
+
+ <State 5>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_2', NIST-KATs/aes.c:317) [10]  (0 ns)
+	'load' operation ('state_load_19', NIST-KATs/aes.c:317) on array 'state' [92]  (1.75 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_19', NIST-KATs/aes.c:318) [12]  (0 ns)
+	'load' operation ('state_load_20', NIST-KATs/aes.c:318) on array 'state' [94]  (1.75 ns)
+
+ <State 7>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_3', NIST-KATs/aes.c:317) [14]  (0 ns)
+	'load' operation ('state_load_22', NIST-KATs/aes.c:317) on array 'state' [129]  (1.75 ns)
+
+ <State 8>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('state_addr_22', NIST-KATs/aes.c:318) [16]  (0 ns)
+	'load' operation ('state_load_23', NIST-KATs/aes.c:318) on array 'state' [131]  (1.75 ns)
+
+ <State 9>: 4.96ns
+The critical path consists of the following:
+	'xor' operation ('x', NIST-KATs/aes.c:318) [22]  (0.8 ns)
+	'xor' operation ('xor_ln318_1', NIST-KATs/aes.c:318) [23]  (0.8 ns)
+	'xor' operation ('xor_ln318_2', NIST-KATs/aes.c:318) [24]  (0.8 ns)
+	'xor' operation ('xor_ln319_2', NIST-KATs/aes.c:319) [29]  (0 ns)
+	'xor' operation ('xor_ln319_1', NIST-KATs/aes.c:319) [30]  (0.8 ns)
+	'store' operation ('store_ln319', NIST-KATs/aes.c:319) of variable 'xor_ln319_1', NIST-KATs/aes.c:319 on array 'state' [31]  (1.75 ns)
+
+ <State 10>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln321', NIST-KATs/aes.c:321) of variable 'xor_ln321_1', NIST-KATs/aes.c:321 on array 'state' [47]  (1.75 ns)
+
+ <State 11>: 4.96ns
+The critical path consists of the following:
+	'xor' operation ('x', NIST-KATs/aes.c:318) [59]  (0.8 ns)
+	'xor' operation ('xor_ln318_3', NIST-KATs/aes.c:318) [60]  (0.8 ns)
+	'xor' operation ('xor_ln318_4', NIST-KATs/aes.c:318) [61]  (0.8 ns)
+	'xor' operation ('xor_ln319_4', NIST-KATs/aes.c:319) [66]  (0 ns)
+	'xor' operation ('xor_ln319_5', NIST-KATs/aes.c:319) [67]  (0.8 ns)
+	'store' operation ('store_ln319', NIST-KATs/aes.c:319) of variable 'xor_ln319_5', NIST-KATs/aes.c:319 on array 'state' [68]  (1.75 ns)
+
+ <State 12>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln321', NIST-KATs/aes.c:321) of variable 'xor_ln321_6', NIST-KATs/aes.c:321 on array 'state' [84]  (1.75 ns)
+
+ <State 13>: 4.96ns
+The critical path consists of the following:
+	'xor' operation ('x', NIST-KATs/aes.c:318) [96]  (0.8 ns)
+	'xor' operation ('xor_ln318_5', NIST-KATs/aes.c:318) [97]  (0.8 ns)
+	'xor' operation ('xor_ln318_6', NIST-KATs/aes.c:318) [98]  (0.8 ns)
+	'xor' operation ('xor_ln319_9', NIST-KATs/aes.c:319) [103]  (0 ns)
+	'xor' operation ('xor_ln319_6', NIST-KATs/aes.c:319) [104]  (0.8 ns)
+	'store' operation ('store_ln319', NIST-KATs/aes.c:319) of variable 'xor_ln319_6', NIST-KATs/aes.c:319 on array 'state' [105]  (1.75 ns)
+
+ <State 14>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln321', NIST-KATs/aes.c:321) of variable 'xor_ln321_8', NIST-KATs/aes.c:321 on array 'state' [121]  (1.75 ns)
+
+ <State 15>: 4.96ns
+The critical path consists of the following:
+	'xor' operation ('x', NIST-KATs/aes.c:318) [133]  (0.8 ns)
+	'xor' operation ('xor_ln318_7', NIST-KATs/aes.c:318) [134]  (0.8 ns)
+	'xor' operation ('xor_ln318_8', NIST-KATs/aes.c:318) [135]  (0.8 ns)
+	'xor' operation ('xor_ln319_11', NIST-KATs/aes.c:319) [140]  (0 ns)
+	'xor' operation ('xor_ln319_7', NIST-KATs/aes.c:319) [141]  (0.8 ns)
+	'store' operation ('store_ln319', NIST-KATs/aes.c:319) of variable 'xor_ln319_7', NIST-KATs/aes.c:319 on array 'state' [142]  (1.75 ns)
+
+ <State 16>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln321', NIST-KATs/aes.c:321) of variable 'xor_ln321_10', NIST-KATs/aes.c:321 on array 'state' [158]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

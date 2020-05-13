@@ -1,0 +1,313 @@
+
+
+================================================================
+== Vivado HLS Report for 'picnic_keygen'
+================================================================
+* Date:           Sat May  9 23:49:21 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.366 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max  |   Type  |
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |        1|    89596| 10.000 ns | 0.896 ms |    1|  89596|   none  |
+    +---------+---------+-----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+-------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                         |             |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |         Instance        |    Module   |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +-------------------------+-------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |grp_randombytes_fu_1933  |randombytes  |     4359|     4419| 43.590 us | 44.190 us |   4359|   4419|   none  |
+        |grp_LowMCEnc_fu_1948     |LowMCEnc     |    80696|    80696|  0.807 ms |  0.807 ms |  80696|  80696|   none  |
+        +-------------------------+-------------+---------+---------+-----------+-----------+-------+-------+---------+
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- memset_temp   |        7|        7|         1|          -|          -|     8|    no    |
+        |- memset_temp2  |        7|        7|         1|          -|          -|     8|    no    |
+        |- memset_temp3  |        7|        7|         1|          -|          -|     8|    no    |
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|     140|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |       85|      -|    4720|   21631|    0|
+|Memory           |        2|      -|     128|       8|    0|
+|Multiplexer      |        -|      -|       -|    2117|    -|
+|Register         |        -|      -|     159|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |       87|      0|    5007|   23896|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      730|    740|  269200|  134600|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |       11|      0|       1|      17|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+-------------+---------+-------+------+-------+-----+
+    |         Instance        |    Module   | BRAM_18K| DSP48E|  FF  |  LUT  | URAM|
+    +-------------------------+-------------+---------+-------+------+-------+-----+
+    |grp_LowMCEnc_fu_1948     |LowMCEnc     |       76|      0|   387|   4437|    0|
+    |grp_randombytes_fu_1933  |randombytes  |        9|      0|  4333|  17194|    0|
+    +-------------------------+-------------+---------+-------+------+-------+-----+
+    |Total                    |             |       85|      0|  4720|  21631|    0|
+    +-------------------------+-------------+---------+-------+------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+    |  Memory |        Module       | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+    |temp_U   |picnic_keygen_temp   |        2|   0|   0|    0|     8|   32|     1|          256|
+    |temp2_U  |picnic_keygen_temp2  |        0|  64|   4|    0|     8|   32|     1|          256|
+    |temp3_U  |picnic_keygen_temp2  |        0|  64|   4|    0|     8|   32|     1|          256|
+    +---------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total    |                     |        2| 128|   8|    0|    24|   96|     3|          768|
+    +---------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |add_ln211_1_fu_2124_p2   |     +    |      0|  0|  12|           3|           1|
+    |add_ln211_2_fu_2141_p2   |     +    |      0|  0|  12|           3|           1|
+    |add_ln211_fu_2107_p2     |     +    |      0|  0|  12|           3|           1|
+    |empty_14_fu_2035_p2      |   icmp   |      0|  0|   9|           4|           3|
+    |empty_16_fu_2047_p2      |   icmp   |      0|  0|   9|           4|           3|
+    |empty_18_fu_2059_p2      |   icmp   |      0|  0|   9|           4|           4|
+    |empty_20_fu_2071_p2      |   icmp   |      0|  0|   9|           4|           4|
+    |empty_22_fu_2083_p2      |   icmp   |      0|  0|   9|           4|           4|
+    |empty_24_fu_2095_p2      |   icmp   |      0|  0|   9|           4|           1|
+    |empty_fu_2029_p2         |   icmp   |      0|  0|   9|           4|           2|
+    |icmp_ln211_1_fu_2135_p2  |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln211_2_fu_2152_p2  |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln211_fu_2118_p2    |   icmp   |      0|  0|   9|           3|           2|
+    |empty_15_fu_2041_p2      |    or    |      0|  0|   2|           1|           1|
+    |empty_17_fu_2053_p2      |    or    |      0|  0|   2|           1|           1|
+    |empty_19_fu_2065_p2      |    or    |      0|  0|   2|           1|           1|
+    |empty_21_fu_2077_p2      |    or    |      0|  0|   2|           1|           1|
+    |empty_23_fu_2089_p2      |    or    |      0|  0|   2|           1|           1|
+    |empty_25_fu_2101_p2      |    or    |      0|  0|   2|           1|           1|
+    |select_ln166_fu_2518_p3  |  select  |      0|  0|   2|           1|           2|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |Total                    |          |      0|  0| 140|          53|          38|
+    +-------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+-----+-----------+-----+-----------+
+    |               Name               | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------+-----+-----------+-----+-----------+
+    |DRBG_ctx_Key_ce0                  |    9|          2|    1|          2|
+    |DRBG_ctx_Key_ce1                  |    9|          2|    1|          2|
+    |DRBG_ctx_Key_we0                  |    9|          2|    1|          2|
+    |DRBG_ctx_Key_we1                  |    9|          2|    1|          2|
+    |DRBG_ctx_V_ce0                    |    9|          2|    1|          2|
+    |DRBG_ctx_V_ce1                    |    9|          2|    1|          2|
+    |DRBG_ctx_V_we0                    |    9|          2|    1|          2|
+    |DRBG_ctx_V_we1                    |    9|          2|    1|          2|
+    |DRBG_ctx_reseed_counter_o         |    9|          2|   32|         64|
+    |DRBG_ctx_reseed_counter_o_ap_vld  |    9|          2|    1|          2|
+    |ap_NS_fsm                         |  189|         43|    1|         43|
+    |ap_phi_mux_p_0_phi_fu_1925_p4     |    9|          2|    1|          2|
+    |ap_return_0                       |    9|          2|   32|         64|
+    |ap_return_1                       |    9|          2|    4|          8|
+    |ap_return_2                       |    9|          2|    4|          8|
+    |phi_ln211_1_reg_1899              |    9|          2|    3|          6|
+    |phi_ln211_2_reg_1910              |    9|          2|    3|          6|
+    |phi_ln211_reg_1888                |    9|          2|    3|          6|
+    |pk_ciphertext_address0            |  149|         33|    5|        165|
+    |pk_ciphertext_address1            |  149|         33|    5|        165|
+    |pk_ciphertext_d0                  |   47|         10|    8|         80|
+    |pk_ciphertext_d1                  |   15|          3|    8|         24|
+    |pk_plaintext_address0             |  153|         34|    5|        170|
+    |pk_plaintext_address1             |  153|         34|    5|        170|
+    |pk_plaintext_ce0                  |   15|          3|    1|          3|
+    |pk_plaintext_ce1                  |   15|          3|    1|          3|
+    |pk_plaintext_we0                  |    9|          2|    1|          2|
+    |pk_plaintext_we1                  |    9|          2|    1|          2|
+    |sk_data_address0                  |   89|         18|    5|         90|
+    |sk_data_address1                  |   89|         18|    5|         90|
+    |sk_data_ce0                       |   15|          3|    1|          3|
+    |sk_data_ce1                       |   15|          3|    1|          3|
+    |sk_data_we0                       |    9|          2|    1|          2|
+    |sk_data_we1                       |    9|          2|    1|          2|
+    |sk_pk_ciphertext_address0         |   85|         17|    5|         85|
+    |sk_pk_ciphertext_address1         |   85|         17|    5|         85|
+    |sk_pk_ciphertext_d0               |   47|         10|    8|         80|
+    |sk_pk_ciphertext_d1               |   15|          3|    8|         24|
+    |sk_pk_plaintext_address0          |   85|         17|    5|         85|
+    |sk_pk_plaintext_address1          |   85|         17|    5|         85|
+    |temp2_address0                    |   50|         11|    3|         33|
+    |temp2_ce0                         |   15|          3|    1|          3|
+    |temp2_ce1                         |    9|          2|    1|          2|
+    |temp2_d0                          |   47|         10|   32|        320|
+    |temp3_address0                    |   50|         11|    3|         33|
+    |temp3_ce0                         |   15|          3|    1|          3|
+    |temp3_ce1                         |    9|          2|    1|          2|
+    |temp3_d0                          |   47|         10|   32|        320|
+    |temp_address0                     |   93|         19|    3|         57|
+    |temp_ce0                          |   15|          3|    1|          3|
+    |temp_ce1                          |    9|          2|    1|          2|
+    |temp_d0                           |   50|         11|   32|        352|
+    |temp_we0                          |   15|          3|    1|          3|
+    |temp_we1                          |    9|          2|    1|          2|
+    +----------------------------------+-----+-----------+-----+-----------+
+    |Total                             | 2117|        453|  295|       2778|
+    +----------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                             |  42|   0|   42|          0|
+    |ap_return_0_preg                      |  32|   0|   32|          0|
+    |ap_return_1_preg                      |   4|   0|    4|          0|
+    |ap_return_2_preg                      |   4|   0|    4|          0|
+    |empty_25_reg_2548                     |   1|   0|    1|          0|
+    |grp_LowMCEnc_fu_1948_ap_start_reg     |   1|   0|    1|          0|
+    |grp_randombytes_fu_1933_ap_start_reg  |   1|   0|    1|          0|
+    |p_0_reg_1921                          |   1|   0|    1|          0|
+    |phi_ln211_1_reg_1899                  |   3|   0|    3|          0|
+    |phi_ln211_2_reg_1910                  |   3|   0|    3|          0|
+    |phi_ln211_reg_1888                    |   3|   0|    3|          0|
+    |reg_1993                              |   8|   0|    8|          0|
+    |reg_1997                              |   8|   0|    8|          0|
+    |reg_2001                              |   8|   0|    8|          0|
+    |reg_2005                              |   8|   0|    8|          0|
+    |reg_2009                              |   8|   0|    8|          0|
+    |reg_2013                              |   8|   0|    8|          0|
+    |reg_2017                              |   8|   0|    8|          0|
+    |reg_2023                              |   8|   0|    8|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 159|   0|  159|          0|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                            |  in |    1| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_rst                            |  in |    1| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_start                          |  in |    1| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_done                           | out |    1| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_idle                           | out |    1| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_ready                          | out |    1| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_return_0                       | out |   32| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_return_1                       | out |    4| ap_ctrl_hs |      picnic_keygen      | return value |
+|ap_return_2                       | out |    4| ap_ctrl_hs |      picnic_keygen      | return value |
+|parameters                        |  in |    4|   ap_none  |        parameters       |    scalar    |
+|pk_plaintext_address0             | out |    5|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_ce0                  | out |    1|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_we0                  | out |    1|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_d0                   | out |    8|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_q0                   |  in |    8|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_address1             | out |    5|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_ce1                  | out |    1|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_we1                  | out |    1|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_d1                   | out |    8|  ap_memory |       pk_plaintext      |     array    |
+|pk_plaintext_q1                   |  in |    8|  ap_memory |       pk_plaintext      |     array    |
+|pk_ciphertext_address0            | out |    5|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_ce0                 | out |    1|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_we0                 | out |    1|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_d0                  | out |    8|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_q0                  |  in |    8|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_address1            | out |    5|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_ce1                 | out |    1|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_we1                 | out |    1|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_d1                  | out |    8|  ap_memory |      pk_ciphertext      |     array    |
+|pk_ciphertext_q1                  |  in |    8|  ap_memory |      pk_ciphertext      |     array    |
+|sk_data_address0                  | out |    5|  ap_memory |         sk_data         |     array    |
+|sk_data_ce0                       | out |    1|  ap_memory |         sk_data         |     array    |
+|sk_data_we0                       | out |    1|  ap_memory |         sk_data         |     array    |
+|sk_data_d0                        | out |    8|  ap_memory |         sk_data         |     array    |
+|sk_data_q0                        |  in |    8|  ap_memory |         sk_data         |     array    |
+|sk_data_address1                  | out |    5|  ap_memory |         sk_data         |     array    |
+|sk_data_ce1                       | out |    1|  ap_memory |         sk_data         |     array    |
+|sk_data_we1                       | out |    1|  ap_memory |         sk_data         |     array    |
+|sk_data_d1                        | out |    8|  ap_memory |         sk_data         |     array    |
+|sk_data_q1                        |  in |    8|  ap_memory |         sk_data         |     array    |
+|sk_pk_plaintext_address0          | out |    5|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_ce0               | out |    1|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_we0               | out |    1|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_d0                | out |    8|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_address1          | out |    5|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_ce1               | out |    1|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_we1               | out |    1|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_plaintext_d1                | out |    8|  ap_memory |     sk_pk_plaintext     |     array    |
+|sk_pk_ciphertext_address0         | out |    5|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_ce0              | out |    1|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_we0              | out |    1|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_d0               | out |    8|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_address1         | out |    5|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_ce1              | out |    1|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_we1              | out |    1|  ap_memory |     sk_pk_ciphertext    |     array    |
+|sk_pk_ciphertext_d1               | out |    8|  ap_memory |     sk_pk_ciphertext    |     array    |
+|DRBG_ctx_V_address0               | out |    4|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_ce0                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_we0                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_d0                     | out |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_q0                     |  in |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_address1               | out |    4|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_ce1                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_we1                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_d1                     | out |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_q1                     |  in |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_Key_address0             | out |    5|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_ce0                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_we0                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_d0                   | out |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_q0                   |  in |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_address1             | out |    5|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_ce1                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_we1                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_d1                   | out |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_q1                   |  in |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_reseed_counter_i         |  in |   32|   ap_ovld  | DRBG_ctx_reseed_counter |    pointer   |
+|DRBG_ctx_reseed_counter_o         | out |   32|   ap_ovld  | DRBG_ctx_reseed_counter |    pointer   |
+|DRBG_ctx_reseed_counter_o_ap_vld  | out |    1|   ap_ovld  | DRBG_ctx_reseed_counter |    pointer   |
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+

@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vivado HLS Report for 'ShiftRows'
+================================================================
+* Date:           Sat May  9 23:49:15 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.510 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10| 0.100 us | 0.100 us |   10|   10|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     237|    -|
+|Register         |        -|      -|      75|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      75|     237|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      730|    740|  269200|  134600|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------+----+-----------+-----+-----------+
+    |      Name      | LUT| Input Size| Bits| Total Bits|
+    +----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm       |  53|         12|    1|         12|
+    |reg_146         |   9|          2|    8|         16|
+    |reg_152         |   9|          2|    8|         16|
+    |state_address0  |  53|         12|    4|         48|
+    |state_address1  |  53|         12|    4|         48|
+    |state_d0        |  27|          5|    8|         40|
+    |state_d1        |  33|          6|    8|         48|
+    +----------------+----+-----------+-----+-----------+
+    |Total           | 237|         51|   41|        228|
+    +----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+----+----+-----+-----------+
+    |         Name         | FF | LUT| Bits| Const Bits|
+    +----------------------+----+----+-----+-----------+
+    |ap_CS_fsm             |  11|   0|   11|          0|
+    |reg_146               |   8|   0|    8|          0|
+    |reg_152               |   8|   0|    8|          0|
+    |state_load_2_reg_190  |   8|   0|    8|          0|
+    |state_load_4_reg_212  |   8|   0|    8|          0|
+    |state_load_6_reg_234  |   8|   0|    8|          0|
+    |state_load_8_reg_250  |   8|   0|    8|          0|
+    |temp_1_reg_207        |   8|   0|    8|          0|
+    |temp_2_reg_229        |   8|   0|    8|          0|
+    +----------------------+----+----+-----+-----------+
+    |Total                 |  75|   0|   75|          0|
+    +----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------+-----+-----+------------+--------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs |   ShiftRows  | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs |   ShiftRows  | return value |
+|ap_start        |  in |    1| ap_ctrl_hs |   ShiftRows  | return value |
+|ap_done         | out |    1| ap_ctrl_hs |   ShiftRows  | return value |
+|ap_idle         | out |    1| ap_ctrl_hs |   ShiftRows  | return value |
+|ap_ready        | out |    1| ap_ctrl_hs |   ShiftRows  | return value |
+|state_address0  | out |    4|  ap_memory |     state    |     array    |
+|state_ce0       | out |    1|  ap_memory |     state    |     array    |
+|state_we0       | out |    1|  ap_memory |     state    |     array    |
+|state_d0        | out |    8|  ap_memory |     state    |     array    |
+|state_q0        |  in |    8|  ap_memory |     state    |     array    |
+|state_address1  | out |    4|  ap_memory |     state    |     array    |
+|state_ce1       | out |    1|  ap_memory |     state    |     array    |
+|state_we1       | out |    1|  ap_memory |     state    |     array    |
+|state_d1        | out |    8|  ap_memory |     state    |     array    |
+|state_q1        |  in |    8|  ap_memory |     state    |     array    |
++----------------+-----+-----+------------+--------------+--------------+
+

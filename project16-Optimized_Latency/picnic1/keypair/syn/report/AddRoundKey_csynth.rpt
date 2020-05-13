@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vivado HLS Report for 'AddRoundKey'
+================================================================
+* Date:           Sat May  9 23:49:14 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.572 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       17|       17| 0.170 us | 0.170 us |   17|   17|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- AddRoundKey_label0  |       16|       16|         4|          -|          -|     4|    no    |
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      76|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     126|    -|
+|Register         |        -|      -|      44|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      44|     202|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      730|    740|  269200|  134600|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |i_fu_173_p2           |     +    |      0|  0|  12|           3|           1|
+    |icmp_ln248_fu_167_p2  |   icmp   |      0|  0|   9|           3|           4|
+    |or_ln253_1_fu_268_p2  |    or    |      0|  0|   8|           2|           8|
+    |or_ln253_2_fu_278_p2  |    or    |      0|  0|   8|           2|           8|
+    |or_ln253_3_fu_196_p2  |    or    |      0|  0|   5|           5|           1|
+    |or_ln253_4_fu_240_p2  |    or    |      0|  0|   5|           5|           2|
+    |or_ln253_5_fu_254_p2  |    or    |      0|  0|   5|           5|           2|
+    |or_ln253_fu_229_p2    |    or    |      0|  0|   8|           1|           8|
+    |grp_fu_145_p2         |    xor   |      0|  0|   8|           8|           8|
+    |grp_fu_151_p2         |    xor   |      0|  0|   8|           8|           8|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0|  76|          42|          50|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |RoundKey_address0  |  15|          3|    8|         24|
+    |RoundKey_address1  |  15|          3|    8|         24|
+    |ap_NS_fsm          |  33|          6|    1|          6|
+    |i_0_reg_134        |   9|          2|    3|          6|
+    |state_address0     |  27|          5|    4|         20|
+    |state_address1     |  27|          5|    4|         20|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 126|         24|   28|        100|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+---+----+-----+-----------+
+    |         Name         | FF| LUT| Bits| Const Bits|
+    +----------------------+---+----+-----+-----------+
+    |add_ln_reg_317        |  6|   0|    8|          2|
+    |ap_CS_fsm             |  5|   0|    5|          0|
+    |i_0_reg_134           |  3|   0|    3|          0|
+    |i_reg_296             |  3|   0|    3|          0|
+    |reg_157               |  8|   0|    8|          0|
+    |reg_162               |  8|   0|    8|          0|
+    |state_addr_1_reg_312  |  2|   0|    4|          2|
+    |state_addr_2_reg_333  |  2|   0|    4|          2|
+    |state_addr_3_reg_338  |  2|   0|    4|          2|
+    |state_addr_reg_307    |  2|   0|    4|          2|
+    |tmp_s_reg_301         |  3|   0|    5|          2|
+    +----------------------+---+----+-----+-----------+
+    |Total                 | 44|   0|   56|         12|
+    +----------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |  AddRoundKey | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |  AddRoundKey | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |  AddRoundKey | return value |
+|ap_done            | out |    1| ap_ctrl_hs |  AddRoundKey | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |  AddRoundKey | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |  AddRoundKey | return value |
+|round              |  in |    5|   ap_none  |     round    |    scalar    |
+|state_address0     | out |    4|  ap_memory |     state    |     array    |
+|state_ce0          | out |    1|  ap_memory |     state    |     array    |
+|state_we0          | out |    1|  ap_memory |     state    |     array    |
+|state_d0           | out |    8|  ap_memory |     state    |     array    |
+|state_q0           |  in |    8|  ap_memory |     state    |     array    |
+|state_address1     | out |    4|  ap_memory |     state    |     array    |
+|state_ce1          | out |    1|  ap_memory |     state    |     array    |
+|state_we1          | out |    1|  ap_memory |     state    |     array    |
+|state_d1           | out |    8|  ap_memory |     state    |     array    |
+|state_q1           |  in |    8|  ap_memory |     state    |     array    |
+|RoundKey_address0  | out |    8|  ap_memory |   RoundKey   |     array    |
+|RoundKey_ce0       | out |    1|  ap_memory |   RoundKey   |     array    |
+|RoundKey_q0        |  in |    8|  ap_memory |   RoundKey   |     array    |
+|RoundKey_address1  | out |    8|  ap_memory |   RoundKey   |     array    |
+|RoundKey_ce1       | out |    1|  ap_memory |   RoundKey   |     array    |
+|RoundKey_q1        |  in |    8|  ap_memory |   RoundKey   |     array    |
++-------------------+-----+-----+------------+--------------+--------------+
+
