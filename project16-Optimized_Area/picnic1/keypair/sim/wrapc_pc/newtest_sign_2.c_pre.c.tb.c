@@ -2,14 +2,14 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
 
 
 
@@ -517,7 +517,7 @@ const char *__mingw_get_crt_info (void);
 
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 9 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
+# 9 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 
 
@@ -1057,7 +1057,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 205 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 #pragma pack(pop)
 # 630 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
-# 10 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
+# 10 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 
 
@@ -1222,7 +1222,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 11 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
+# 11 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 1 3
 
 
@@ -1334,9 +1334,9 @@ int __cdecl isblank(int _C);
 
 
 int __cdecl iswblank(wint_t _C);
-# 12 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h" 1
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h"
+# 12 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h" 1
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h"
 typedef struct {
     unsigned char buffer[16];
     int buffer_pos;
@@ -1376,9 +1376,9 @@ randombytes(unsigned char *x, unsigned long long xlen);
 
 int
 randombytes_sign(unsigned char *x, unsigned long long xlen);
-# 13 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.h" 1
-# 27 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.h"
+# 13 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.h" 1
+# 27 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.h"
 int
 crypto_sign_keypair(unsigned char *pk, unsigned char *sk);
 
@@ -1391,8 +1391,8 @@ int
 crypto_sign_open(unsigned char *m, unsigned long long *mlen,
                  const unsigned char *sm, unsigned long long smlen,
                  const unsigned char *pk);
-# 14 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c" 2
-# 29 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 14 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c" 2
+# 29 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
 int FindMarker(FILE *infile, const char *marker);
 int ReadHex(FILE *infile, unsigned char *A, int Length, char *str);
 void fprintBstr(FILE *fp, char *S, unsigned char *A, unsigned long long L);
@@ -1408,7 +1408,7 @@ int isxdigit2(int ch) {
 #ifndef HLS_FASTSIM
 #include "apatb_crypto_sign_keypair.h"
 #endif
-# 40 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 40 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
 int
 main()
 {
@@ -1500,10 +1500,10 @@ main()
 #ifndef HLS_FASTSIM
 #define crypto_sign_keypair AESL_WRAP_crypto_sign_keypair
 #endif
-# 127 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 127 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
 crypto_sign_keypair(pk, sk))
 #undef crypto_sign_keypair
-# 127 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 127 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
  != 0) {
             printf("crypto_sign_keypair returned <%d>\n", ret_val);
 
@@ -1524,7 +1524,7 @@ crypto_sign_keypair(pk, sk))
      printf("ERR: pk is different from <%s>\n", fn_rsp);
 
  }
-# 155 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 155 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
         if(memcmp(sk,sk_rsp,49)!=0){
      printf("ERROR: sk is different from <%s>\n", fn_rsp);
 
@@ -1553,7 +1553,7 @@ crypto_sign_keypair(pk, sk))
             printf("ERROR: unable to read 'sm' from <%s>\n", fn_rsp);
             return -3;
         }
-# 200 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 200 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
     if(memcmp(sm,sm_rsp,smlen)!=0){
          for(loop=0;loop<smlen;loop++) {
 
@@ -1596,7 +1596,7 @@ crypto_sign_keypair(pk, sk))
     return 0;
 }
 #endif
-# 240 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/newtest_sign_2.c"
+# 240 "C:/picnic_keypair_16-master/project16-Optimized_Area/newtest_sign_2.c"
 
 
 

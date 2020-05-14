@@ -2,15 +2,15 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\assert.h" 1 3
 # 15 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\assert.h" 3
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
@@ -177,7 +177,7 @@ extern void __cdecl
 _wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
 extern void __cdecl
 _assert (const char *_Message, const char *_File, unsigned _Line);
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 
 
@@ -536,7 +536,7 @@ _assert (const char *_Message, const char *_File, unsigned _Line);
 
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 
 
@@ -1064,7 +1064,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 205 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 #pragma pack(pop)
 # 630 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 
 
@@ -1229,9 +1229,9 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/brg_endian.h" 1
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/brg_endian.h" 1
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c" 2
 
 
 
@@ -1239,7 +1239,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 typedef unsigned char UINT8;
 typedef unsigned long long UINT64;
 typedef UINT64 tKeccakLane;
-# 98 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 98 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
 static const tKeccakLane KeccakRoundConstants[24] =
 {
     0x0000000000000001,
@@ -1290,7 +1290,7 @@ void KeccakP1600_Initialize(unsigned char *state)
 
 void KeccakP1600_AddByte(unsigned char *state, unsigned char byte, unsigned int offset)
 {
-    (void) ((!!(offset < 200)) || (_assert("offset < 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",148),0));
+    (void) ((!!(offset < 200)) || (_assert("offset < 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",148),0));
     state[offset] ^= byte;
 }
 
@@ -1310,8 +1310,8 @@ void KeccakP1600_AddBytes(unsigned char *state, const unsigned char *data, unsig
 
 void KeccakP1600_OverwriteBytes(unsigned char *state, const unsigned char *data, unsigned int offset, unsigned int length)
 {
-    (void) ((!!(offset < 200)) || (_assert("offset < 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",168),0));
-    (void) ((!!(offset+length <= 200)) || (_assert("offset+length <= 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",169),0));
+    (void) ((!!(offset < 200)) || (_assert("offset < 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",168),0));
+    (void) ((!!(offset+length <= 200)) || (_assert("offset+length <= 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",169),0));
     memcpy(state+offset, data, length);
 }
 
@@ -1319,7 +1319,7 @@ void KeccakP1600_OverwriteBytes(unsigned char *state, const unsigned char *data,
 
 void KeccakP1600_OverwriteWithZeroes(unsigned char *state, unsigned int byteCount)
 {
-    (void) ((!!(byteCount <= 200)) || (_assert("byteCount <= 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",177),0));
+    (void) ((!!(byteCount <= 200)) || (_assert("byteCount <= 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",177),0));
     memset(state, 0, byteCount);
 }
 
@@ -1337,16 +1337,16 @@ static void iota(tKeccakLane *A, unsigned int indexRound);
 
 void KeccakP1600_Permute_Nrounds(unsigned char *state, unsigned int nrounds)
 {
-# 203 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 203 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
     KeccakP1600OnWords((tKeccakLane*)state, nrounds);
-# 212 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 212 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
 }
 
 void KeccakP1600_Permute_12rounds(unsigned char *state)
 {
-# 224 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 224 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
     KeccakP1600OnWords((tKeccakLane*)state, 12);
-# 233 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 233 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
 }
 
 void KeccakP1600_Permute_24rounds(unsigned char *state)
@@ -1355,7 +1355,7 @@ void KeccakP1600_Permute_24rounds(unsigned char *state)
     int loop = 0;
 
     tKeccakLane stateAsWords[1600/64];
-# 256 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c"
+# 256 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c"
     fromBytesToWords(stateAsWords, state);
     KeccakP1600OnWords(stateAsWords, 24);
     fromWordsToBytes(state, stateAsWords);
@@ -1489,8 +1489,8 @@ static void iota(tKeccakLane *A, unsigned int indexRound)
 
 void KeccakP1600_ExtractBytes(const unsigned char *state, unsigned char *data, unsigned int offset, unsigned int length)
 {
-    (void) ((!!(offset < 200)) || (_assert("offset < 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",389),0));
-    (void) ((!!(offset+length <= 200)) || (_assert("offset+length <= 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",390),0));
+    (void) ((!!(offset < 200)) || (_assert("offset < 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",389),0));
+    (void) ((!!(offset+length <= 200)) || (_assert("offset+length <= 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",390),0));
 
     int loop;
     for(loop=0;loop<length;loop++)
@@ -1503,8 +1503,8 @@ void KeccakP1600_ExtractAndAddBytes(const unsigned char *state, const unsigned c
 {
     unsigned int i;
 
-    (void) ((!!(offset < 200)) || (_assert("offset < 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",403),0));
-    (void) ((!!(offset+length <= 200)) || (_assert("offset+length <= 200","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c",404),0));
+    (void) ((!!(offset < 200)) || (_assert("offset < 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",403),0));
+    (void) ((!!(offset+length <= 200)) || (_assert("offset+length <= 200","C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c",404),0));
     for(i=0; i<length; i++)
         output[i] = input[i] ^ (state)[offset+i];
 }

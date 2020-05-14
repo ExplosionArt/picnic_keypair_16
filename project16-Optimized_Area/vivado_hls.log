@@ -1,479 +1,398 @@
 INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Wed May 13 21:28:02 +0530 2020
-INFO: [HLS 200-10] In directory 'D:/VLSI_Optimized_Models/project16-master-Optimized_Area'
-Sourcing Tcl script 'D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic1/keypair/csynth.tcl'
-INFO: [HLS 200-10] Opening project 'D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic1'.
-INFO: [HLS 200-10] Adding design file 'sha3/KeccakHash.c' to the project
-INFO: [HLS 200-10] Adding design file 'sha3/KeccakP-1600-reference.c' to the project
-INFO: [HLS 200-10] Adding design file 'sha3/KeccakSpongeWidth1600.c' to the project
-INFO: [HLS 200-10] Adding design file 'NIST-KATs/aes.c' to the project
-INFO: [HLS 200-10] Adding design file 'api.c' to the project
-INFO: [HLS 200-10] Adding design file 'hash.c' to the project
-INFO: [HLS 200-10] Adding design file 'lowmc_constants.c' to the project
-INFO: [HLS 200-10] Adding design file 'picnic.c' to the project
-INFO: [HLS 200-10] Adding design file 'picnic2_impl.c' to the project
-INFO: [HLS 200-10] Adding design file 'picnic_impl.c' to the project
-INFO: [HLS 200-10] Adding design file 'picnic_types.c' to the project
-INFO: [HLS 200-10] Adding design file 'NIST-KATs/rng.c' to the project
-INFO: [HLS 200-10] Adding design file 'tree.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'newtest_sign_2.c' to the project
-INFO: [HLS 200-10] Opening solution 'D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic1/keypair'.
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:24:49 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area'
+Sourcing Tcl script 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/cosim.tcl'
+INFO: [HLS 200-10] Opening project 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1'.
+INFO: [HLS 200-10] Opening solution 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a200t-fbg676-2'
 INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
 INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
 INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
 INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=0
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
-INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
-INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
-INFO: [HLS 200-10] Analyzing design file 'tree.c' ... 
-WARNING: [HLS 200-40] In file included from tree.c:1:
-tree.c:221:24: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
-        printf("seed %lu", i);
-                     ~~^   ~
-                     %llu
-1 warning generated.
-INFO: [HLS 200-10] Analyzing design file 'NIST-KATs/rng.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'picnic_types.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'picnic_impl.c' ... 
-WARNING: [HLS 200-40] In file included from picnic_impl.c:1:
-picnic_impl.c:693:16: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'void *' [-Wint-conversion]
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx_Vivado/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_crypto_sign_keypair.cpp
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:16 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) hash.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:20 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) api.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:23 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lowmc_constants.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:28 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) KeccakP-1600-reference.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:32 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) newtest_sign_2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:35 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic_impl.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:38 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.c:693:16: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'void *' [-Wint-conversion]
         memcpy(proof->view3UnruhG, gs->G[(challenge + 2) % 3], view3UnruhLength);
                ^~~~~~~~~~~~~~~~~~
-D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:41:37: note: passing argument to parameter '_Dst' here
-  void * memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
-                                    ^
-In file included from picnic_impl.c:1:
-picnic_impl.c:1641:12: warning: incompatible pointer types returning 'seeds_2t *' (aka 'struct seeds_2t *') from a function with result type 'seeds_t *' (aka 'struct seeds_t *') [-Wincompatible-pointer-types]
+D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:41:44: note: passing argument to parameter '_Dst' here
+  void *__cdecl memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                           ^
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.c:1641:12: warning: incompatible pointer types returning 'seeds_2t *' (aka 'struct seeds_2t *') from a function with result type 'seeds_t *' (aka 'struct seeds_t *') [-Wincompatible-pointer-types]
     return allSeeds;
            ^~~~~~~~
 2 warnings generated.
-INFO: [HLS 200-10] Analyzing design file 'picnic2_impl.c' ... 
-WARNING: [HLS 200-40] In file included from picnic2_impl.c:1:
-picnic2_impl.c:749:65: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) KeccakHash.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:45 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) rng.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:48 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic2_impl.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:52 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.c:749:65: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
                 printf("Failed to reconstruct seeds for round %lu\n", t);
                                                               ~~^     ~
                                                               %llu
-picnic2_impl.c:818:59: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.c:818:59: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
                 printf("MPC simulation failed for round %lu, signature invalid\n", t);
                                                         ~~^                        ~
                                                         %llu
-picnic2_impl.c:1140:37: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.c:1140:37: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
         printf("%s: sigBytesLen = %lu, expected bytesRequired = %lu\n", __func__, sigBytesLen, bytesRequired);
                                   ~~^                                             ~~~~~~~~~~~
                                   %llu
-picnic2_impl.c:1140:67: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.c:1140:67: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
         printf("%s: sigBytesLen = %lu, expected bytesRequired = %lu\n", __func__, sigBytesLen, bytesRequired);
                                                                 ~~^                            ~~~~~~~~~~~~~
                                                                 %llu
 4 warnings generated.
-INFO: [HLS 200-10] Analyzing design file 'picnic.c' ... 
-WARNING: [HLS 200-40] In file included from picnic.c:1:
-picnic.c:756:20: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'void *' [-Wint-conversion]
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:25:57 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.c:756:20: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'void *' [-Wint-conversion]
             memcpy(proofs[i].view3UnruhG, sigBytes, view3UnruhLength);
                    ^~~~~~~~~~~~~~~~~~~~~
-D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\memory.h:28:37: note: passing argument to parameter '_Dst' here
-  void * memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
-                                    ^
-In file included from picnic.c:1:
-picnic.c:759:29: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'const uint8_t *' (aka 'const unsigned char *'); take the address with & [-Wint-conversion]
+D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\memory.h:28:44: note: passing argument to parameter '_Dst' here
+  void *__cdecl memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                           ^
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.c:759:29: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'const uint8_t *' (aka 'const unsigned char *'); take the address with & [-Wint-conversion]
             printHex(label, proofs[i].view3UnruhG, view3UnruhLength);
                             ^~~~~~~~~~~~~~~~~~~~~
                             &
-./picnic_impl.h:88:45: note: passing argument to parameter 'data' here
+C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h:88:45: note: passing argument to parameter 'data' here
 void printHex(const char* s, const uint8_t* data, size_t len);
                                             ^
 2 warnings generated.
-INFO: [HLS 200-10] Analyzing design file 'lowmc_constants.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'hash.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'api.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'NIST-KATs/aes.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'sha3/KeccakSpongeWidth1600.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'sha3/KeccakP-1600-reference.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'sha3/KeccakHash.c' ... 
-WARNING: [HLS 200-40] In file included from sha3/KeccakHash.c:1:
-sha3/KeccakHash.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic_types.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:26:00 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) tree.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:26:04 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c:1:
+C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c:221:24: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+        printf("seed %lu", i);
+                     ~~^   ~
+                     %llu
 1 warning generated.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:46 . Memory (MB): peak = 209.340 ; gain = 119.000
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:46 . Memory (MB): peak = 209.340 ; gain = 119.000
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:46 . Memory (MB): peak = 209.340 ; gain = 119.000
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'numBytes' into 'get_param_set' (picnic.c:92) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_transform' into 'get_param_set' (picnic.c:154) automatically.
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (NIST-KATs/aes.c:329) automatically.
-INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (NIST-KATs/aes.c:439) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_init_ctx' into 'AES256_ECB.1' (NIST-KATs/rng.c:152) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_ECB_encrypt' into 'AES256_ECB.1' (NIST-KATs/rng.c:188) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_init_ctx' into 'AES256_ECB' (NIST-KATs/rng.c:152) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_ECB_encrypt' into 'AES256_ECB' (NIST-KATs/rng.c:188) automatically.
-INFO: [XFORM 203-602] Inlining function 'parity' into 'matrix_mul.1' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBit.1' into 'matrix_mul.1' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'parity' into 'matrix_mul' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBit.1' into 'matrix_mul' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'xor_array' into 'LowMCEnc' (picnic_impl.c:175) automatically.
-INFO: [XFORM 203-602] Inlining function 'getBit' into 'LowMCEnc' (picnic_impl.c:200) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBit' into 'LowMCEnc' (picnic_impl.c:204) automatically.
-INFO: [XFORM 203-602] Inlining function 'xor_array.1' into 'LowMCEnc' (picnic_impl.c:226) automatically.
-INFO: [XFORM 203-602] Inlining function 'is_valid_params' into 'picnic_keygen' (picnic.c:169) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_param_set' into 'picnic_keygen' (picnic.c:188) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_param_set' into 'picnic_write_public_key' (picnic.c:524) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_param_set' into 'picnic_write_private_key' (picnic.c:596) automatically.
-WARNING: [SYNCHK 200-23] picnic_impl.c:68: variable-indexed range selection may cause suboptimal QoR.
-INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:47 . Memory (MB): peak = 209.340 ; gain = 119.000
-INFO: [XFORM 203-102] Automatically partitioning small array 'tempa' (NIST-KATs/aes.c:155) completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'tempa' (NIST-KATs/aes.c:155) in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'numBytes' into 'get_param_set' (picnic.c:150) automatically.
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (NIST-KATs/aes.c:329) automatically.
-INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (NIST-KATs/aes.c:439) automatically.
-INFO: [XFORM 203-602] Inlining function 'MixColumns' into 'Cipher' (NIST-KATs/aes.c:440) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_init_ctx' into 'AES256_ECB.1' (NIST-KATs/rng.c:152) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_ECB_encrypt' into 'AES256_ECB.1' (NIST-KATs/rng.c:188) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_init_ctx' into 'AES256_ECB' (NIST-KATs/rng.c:152) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_ECB_encrypt' into 'AES256_ECB' (NIST-KATs/rng.c:188) automatically.
-INFO: [XFORM 203-602] Inlining function 'parity' into 'matrix_mul.1' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBit.1' into 'matrix_mul.1' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'parity' into 'matrix_mul' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBit.1' into 'matrix_mul' (picnic_impl.c:136) automatically.
-INFO: [XFORM 203-602] Inlining function 'xor_array' into 'LowMCEnc' (picnic_impl.c:175) automatically.
-INFO: [XFORM 203-602] Inlining function 'getBit' into 'LowMCEnc' (picnic_impl.c:200) automatically.
-INFO: [XFORM 203-602] Inlining function 'setBit' into 'LowMCEnc' (picnic_impl.c:204) automatically.
-INFO: [XFORM 203-602] Inlining function 'xor_array.1' into 'LowMCEnc' (picnic_impl.c:226) automatically.
-INFO: [XFORM 203-602] Inlining function 'is_valid_params' into 'picnic_keygen' (picnic.c:169) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_param_set' into 'picnic_keygen' (picnic.c:188) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_param_set' into 'picnic_write_public_key' (picnic.c:524) automatically.
-INFO: [XFORM 203-602] Inlining function 'get_param_set' into 'picnic_write_private_key' (picnic.c:596) automatically.
-INFO: [XFORM 203-602] Inlining function 'picnic_write_public_key' into 'crypto_sign_keypair' (api.c:70) automatically.
-INFO: [XFORM 203-602] Inlining function 'picnic_write_private_key' into 'crypto_sign_keypair' (api.c:75) automatically.
-INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mul.1' (picnic_impl.c:68:71)...5 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mul' (picnic_impl.c:117)...5 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'Cipher' (NIST-KATs/aes.c:426)...9 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:48 . Memory (MB): peak = 209.340 ; gain = 119.000
-INFO: [HLS 200-472] Inferring partial write operation for 'DRBG_ctx.V' (NIST-KATs/rng.c:250:17)
-INFO: [HLS 200-472] Inferring partial write operation for 'DRBG_ctx.V' (NIST-KATs/rng.c:252:17)
-INFO: [HLS 200-472] Inferring partial write operation for 'x' (NIST-KATs/rng.c:270:11)
-INFO: [HLS 200-472] Inferring partial write operation for 'DRBG_ctx.V' (NIST-KATs/rng.c:293:21)
-INFO: [HLS 200-472] Inferring partial write operation for 'DRBG_ctx.V' (NIST-KATs/rng.c:295:21)
-INFO: [HLS 200-472] Inferring partial write operation for 'DRBG_ctx.Key' (NIST-KATs/rng.c:307:10)
-INFO: [HLS 200-472] Inferring partial write operation for 'DRBG_ctx.V' (NIST-KATs/rng.c:309:10)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic.c:210:68)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic.c:213:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp2' (picnic.c:214:7)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp3' (picnic.c:215:7)
-INFO: [HLS 200-472] Inferring partial write operation for 'pk.ciphertext' (picnic.c:223:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic.c:224:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'sk.pk.ciphertext' (picnic.c:231:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'sk.pk.plaintext' (picnic.c:232:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'prod' (picnic_impl.c:134:13)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic_impl.c:68:5)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:141:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:279:7)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:170:10)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:112:9)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic_impl.c:191:10)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:192:10)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic_impl.c:68:5)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic_impl.c:68:5)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (picnic_impl.c:68:5)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:220:10)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:112:9)
-INFO: [HLS 200-472] Inferring partial write operation for 'output' (picnic_impl.c:112:9)
-INFO: [HLS 200-472] Inferring partial write operation for 'RoundKey' (NIST-KATs/aes.c:162:5)
-INFO: [HLS 200-472] Inferring partial write operation for 'RoundKey' (NIST-KATs/aes.c:231:6)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:293:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:294:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:295:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:296:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:300:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:301:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:304:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:305:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:309:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:310:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:311:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:312:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:329:60)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:330:60)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:331:60)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:332:47)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:293:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:294:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:295:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:296:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:300:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:301:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:304:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:305:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:309:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:310:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:311:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:312:3)
-INFO: [HLS 200-472] Inferring partial write operation for 'state' (NIST-KATs/aes.c:265:7)
-INFO: [HLS 200-472] Inferring partial write operation for 'test' (NIST-KATs/rng.c:168:7)
-INFO: [HLS 200-472] Inferring partial write operation for 'buffer' (NIST-KATs/rng.c:195:4)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:49 . Memory (MB): peak = 302.867 ; gain = 212.527
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'crypto_sign_keypair' ...
-WARNING: [SYN 201-103] Legalizing function name 'AES256_ECB.1' to 'AES256_ECB_1'.
-WARNING: [SYN 201-103] Legalizing function name 'matrix_mul.1' to 'matrix_mul_1'.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 49.404 seconds; current allocated memory: 242.431 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.165 seconds; current allocated memory: 243.083 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 243.202 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.099 seconds; current allocated memory: 243.325 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'SubBytes' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.115 seconds; current allocated memory: 243.393 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 243.494 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Cipher' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 243.834 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.244 seconds; current allocated memory: 244.252 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AES256_ECB_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.218 seconds; current allocated memory: 244.428 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.177 seconds; current allocated memory: 244.656 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AES256_ECB' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 244.869 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 245.143 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'randombytes' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 245.427 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.237 seconds; current allocated memory: 245.762 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'matrix_mul_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.336 seconds; current allocated memory: 246.283 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 246.761 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'matrix_mul' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.248 seconds; current allocated memory: 247.146 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 247.623 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'LowMCEnc' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 248.081 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.261 seconds; current allocated memory: 248.656 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'picnic_keygen' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.351 seconds; current allocated memory: 249.149 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.475 seconds; current allocated memory: 249.889 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'crypto_sign_keypair' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 250.380 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.261 seconds; current allocated memory: 250.730 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'crypto_sign_keypair_mux_42_8_1_1' to 'crypto_sign_keypabkb' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'crypto_sign_keypabkb': 3 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'KeyExpansion'.
-INFO: [HLS 200-111]  Elapsed time: 0.501 seconds; current allocated memory: 251.914 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
-INFO: [HLS 200-111]  Elapsed time: 0.361 seconds; current allocated memory: 252.286 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'SubBytes' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'SubBytes'.
-INFO: [HLS 200-111]  Elapsed time: 0.178 seconds; current allocated memory: 252.502 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Cipher'.
-INFO: [HLS 200-111]  Elapsed time: 0.237 seconds; current allocated memory: 253.378 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AES256_ECB_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'AES256_ECB_1_ctx_RoundKey' to 'AES256_ECB_1_ctx_cud' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AES256_ECB_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.378 seconds; current allocated memory: 253.936 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AES256_ECB' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'AES256_ECB_ctx_RoundKey' to 'AES256_ECB_ctx_RodEe' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AES256_ECB'.
-INFO: [HLS 200-111]  Elapsed time: 0.316 seconds; current allocated memory: 254.588 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'randombytes' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'randombytes'.
-INFO: [HLS 200-111]  Elapsed time: 0.319 seconds; current allocated memory: 255.270 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mul_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'matrix_mul_1_temp_matrix' to 'matrix_mul_1_tempeOg' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mul_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.485 seconds; current allocated memory: 256.326 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mul' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'matrix_mul_temp_matrix2' to 'matrix_mul_temp_mfYi' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mul'.
-INFO: [HLS 200-111]  Elapsed time: 0.484 seconds; current allocated memory: 257.349 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'LowMCEnc' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'LowMCEnc_temp_matrix3' to 'LowMCEnc_temp_matg8j' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'LowMCEnc'.
-INFO: [HLS 200-111]  Elapsed time: 0.457 seconds; current allocated memory: 258.638 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'picnic_keygen' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'picnic_keygen'.
-INFO: [HLS 200-111]  Elapsed time: 0.595 seconds; current allocated memory: 259.948 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'crypto_sign_keypair' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_sign_keypair/pk' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_sign_keypair/sk' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_sign_keypair/params' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_sign_keypair/DRBG_ctx_V' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_sign_keypair/DRBG_ctx_Key' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_sign_keypair/DRBG_ctx_reseed_counter' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_sign_keypair' to 'ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] Global scalar 'params' will be exposed as RTL port.
-WARNING: [RTGEN 206-101] Global array 'DRBG_ctx_V' will be exposed as RTL port.
-WARNING: [RTGEN 206-101] Global array 'DRBG_ctx_Key' will be exposed as RTL port.
-WARNING: [RTGEN 206-101] Global scalar 'DRBG_ctx_reseed_counter' will be exposed as RTL port.
-WARNING: [RTGEN 206-101] Global array 'temp_matrix' will not be exposed as RTL port.
-WARNING: [RTGEN 206-101] Global array 'temp_matrix2' will not be exposed as RTL port.
-WARNING: [RTGEN 206-101] Global array 'temp_matrix3' will not be exposed as RTL port.
-INFO: [SYN 201-210] Renamed object name 'crypto_sign_keypair_pubkey_plaintext' to 'crypto_sign_keypahbi' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'crypto_sign_keypair_pubkey_ciphertext' to 'crypto_sign_keypaibs' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'crypto_sign_keypair_secret_data' to 'crypto_sign_keypajbC' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'crypto_sign_keypair_secret_pk_plaintext' to 'crypto_sign_keypakbM' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'crypto_sign_keypair_secret_pk_ciphertext' to 'crypto_sign_keypalbW' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_sign_keypair'.
-INFO: [HLS 200-111]  Elapsed time: 0.917 seconds; current allocated memory: 261.164 MB.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 119.53 MHz
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_rom' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_Rcon_rom' using distributed ROMs.
-INFO: [RTMG 210-278] Implementing memory 'AES256_ECB_1_ctx_cud_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-278] Implementing memory 'AES256_ECB_1_test_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-278] Implementing memory 'AES256_ECB_ctx_RodEe_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-278] Implementing memory 'randombytes_block_ram (RAM)' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'randombytes_temp_ram (RAM)' using distributed RAMs.
-INFO: [RTMG 210-279] Implementing memory 'matrix_mul_1_tempeOg_rom' using auto ROMs.
-INFO: [RTMG 210-278] Implementing memory 'matrix_mul_1_prod_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-278] Implementing memory 'matrix_mul_1_temp_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-279] Implementing memory 'matrix_mul_temp_mfYi_rom' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'LowMCEnc_temp_matg8j_rom' using auto ROMs.
-INFO: [RTMG 210-278] Implementing memory 'LowMCEnc_roundKey_ram (RAM)' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'LowMCEnc_temp_ram (RAM)' using block RAMs.
-INFO: [RTMG 210-278] Implementing memory 'picnic_keygen_temp_ram (RAM)' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'crypto_sign_keypahbi_ram (RAM)' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'crypto_sign_keypakbM_ram (RAM)' using distributed RAMs.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:01:05 . Memory (MB): peak = 357.152 ; gain = 266.813
-INFO: [VHDL 208-304] Generating VHDL RTL for crypto_sign_keypair.
-INFO: [VLOG 209-307] Generating Verilog RTL for crypto_sign_keypair.
-INFO: [HLS 200-112] Total elapsed time: 65.083 seconds; peak allocated memory: 261.164 MB.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) KeccakSpongeWidth1600.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Thu May 14 22:26:07 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Num bytes = 55
+Known Answer Tests PASSED. 
+
+
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\picnic_keypair_16-master\project16-Optimized_Area\picnic1\keypair\sim\verilog>set PATH= 
+
+C:\picnic_keypair_16-master\project16-Optimized_Area\picnic1\keypair\sim\verilog>call D:/Xilinx_Vivado/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_crypto_sign_keypair_top glbl -prj crypto_sign_keypair.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx_Vivado/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s crypto_sign_keypair  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx_Vivado/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_crypto_sign_keypair_top glbl -prj crypto_sign_keypair.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx_Vivado/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_sign_keypair 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AddRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddRoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AES256_ECB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AES256_ECB_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AES256_ECB_1_ctx_cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_cud_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AES256_ECB_1_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AES256_ECB_ctx_RodEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_RodEe_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_RodEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AESL_automem_DRBG_ctx_Key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_Key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AESL_automem_DRBG_ctx_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AESL_automem_pk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_pk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/Cipher.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/crypto_sign_keypabkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypabkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/crypto_sign_keypahbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypahbi_ram
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypahbi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/crypto_sign_keypair.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_sign_keypair_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/crypto_sign_keypair.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypair
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/crypto_sign_keypakbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypakbM_ram
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypakbM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/KeyExpansion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/KeyExpansion_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/LowMCEnc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/LowMCEnc_roundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc_roundKey_ram
+INFO: [VRFC 10-311] analyzing module LowMCEnc_roundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/LowMCEnc_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp_ram
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/LowMCEnc_temp_matg8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp_matg8j_rom
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp_matg8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/matrix_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/matrix_mul_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/matrix_mul_1_prod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_prod_ram
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_prod
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/matrix_mul_1_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_temp_ram
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/matrix_mul_1_tempeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_tempeOg_rom
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_tempeOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/matrix_mul_temp_mfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_temp_mfYi_rom
+INFO: [VRFC 10-311] analyzing module matrix_mul_temp_mfYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/picnic_keygen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module picnic_keygen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/picnic_keygen_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module picnic_keygen_temp_ram
+INFO: [VRFC 10-311] analyzing module picnic_keygen_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/randombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/randombytes_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_block_ram
+INFO: [VRFC 10-311] analyzing module randombytes_block
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/randombytes_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_temp_ram
+INFO: [VRFC 10-311] analyzing module randombytes_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/SubBytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_sign_keypahbi_ram
+Compiling module xil_defaultlib.crypto_sign_keypahbi(DataWidth=8...
+Compiling module xil_defaultlib.crypto_sign_keypakbM_ram
+Compiling module xil_defaultlib.crypto_sign_keypakbM(DataWidth=8...
+Compiling module xil_defaultlib.picnic_keygen_temp_ram
+Compiling module xil_defaultlib.picnic_keygen_temp(DataWidth=32,...
+Compiling module xil_defaultlib.randombytes_block_ram
+Compiling module xil_defaultlib.randombytes_block(DataWidth=8,Ad...
+Compiling module xil_defaultlib.randombytes_temp_ram
+Compiling module xil_defaultlib.randombytes_temp(DataWidth=8,Add...
+Compiling module xil_defaultlib.AES256_ECB_ctx_RodEe_ram
+Compiling module xil_defaultlib.AES256_ECB_ctx_RodEe(DataWidth=8...
+Compiling module xil_defaultlib.AES256_ECB_1_test_ram
+Compiling module xil_defaultlib.AES256_ECB_1_test(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_sbox_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
+Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
+Compiling module xil_defaultlib.crypto_sign_keypabkb(ID=1,din0_W...
+Compiling module xil_defaultlib.KeyExpansion
+Compiling module xil_defaultlib.AddRoundKey
+Compiling module xil_defaultlib.SubBytes
+Compiling module xil_defaultlib.Cipher
+Compiling module xil_defaultlib.AES256_ECB
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_cud_ram
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_cud(DataWidth=8...
+Compiling module xil_defaultlib.AES256_ECB_1
+Compiling module xil_defaultlib.randombytes
+Compiling module xil_defaultlib.LowMCEnc_temp_matg8j_rom
+Compiling module xil_defaultlib.LowMCEnc_temp_matg8j(DataWidth=3...
+Compiling module xil_defaultlib.LowMCEnc_roundKey_ram
+Compiling module xil_defaultlib.LowMCEnc_roundKey(DataWidth=32,A...
+Compiling module xil_defaultlib.LowMCEnc_temp_ram
+Compiling module xil_defaultlib.LowMCEnc_temp(DataWidth=8,Addres...
+Compiling module xil_defaultlib.matrix_mul_temp_mfYi_rom
+Compiling module xil_defaultlib.matrix_mul_temp_mfYi(DataWidth=3...
+Compiling module xil_defaultlib.matrix_mul_1_prod_ram
+Compiling module xil_defaultlib.matrix_mul_1_prod(DataWidth=32,A...
+Compiling module xil_defaultlib.matrix_mul_1_temp_ram_default
+Compiling module xil_defaultlib.matrix_mul_1_temp(DataWidth=32,A...
+Compiling module xil_defaultlib.matrix_mul
+Compiling module xil_defaultlib.matrix_mul_1_tempeOg_rom
+Compiling module xil_defaultlib.matrix_mul_1_tempeOg(DataWidth=3...
+Compiling module xil_defaultlib.matrix_mul_1
+Compiling module xil_defaultlib.LowMCEnc
+Compiling module xil_defaultlib.picnic_keygen
+Compiling module xil_defaultlib.crypto_sign_keypair
+Compiling module xil_defaultlib.AESL_automem_pk
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_V
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_Key
+Compiling module xil_defaultlib.apatb_crypto_sign_keypair_top
+Compiling module work.glbl
+Built simulation snapshot crypto_sign_keypair
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/xsim.dir/crypto_sign_keypair/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/xsim.dir/crypto_sign_keypair/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu May 14 22:27:49 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx_Vivado/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu May 14 22:27:49 2020...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/crypto_sign_keypair/xsim_script.tcl
+# xsim {crypto_sign_keypair} -autoloadwcfg -tclbatch {crypto_sign_keypair.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source crypto_sign_keypair.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "1357345000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1357385 ns : File "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/sim/verilog/crypto_sign_keypair.autotb.v" Line 616
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 240.520 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 14 22:28:06 2020...
+INFO: [COSIM 212-316] Starting C post checking ...
+Num bytes = 55
+Known Answer Tests PASSED. 
+
+
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

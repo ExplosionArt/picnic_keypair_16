@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'SubBytes'
 ================================================================
-* Date:           Wed May 13 21:28:52 2020
+* Date:           Thu May 14 22:22:16 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        picnic1
@@ -93,8 +93,8 @@ ST_2 : Operation 8 [1/1] (1.00ns)   --->   "%icmp_ln275 = icmp eq i3 %i_0, -4" [
 ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 10 [1/1] (1.34ns)   --->   "%i = add i3 %i_0, 1" [NIST-KATs/aes.c:275]   --->   Operation 10 'add' 'i' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %icmp_ln275, label %4, label %SubBytes_label1_begin" [NIST-KATs/aes.c:275]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str4107) nounwind" [NIST-KATs/aes.c:276]   --->   Operation 12 'specloopname' <Predicate = (!icmp_ln275)> <Delay = 0.00>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str4107) nounwind" [NIST-KATs/aes.c:276]   --->   Operation 13 'specregionbegin' 'tmp' <Predicate = (!icmp_ln275)> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str415) nounwind" [NIST-KATs/aes.c:276]   --->   Operation 12 'specloopname' <Predicate = (!icmp_ln275)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str415) nounwind" [NIST-KATs/aes.c:276]   --->   Operation 13 'specregionbegin' 'tmp' <Predicate = (!icmp_ln275)> <Delay = 0.00>
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln277 = zext i3 %i_0 to i6" [NIST-KATs/aes.c:277]   --->   Operation 14 'zext' 'zext_ln277' <Predicate = (!icmp_ln275)> <Delay = 0.00>
 ST_2 : Operation 15 [1/1] (1.35ns)   --->   "br label %2" [NIST-KATs/aes.c:277]   --->   Operation 15 'br' <Predicate = (!icmp_ln275)> <Delay = 1.35>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/aes.c:282]   --->   Operation 16 'ret' <Predicate = (icmp_ln275)> <Delay = 0.00>
@@ -102,16 +102,16 @@ ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/aes.c:282]   -
 State 3 <SV = 2> <Delay = 3.30>
 ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ 0, %SubBytes_label1_begin ], [ %j, %3 ]"   --->   Operation 17 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 18 [1/1] (1.00ns)   --->   "%icmp_ln277 = icmp eq i3 %j_0, -4" [NIST-KATs/aes.c:277]   --->   Operation 18 'icmp' 'icmp_ln277' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%empty_118 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 19 'speclooptripcount' 'empty_118' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%empty_122 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 19 'speclooptripcount' 'empty_122' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 20 [1/1] (1.34ns)   --->   "%j = add i3 %j_0, 1" [NIST-KATs/aes.c:277]   --->   Operation 20 'add' 'j' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %icmp_ln277, label %SubBytes_label1_end, label %3" [NIST-KATs/aes.c:277]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_9 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %j_0, i2 0)" [NIST-KATs/aes.c:279]   --->   Operation 22 'bitconcatenate' 'tmp_9' <Predicate = (!icmp_ln277)> <Delay = 0.00>
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln279 = zext i5 %tmp_9 to i6" [NIST-KATs/aes.c:279]   --->   Operation 23 'zext' 'zext_ln279' <Predicate = (!icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_s = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %j_0, i2 0)" [NIST-KATs/aes.c:279]   --->   Operation 22 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln279 = zext i5 %tmp_s to i6" [NIST-KATs/aes.c:279]   --->   Operation 23 'zext' 'zext_ln279' <Predicate = (!icmp_ln277)> <Delay = 0.00>
 ST_3 : Operation 24 [1/1] (1.54ns)   --->   "%add_ln279 = add i6 %zext_ln277, %zext_ln279" [NIST-KATs/aes.c:279]   --->   Operation 24 'add' 'add_ln279' <Predicate = (!icmp_ln277)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln279_1 = zext i6 %add_ln279 to i64" [NIST-KATs/aes.c:279]   --->   Operation 25 'zext' 'zext_ln279_1' <Predicate = (!icmp_ln277)> <Delay = 0.00>
 ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 %zext_ln279_1" [NIST-KATs/aes.c:279]   --->   Operation 26 'getelementptr' 'state_addr' <Predicate = (!icmp_ln277)> <Delay = 0.00>
 ST_3 : Operation 27 [2/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 27 'load' 'state_load' <Predicate = (!icmp_ln277)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty_119 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str4107, i32 %tmp) nounwind" [NIST-KATs/aes.c:281]   --->   Operation 28 'specregionend' 'empty_119' <Predicate = (icmp_ln277)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty_123 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str415, i32 %tmp) nounwind" [NIST-KATs/aes.c:281]   --->   Operation 28 'specregionend' 'empty_123' <Predicate = (icmp_ln277)> <Delay = 0.00>
 ST_3 : Operation 29 [1/1] (0.00ns)   --->   "br label %1" [NIST-KATs/aes.c:275]   --->   Operation 29 'br' <Predicate = (icmp_ln277)> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 4.52>
@@ -121,7 +121,7 @@ ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%sbox_addr = getelementptr inbounds
 ST_4 : Operation 33 [2/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 33 'load' 'sbox_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
 
 State 5 <SV = 4> <Delay = 4.52>
-ST_5 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str5108) nounwind" [NIST-KATs/aes.c:278]   --->   Operation 34 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str516) nounwind" [NIST-KATs/aes.c:278]   --->   Operation 34 'specloopname' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 35 [1/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 35 'load' 'sbox_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
 ST_5 : Operation 36 [1/1] (1.75ns)   --->   "store i8 %sbox_load, i8* %state_addr, align 1" [NIST-KATs/aes.c:279]   --->   Operation 36 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
 ST_5 : Operation 37 [1/1] (0.00ns)   --->   "br label %2" [NIST-KATs/aes.c:277]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
@@ -159,15 +159,15 @@ br_ln277           (br               ) [ 001111]
 ret_ln282          (ret              ) [ 000000]
 j_0                (phi              ) [ 000100]
 icmp_ln277         (icmp             ) [ 001111]
-empty_118          (speclooptripcount) [ 000000]
+empty_122          (speclooptripcount) [ 000000]
 j                  (add              ) [ 001111]
 br_ln277           (br               ) [ 000000]
-tmp_9              (bitconcatenate   ) [ 000000]
+tmp_s              (bitconcatenate   ) [ 000000]
 zext_ln279         (zext             ) [ 000000]
 add_ln279          (add              ) [ 000000]
 zext_ln279_1       (zext             ) [ 000000]
 state_addr         (getelementptr    ) [ 000011]
-empty_119          (specregionend    ) [ 000000]
+empty_123          (specregionend    ) [ 000000]
 br_ln275           (br               ) [ 011111]
 state_load         (load             ) [ 000000]
 zext_ln279_2       (zext             ) [ 000000]
@@ -260,7 +260,7 @@ br_ln277           (br               ) [ 001111]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str4107"/></StgValue>
+<StgValue><ssdm name="p_str415"/></StgValue>
 </bind>
 </comp>
 
@@ -314,7 +314,7 @@ br_ln277           (br               ) [ 001111]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str5108"/></StgValue>
+<StgValue><ssdm name="p_str516"/></StgValue>
 </bind>
 </comp>
 
@@ -477,7 +477,7 @@ br_ln277           (br               ) [ 001111]
 </bind>
 </comp>
 
-<comp id="107" class="1004" name="tmp_9_fu_107">
+<comp id="107" class="1004" name="tmp_s_fu_107">
 <pin_list>
 <pin id="108" dir="0" index="0" bw="5" slack="0"/>
 <pin id="109" dir="0" index="1" bw="3" slack="0"/>
@@ -486,7 +486,7 @@ br_ln277           (br               ) [ 001111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_9/3 "/>
+<opset="tmp_s/3 "/>
 </bind>
 </comp>
 
@@ -688,7 +688,7 @@ br_ln277           (br               ) [ 001111]
 		icmp_ln277 : 1
 		j : 1
 		br_ln277 : 2
-		tmp_9 : 1
+		tmp_s : 1
 		zext_ln279 : 2
 		add_ln279 : 3
 		zext_ln279_1 : 4
@@ -722,7 +722,7 @@ br_ln277           (br               ) [ 001111]
 |          | zext_ln279_1_fu_124 |    0    |    0    |
 |          | zext_ln279_2_fu_129 |    0    |    0    |
 |----------|---------------------|---------|---------|
-|bitconcatenate|     tmp_9_fu_107    |    0    |    0    |
+|bitconcatenate|     tmp_s_fu_107    |    0    |    0    |
 |----------|---------------------|---------|---------|
 |   Total  |                     |    0    |    57   |
 |----------|---------------------|---------|---------|

@@ -549,10 +549,10 @@
 
 <Node id="33" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  %empty_120 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 0)
+:2  %empty_124 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 0)
 
 ]]></Node>
-<StgValue><ssdm name="empty_120"/></StgValue>
+<StgValue><ssdm name="empty_124"/></StgValue>
 </operation>
 
 <operation id="48" st_id="5" stage="1" lat="1">
@@ -757,7 +757,7 @@ xor_array.exit:4  br label %3
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str320) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str380) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln111"/></StgValue>
@@ -865,10 +865,10 @@ xor_array.exit:4  br label %3
 
 <Node id="54" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:1  %empty_121 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20)
+:1  %empty_125 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20)
 
 ]]></Node>
-<StgValue><ssdm name="empty_121"/></StgValue>
+<StgValue><ssdm name="empty_125"/></StgValue>
 </operation>
 
 <operation id="68" st_id="7" stage="1" lat="1">
@@ -1024,10 +1024,10 @@ xor_array.exit:4  br label %3
 
 <Node id="64" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  %empty_122 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+:2  %empty_126 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
 ]]></Node>
-<StgValue><ssdm name="empty_122"/></StgValue>
+<StgValue><ssdm name="empty_126"/></StgValue>
 </operation>
 
 <operation id="78" st_id="9" stage="1" lat="1">
@@ -1272,10 +1272,10 @@ xor_array.exit:4  br label %3
 
 <Node id="82" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader:2  %empty_123 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)
+.preheader:2  %empty_127 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)
 
 ]]></Node>
-<StgValue><ssdm name="empty_123"/></StgValue>
+<StgValue><ssdm name="empty_127"/></StgValue>
 </operation>
 
 <operation id="94" st_id="11" stage="1" lat="1">
@@ -2587,10 +2587,10 @@ xor_array.exit:4  br label %3
 
 <Node id="160" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:2  %empty_124 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 0)
+:2  %empty_128 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 0)
 
 ]]></Node>
-<StgValue><ssdm name="empty_124"/></StgValue>
+<StgValue><ssdm name="empty_128"/></StgValue>
 </operation>
 
 <operation id="179" st_id="22" stage="1" lat="1">
@@ -2779,7 +2779,7 @@ xor_array.1.exit.preheader:0  br label %xor_array.1.exit
 
 <Node id="164" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str320) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str380) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln111"/></StgValue>
@@ -2902,10 +2902,10 @@ xor_array.1.exit:1  %icmp_ln111_2 = icmp eq i3 %i_0_i56, -4
 
 <Node id="181" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-xor_array.1.exit:2  %empty_125 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 0)
+xor_array.1.exit:2  %empty_129 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 0)
 
 ]]></Node>
-<StgValue><ssdm name="empty_125"/></StgValue>
+<StgValue><ssdm name="empty_129"/></StgValue>
 </operation>
 
 <operation id="199" st_id="24" stage="1" lat="1">
@@ -3062,7 +3062,7 @@ xor_array.exit65:1  br label %3
 
 <Node id="185" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str320) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str380) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln111"/></StgValue>

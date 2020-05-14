@@ -83,19 +83,19 @@
   },
   "Files": {
     "CSource": [
-      "..\/..\/tree.c",
-      "..\/..\/NIST-KATs\/rng.c",
-      "..\/..\/picnic_types.c",
-      "..\/..\/picnic_impl.c",
-      "..\/..\/picnic2_impl.c",
-      "..\/..\/picnic.c",
-      "..\/..\/lowmc_constants.c",
-      "..\/..\/hash.c",
-      "..\/..\/api.c",
-      "..\/..\/NIST-KATs\/aes.c",
-      "..\/..\/sha3\/KeccakSpongeWidth1600.c",
+      "..\/..\/sha3\/KeccakHash.c",
       "..\/..\/sha3\/KeccakP-1600-reference.c",
-      "..\/..\/sha3\/KeccakHash.c"
+      "..\/..\/sha3\/KeccakSpongeWidth1600.c",
+      "..\/..\/NIST-KATs\/aes.c",
+      "..\/..\/api.c",
+      "..\/..\/hash.c",
+      "..\/..\/lowmc_constants.c",
+      "..\/..\/picnic.c",
+      "..\/..\/picnic2_impl.c",
+      "..\/..\/picnic_impl.c",
+      "..\/..\/picnic_types.c",
+      "..\/..\/NIST-KATs\/rng.c",
+      "..\/..\/tree.c"
     ],
     "Vhdl": [
       "impl\/vhdl\/AddRoundKey.vhd",
@@ -167,9 +167,9 @@
       "impl\/verilog\/crypto_sign_keypair.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "D:\/VLSI_Optimized_Models\/project16-master-Optimized_Area\/picnic1\/keypair\/.autopilot\/db\/crypto_sign_keypair.design.xml",
-    "DebugDir": "D:\/VLSI_Optimized_Models\/project16-master-Optimized_Area\/picnic1\/keypair\/.debug",
-    "ProtoInst": ["D:\/VLSI_Optimized_Models\/project16-master-Optimized_Area\/picnic1\/keypair\/.debug\/crypto_sign_keypair.protoinst"]
+    "DesignXml": "C:\/picnic_keypair_16-master\/project16-Optimized_Area\/picnic1\/keypair\/.autopilot\/db\/crypto_sign_keypair.design.xml",
+    "DebugDir": "C:\/picnic_keypair_16-master\/project16-Optimized_Area\/picnic1\/keypair\/.debug",
+    "ProtoInst": ["C:\/picnic_keypair_16-master\/project16-Optimized_Area\/picnic1\/keypair\/.debug\/crypto_sign_keypair.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -1052,10 +1052,10 @@
       },
       "matrix_mul_1": {
         "Latency": {
-          "LatencyBest": "2570",
-          "LatencyAvg": "2570",
-          "LatencyWorst": "2570",
-          "PipelineII": "2570",
+          "LatencyBest": "2569",
+          "LatencyAvg": "2569",
+          "LatencyWorst": "2569",
+          "PipelineII": "2569",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1068,15 +1068,15 @@
           {
             "Name": "matrix_mul_label6",
             "TripCount": "128",
-            "Latency": "2560",
+            "Latency": "2559",
             "PipelineII": "",
             "PipelineDepth": "20",
             "Loops": [
               {
                 "Name": "matrix_mul_label5",
                 "TripCount": "4",
-                "Latency": "8",
-                "PipelineII": "",
+                "Latency": "7",
+                "PipelineII": "2",
                 "PipelineDepth": "2"
               },
               {
@@ -1098,18 +1098,18 @@
         ],
         "Area": {
           "BRAM_18K": "34",
-          "FF": "111",
-          "LUT": "1459",
+          "FF": "100",
+          "LUT": "1457",
           "URAM": "0",
           "DSP48E": "0"
         }
       },
       "matrix_mul": {
         "Latency": {
-          "LatencyBest": "2570",
-          "LatencyAvg": "2570",
-          "LatencyWorst": "2570",
-          "PipelineII": "2570",
+          "LatencyBest": "2569",
+          "LatencyAvg": "2569",
+          "LatencyWorst": "2569",
+          "PipelineII": "2569",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1122,15 +1122,15 @@
           {
             "Name": "matrix_mul_label6",
             "TripCount": "128",
-            "Latency": "2560",
+            "Latency": "2559",
             "PipelineII": "",
             "PipelineDepth": "20",
             "Loops": [
               {
                 "Name": "matrix_mul_label5",
                 "TripCount": "4",
-                "Latency": "8",
-                "PipelineII": "",
+                "Latency": "7",
+                "PipelineII": "2",
                 "PipelineDepth": "2"
               },
               {
@@ -1152,18 +1152,18 @@
         ],
         "Area": {
           "BRAM_18K": "34",
-          "FF": "111",
-          "LUT": "1474",
+          "FF": "100",
+          "LUT": "1472",
           "URAM": "0",
           "DSP48E": "0"
         }
       },
       "LowMCEnc": {
         "Latency": {
-          "LatencyBest": "107470",
-          "LatencyAvg": "107470",
-          "LatencyWorst": "107470",
-          "PipelineII": "107470",
+          "LatencyBest": "107429",
+          "LatencyAvg": "107429",
+          "LatencyWorst": "107429",
+          "PipelineII": "107429",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1190,9 +1190,9 @@
           {
             "Name": "Loop 3",
             "TripCount": "20",
-            "Latency": "104880",
+            "Latency": "104840",
             "PipelineII": "",
-            "PipelineDepth": "5244",
+            "PipelineDepth": "5242",
             "Loops": [
               {
                 "Name": "Loop 3.1",
@@ -1227,8 +1227,8 @@
         ],
         "Area": {
           "BRAM_18K": "70",
-          "FF": "420",
-          "LUT": "3997",
+          "FF": "398",
+          "LUT": "3993",
           "URAM": "0",
           "DSP48E": "0"
         }
@@ -1236,11 +1236,11 @@
       "picnic_keygen": {
         "Latency": {
           "LatencyBest": "1",
-          "LatencyAvg": "69939",
-          "LatencyWorst": "144996",
+          "LatencyAvg": "69918",
+          "LatencyWorst": "144955",
           "PipelineIIMin": "1",
-          "PipelineIIMax": "144996",
-          "PipelineII": "1 ~ 144996",
+          "PipelineIIMax": "144955",
+          "PipelineII": "1 ~ 144955",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1295,8 +1295,8 @@
         ],
         "Area": {
           "BRAM_18K": "78",
-          "FF": "2218",
-          "LUT": "9712",
+          "FF": "2196",
+          "LUT": "9708",
           "URAM": "0",
           "DSP48E": "0"
         }
@@ -1304,11 +1304,11 @@
       "crypto_sign_keypair": {
         "Latency": {
           "LatencyBest": "3",
-          "LatencyAvg": "69999",
-          "LatencyWorst": "145113",
+          "LatencyAvg": "69978",
+          "LatencyWorst": "145072",
           "PipelineIIMin": "4",
-          "PipelineIIMax": "145114",
-          "PipelineII": "4 ~ 145114",
+          "PipelineIIMax": "145073",
+          "PipelineII": "4 ~ 145073",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1342,8 +1342,8 @@
         ],
         "Area": {
           "BRAM_18K": "78",
-          "FF": "2393",
-          "LUT": "10292",
+          "FF": "2371",
+          "LUT": "10288",
           "URAM": "0",
           "DSP48E": "0"
         }
@@ -1360,7 +1360,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-13 21:29:07 +0530",
+    "Time": "2020-05-14 22:22:32 +0530",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

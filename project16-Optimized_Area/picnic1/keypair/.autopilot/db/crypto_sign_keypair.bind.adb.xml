@@ -700,10 +700,10 @@
 
 <Node id="62" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader.i:3  %empty_45 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+.preheader.i:3  %empty_49 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="empty_45"/></StgValue>
+<StgValue><ssdm name="empty_49"/></StgValue>
 </operation>
 
 <operation id="50" st_id="5" stage="1" lat="1">
@@ -998,10 +998,10 @@ picnic_write_public_key.exit:3  br label %5
 
 <Node id="83" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:3  %empty_46 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+:3  %empty_50 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="empty_46"/></StgValue>
+<StgValue><ssdm name="empty_50"/></StgValue>
 </operation>
 
 <operation id="69" st_id="7" stage="1" lat="1">
@@ -1669,13 +1669,13 @@ UnifiedReturnBlock:1  ret i32 %UnifiedRetVal
 </dataflow>
 <dataflow id="222" from="StgValue_192" to="icmp_ln541" fromId="192" toId="48">
 </dataflow>
-<dataflow id="223" from="_ssdm_op_SpecLoopTripCount" to="empty_45" fromId="194" toId="49">
+<dataflow id="223" from="_ssdm_op_SpecLoopTripCount" to="empty_49" fromId="194" toId="49">
 </dataflow>
-<dataflow id="224" from="StgValue_196" to="empty_45" fromId="196" toId="49">
+<dataflow id="224" from="StgValue_196" to="empty_49" fromId="196" toId="49">
 </dataflow>
-<dataflow id="225" from="StgValue_196" to="empty_45" fromId="196" toId="49">
+<dataflow id="225" from="StgValue_196" to="empty_49" fromId="196" toId="49">
 </dataflow>
-<dataflow id="226" from="StgValue_196" to="empty_45" fromId="196" toId="49">
+<dataflow id="226" from="StgValue_196" to="empty_49" fromId="196" toId="49">
 </dataflow>
 <dataflow id="227" from="loop_1_i" to="loop_5" fromId="46" toId="50">
 </dataflow>
@@ -1744,13 +1744,13 @@ UnifiedReturnBlock:1  ret i32 %UnifiedRetVal
 </dataflow>
 <dataflow id="256" from="loop_0_i2" to="sext_ln614_i_cast" fromId="65" toId="67">
 </dataflow>
-<dataflow id="257" from="_ssdm_op_SpecLoopTripCount" to="empty_46" fromId="194" toId="68">
+<dataflow id="257" from="_ssdm_op_SpecLoopTripCount" to="empty_50" fromId="194" toId="68">
 </dataflow>
-<dataflow id="258" from="StgValue_196" to="empty_46" fromId="196" toId="68">
+<dataflow id="258" from="StgValue_196" to="empty_50" fromId="196" toId="68">
 </dataflow>
-<dataflow id="259" from="StgValue_196" to="empty_46" fromId="196" toId="68">
+<dataflow id="259" from="StgValue_196" to="empty_50" fromId="196" toId="68">
 </dataflow>
-<dataflow id="260" from="StgValue_196" to="empty_46" fromId="196" toId="68">
+<dataflow id="260" from="StgValue_196" to="empty_50" fromId="196" toId="68">
 </dataflow>
 <dataflow id="261" from="loop_0_i2" to="icmp_ln614" fromId="65" toId="69">
 </dataflow>

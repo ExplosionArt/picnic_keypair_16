@@ -1,14 +1,14 @@
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c" 2
-# 12 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 1
-# 32 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c" 2
+# 12 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 1
+# 32 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
@@ -213,7 +213,7 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 33 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 2
+# 33 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 
 
@@ -753,7 +753,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 205 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 #pragma pack(pop)
 # 630 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
-# 34 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 2
+# 34 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 2
 
 
 
@@ -789,32 +789,32 @@ typedef struct {
     uint8_t data[32];
     picnic_publickey_t pk;
 } picnic_privatekey_t;
-# 77 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 77 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 const char* picnic_get_param_name(picnic_params_t parameters);
-# 93 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 93 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_keygen(picnic_params_t parameters, picnic_publickey_t* pk,
                   picnic_privatekey_t* sk);
-# 116 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 116 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_sign(picnic_privatekey_t* sk, const uint8_t* message, size_t message_len,
                 uint8_t* signature, size_t* signature_len);
-# 134 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 134 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 size_t picnic_signature_size(picnic_params_t parameters);
-# 151 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 151 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_verify(picnic_publickey_t* pk, const uint8_t* message, size_t message_len,
                   const uint8_t* signature, size_t signature_len);
-# 164 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 164 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_write_public_key(const picnic_publickey_t* key, uint8_t* buf, size_t buflen);
-# 176 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 176 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_read_public_key(picnic_publickey_t* key, const uint8_t* buf, size_t buflen);
-# 188 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 188 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_write_private_key(const picnic_privatekey_t* key, uint8_t* buf, size_t buflen);
-# 200 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 200 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_read_private_key(picnic_privatekey_t* key, const uint8_t* buf, size_t buflen);
-# 210 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 210 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_validate_keypair(const picnic_privatekey_t* privatekey, const picnic_publickey_t* publickey);
-# 230 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h" 1
-# 11 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h"
+# 230 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h" 1
+# 11 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 
 
@@ -1173,7 +1173,7 @@ int picnic_validate_keypair(const picnic_privatekey_t* privatekey, const picnic_
 
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 12 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h" 2
+# 12 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h" 2
 
 
 
@@ -1219,13 +1219,13 @@ randombytes(unsigned char *x, unsigned long long xlen);
 
 int
 randombytes_sign(unsigned char *x, unsigned long long xlen);
-# 231 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 2
-# 242 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 231 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 2
+# 242 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 void print_signature(const uint8_t* sigBytes, size_t sigBytesLen, picnic_params_t picnic_params);
-# 13 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c" 2
+# 13 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c" 2
 
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.h" 1
-# 27 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.h" 1
+# 27 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.h"
 int
 crypto_sign_keypair(unsigned char *pk, unsigned char *sk);
 
@@ -1238,7 +1238,7 @@ int
 crypto_sign_open(unsigned char *m, unsigned long long *mlen,
                  const unsigned char *sm, unsigned long long smlen,
                  const unsigned char *pk);
-# 15 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c" 2
+# 15 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c" 2
 
 
 
@@ -1408,7 +1408,7 @@ crypto_sign_open(unsigned char *m, unsigned long long *mlen,
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/api.c" 2
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/api.c" 2
 
 
 static uint32_t bswap32(uint32_t x)

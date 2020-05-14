@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'crypto_sign_keypair'
 ================================================================
-* Date:           Wed May 13 21:28:56 2020
+* Date:           Thu May 14 22:22:21 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        picnic1
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
     |   min   |   max   |    min    |    max   | min |   max  |   Type  |
     +---------+---------+-----------+----------+-----+--------+---------+
-    |        3|   145113| 30.000 ns | 1.451 ms |    3|  145113|   none  |
+    |        3|   145072| 30.000 ns | 1.451 ms |    3|  145072|   none  |
     +---------+---------+-----------+----------+-----+--------+---------+
 
     + Detail: 
@@ -137,7 +137,7 @@ State 5 <SV = 3> <Delay = 1.75>
 ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%loop_1_i = phi i5 [ %loop_5, %4 ], [ 0, %.preheader.i.preheader ]"   --->   Operation 46 'phi' 'loop_1_i' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln541 = zext i5 %loop_1_i to i6" [picnic.c:541->api.c:70]   --->   Operation 47 'zext' 'zext_ln541' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 48 [1/1] (1.21ns)   --->   "%icmp_ln541 = icmp eq i5 %loop_1_i, -16" [picnic.c:541->api.c:70]   --->   Operation 48 'icmp' 'icmp_ln541' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%empty_45 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 49 'speclooptripcount' 'empty_45' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%empty_49 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 49 'speclooptripcount' 'empty_49' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 50 [1/1] (1.54ns)   --->   "%loop_5 = add i5 %loop_1_i, 1" [picnic.c:542->api.c:70]   --->   Operation 50 'add' 'loop_5' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %icmp_ln541, label %picnic_write_public_key.exit, label %4" [picnic.c:541->api.c:70]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln542 = zext i5 %loop_1_i to i64" [picnic.c:542->api.c:70]   --->   Operation 52 'zext' 'zext_ln542' <Predicate = (!icmp_ln541)> <Delay = 0.00>
@@ -160,7 +160,7 @@ State 7 <SV = 4> <Delay = 1.75>
 ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%loop_0_i2 = phi i5 [ 0, %picnic_write_public_key.exit ], [ %loop_6, %6 ]"   --->   Operation 65 'phi' 'loop_0_i2' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln614 = zext i5 %loop_0_i2 to i64" [picnic.c:614->api.c:75]   --->   Operation 66 'zext' 'zext_ln614' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%sext_ln614_i_cast = zext i5 %loop_0_i2 to i6" [picnic.c:615->api.c:75]   --->   Operation 67 'zext' 'sext_ln614_i_cast' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%empty_46 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 68 'speclooptripcount' 'empty_46' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%empty_50 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 68 'speclooptripcount' 'empty_50' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 69 [1/1] (1.21ns)   --->   "%icmp_ln614 = icmp eq i5 %loop_0_i2, -16" [picnic.c:614->api.c:75]   --->   Operation 69 'icmp' 'icmp_ln614' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 70 [1/1] (1.54ns)   --->   "%loop_6 = add i5 %loop_0_i2, 1" [picnic.c:615->api.c:75]   --->   Operation 70 'add' 'loop_6' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 71 [1/1] (0.00ns)   --->   "br i1 %icmp_ln614, label %UnifiedReturnBlock.loopexit, label %6" [picnic.c:614->api.c:75]   --->   Operation 71 'br' <Predicate = true> <Delay = 0.00>

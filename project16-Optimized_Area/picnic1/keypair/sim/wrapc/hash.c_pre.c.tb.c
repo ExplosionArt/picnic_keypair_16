@@ -2,23 +2,23 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c" 2
-# 12 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h" 1
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h" 1
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 1
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h" 1
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c" 2
+# 12 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h" 1
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h" 1
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 1
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h" 1
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 
 
@@ -325,14 +325,14 @@ const char *__mingw_get_crt_info (void);
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/align.h" 1
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h" 2
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/align.h" 1
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
 
 
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-SnP.h" 1
-# 31 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-SnP.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-SnP.h" 1
+# 31 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-SnP.h"
 void KeccakP1600_Initialize(void *state);
 void KeccakP1600_AddByte(void *state, unsigned char data, unsigned int offset);
 void KeccakP1600_AddBytes(void *state, const unsigned char *data, unsigned int offset, unsigned int length);
@@ -343,7 +343,7 @@ void KeccakP1600_Permute_12rounds(void *state);
 void KeccakP1600_Permute_24rounds(void *state);
 void KeccakP1600_ExtractBytes(const void *state, unsigned char *data, unsigned int offset, unsigned int length);
 void KeccakP1600_ExtractAndAddBytes(const void *state, const unsigned char *input, unsigned char *output, unsigned int offset, unsigned int length);
-# 23 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
+# 23 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
  __attribute__ ((aligned(8))) typedef struct KeccakWidth1600_SpongeInstanceStruct { unsigned char state[200]; unsigned int rate; unsigned int byteIOIndex; int squeezing; } KeccakWidth1600_SpongeInstance;
     int KeccakWidth1600_Sponge(unsigned int rate, unsigned int capacity, const unsigned char *input, size_t inputByteLen, unsigned char suffix, unsigned char *output, size_t outputByteLen); int KeccakWidth1600_SpongeInitialize(KeccakWidth1600_SpongeInstance *spongeInstance, unsigned int rate, unsigned int capacity); int KeccakWidth1600_SpongeAbsorb(KeccakWidth1600_SpongeInstance *spongeInstance, const unsigned char *data, size_t dataByteLen); int KeccakWidth1600_SpongeAbsorbLastFewBits(KeccakWidth1600_SpongeInstance *spongeInstance, unsigned char delimitedData); int KeccakWidth1600_SpongeSqueeze(KeccakWidth1600_SpongeInstance *spongeInstance, unsigned char *data, size_t dataByteLen);
 
@@ -352,7 +352,7 @@ void KeccakP1600_ExtractAndAddBytes(const void *state, const unsigned char *inpu
 
     __attribute__ ((aligned(8))) typedef struct KeccakWidth1600_12rounds_SpongeInstanceStruct { unsigned char state[200]; unsigned int rate; unsigned int byteIOIndex; int squeezing; } KeccakWidth1600_12rounds_SpongeInstance;
     int KeccakWidth1600_12rounds_Sponge(unsigned int rate, unsigned int capacity, const unsigned char *input, size_t inputByteLen, unsigned char suffix, unsigned char *output, size_t outputByteLen); int KeccakWidth1600_12rounds_SpongeInitialize(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, unsigned int rate, unsigned int capacity); int KeccakWidth1600_12rounds_SpongeAbsorb(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, const unsigned char *data, size_t dataByteLen); int KeccakWidth1600_12rounds_SpongeAbsorbLastFewBits(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, unsigned char delimitedData); int KeccakWidth1600_12rounds_SpongeSqueeze(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, unsigned char *data, size_t dataByteLen);
-# 22 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h" 2
+# 22 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h" 2
 
 
 
@@ -369,20 +369,20 @@ typedef struct {
     unsigned int fixedOutputLength;
     unsigned char delimitedSuffix;
 } Keccak_HashInstance;
-# 54 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 54 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashInitialize(Keccak_HashInstance *hashInstance, unsigned int rate, unsigned int capacity, unsigned int hashbitlen, unsigned char delimitedSuffix);
-# 90 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 90 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashUpdate(Keccak_HashInstance *hashInstance, const BitSequence *data, BitLength databitlen);
-# 103 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 103 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashFinal(Keccak_HashInstance *hashInstance, BitSequence *hashval);
-# 114 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 114 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashSqueeze(Keccak_HashInstance *hashInstance, BitSequence *data, BitLength databitlen);
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h" 2
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h" 2
 
 
 
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 1
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 1
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
@@ -445,9 +445,9 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 2
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 2
 
 typedef enum {
     TRANSFORM_FS = 0,
@@ -472,7 +472,7 @@ typedef struct paramset_t {
     uint32_t digestSizeBytes;
     transform_t transform;
 } paramset_t;
-# 63 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h"
+# 63 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h"
 typedef struct proof_t {
     uint8_t seed1[16];
     uint8_t seed2[16];
@@ -526,7 +526,7 @@ void setBit(uint8_t* bytes, uint32_t bitNumber, uint8_t val);
 void setBitInWordArray(uint32_t* array, uint32_t bitNumber, uint8_t val);
 uint8_t parity(uint32_t* data, size_t len);
 void xor_array(uint32_t* out, const uint32_t * in1, const uint32_t * in2, uint32_t length);
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h" 2
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h" 2
 
 
 
@@ -556,7 +556,7 @@ void HashSqueeze(HashInstance* ctx, uint8_t* digest, size_t byteLen);
 uint16_t toLittleEndian(uint16_t x);
 void HashUpdateIntLE(HashInstance* ctx, uint16_t x);
 uint16_t fromLittleEndian(uint16_t x);
-# 13 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c" 2
+# 13 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 
 
@@ -915,7 +915,7 @@ uint16_t fromLittleEndian(uint16_t x);
 
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 14 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c" 2
+# 14 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\assert.h" 1 3
 # 15 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\assert.h" 3
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
@@ -940,9 +940,9 @@ extern void __cdecl
 _wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
 extern void __cdecl
 _assert (const char *_Message, const char *_File, unsigned _Line);
-# 15 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/brg_endian.h" 1
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.c" 2
+# 15 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/brg_endian.h" 1
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.c" 2
 
 void HashUpdate(HashInstance* ctx, const uint8_t* data, size_t byteLen)
 {

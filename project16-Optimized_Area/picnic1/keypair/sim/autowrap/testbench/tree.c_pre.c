@@ -1,12 +1,12 @@
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
-# 14 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
+# 14 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\assert.h" 1 3
 # 15 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\assert.h" 3
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
@@ -173,7 +173,7 @@ extern void __cdecl
 _wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
 extern void __cdecl
 _assert (const char *_Message, const char *_File, unsigned _Line);
-# 15 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
+# 15 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 
 
@@ -532,7 +532,7 @@ _assert (const char *_Message, const char *_File, unsigned _Line);
 
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 1 3 4
 # 38 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 1 3 4
@@ -544,12 +544,12 @@ _assert (const char *_Message, const char *_File, unsigned _Line);
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
 # 6 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 2 3 4
 # 38 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 2 3 4
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
 
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_types.h" 1
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_types.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 1
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_types.h" 1
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_types.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 1
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
@@ -612,9 +612,9 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 2
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 2
 
 typedef enum {
     TRANSFORM_FS = 0,
@@ -639,7 +639,7 @@ typedef struct paramset_t {
     uint32_t digestSizeBytes;
     transform_t transform;
 } paramset_t;
-# 63 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h"
+# 63 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h"
 typedef struct proof_t {
     uint8_t seed1[16];
     uint8_t seed2[16];
@@ -693,11 +693,11 @@ void setBit(uint8_t* bytes, uint32_t bitNumber, uint8_t val);
 void setBitInWordArray(uint32_t* array, uint32_t bitNumber, uint8_t val);
 uint8_t parity(uint32_t* data, size_t len);
 void xor_array(uint32_t* out, const uint32_t * in1, const uint32_t * in2, uint32_t length);
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_types.h" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic2_impl.h" 1
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic2_impl.h"
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_types.h" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.h" 1
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic2_impl.h" 2
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.h" 2
 
 
 typedef struct proof2_t {
@@ -731,7 +731,7 @@ void freeSignature2(signature2_t* sig, paramset_t* params);
 int serializeSignature2(const signature2_t* sig, uint8_t* sigBytes, size_t sigBytesLen, paramset_t* params);
 
 int deserializeSignature2(signature2_t* sig, const uint8_t* sigBytes, size_t sigBytesLen, paramset_t* params);
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_types.h" 2
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_types.h" 2
 
 
 typedef struct randomTape_t {
@@ -837,15 +837,15 @@ void freeViews(view_t** views, paramset_t* params);
 
 g_commitments_t* allocateGCommitments(paramset_t* params);
 void freeGCommitments(g_commitments_t* gs);
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h" 1
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h" 1
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 1
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h" 1
-# 19 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h"
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h" 1
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h" 1
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 1
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h" 1
+# 19 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 
 
@@ -1010,14 +1010,14 @@ void freeGCommitments(g_commitments_t* gs);
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/align.h" 1
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSponge-common.h" 2
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/align.h" 1
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSponge-common.h" 2
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
 
 
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-SnP.h" 1
-# 31 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-SnP.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-SnP.h" 1
+# 31 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-SnP.h"
 void KeccakP1600_Initialize(void *state);
 void KeccakP1600_AddByte(void *state, unsigned char data, unsigned int offset);
 void KeccakP1600_AddBytes(void *state, const unsigned char *data, unsigned int offset, unsigned int length);
@@ -1028,7 +1028,7 @@ void KeccakP1600_Permute_12rounds(void *state);
 void KeccakP1600_Permute_24rounds(void *state);
 void KeccakP1600_ExtractBytes(const void *state, unsigned char *data, unsigned int offset, unsigned int length);
 void KeccakP1600_ExtractAndAddBytes(const void *state, const unsigned char *input, unsigned char *output, unsigned int offset, unsigned int length);
-# 23 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
+# 23 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakSpongeWidth1600.h" 2
  __attribute__ ((aligned(8))) typedef struct KeccakWidth1600_SpongeInstanceStruct { unsigned char state[200]; unsigned int rate; unsigned int byteIOIndex; int squeezing; } KeccakWidth1600_SpongeInstance;
     int KeccakWidth1600_Sponge(unsigned int rate, unsigned int capacity, const unsigned char *input, size_t inputByteLen, unsigned char suffix, unsigned char *output, size_t outputByteLen); int KeccakWidth1600_SpongeInitialize(KeccakWidth1600_SpongeInstance *spongeInstance, unsigned int rate, unsigned int capacity); int KeccakWidth1600_SpongeAbsorb(KeccakWidth1600_SpongeInstance *spongeInstance, const unsigned char *data, size_t dataByteLen); int KeccakWidth1600_SpongeAbsorbLastFewBits(KeccakWidth1600_SpongeInstance *spongeInstance, unsigned char delimitedData); int KeccakWidth1600_SpongeSqueeze(KeccakWidth1600_SpongeInstance *spongeInstance, unsigned char *data, size_t dataByteLen);
 
@@ -1037,7 +1037,7 @@ void KeccakP1600_ExtractAndAddBytes(const void *state, const unsigned char *inpu
 
     __attribute__ ((aligned(8))) typedef struct KeccakWidth1600_12rounds_SpongeInstanceStruct { unsigned char state[200]; unsigned int rate; unsigned int byteIOIndex; int squeezing; } KeccakWidth1600_12rounds_SpongeInstance;
     int KeccakWidth1600_12rounds_Sponge(unsigned int rate, unsigned int capacity, const unsigned char *input, size_t inputByteLen, unsigned char suffix, unsigned char *output, size_t outputByteLen); int KeccakWidth1600_12rounds_SpongeInitialize(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, unsigned int rate, unsigned int capacity); int KeccakWidth1600_12rounds_SpongeAbsorb(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, const unsigned char *data, size_t dataByteLen); int KeccakWidth1600_12rounds_SpongeAbsorbLastFewBits(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, unsigned char delimitedData); int KeccakWidth1600_12rounds_SpongeSqueeze(KeccakWidth1600_12rounds_SpongeInstance *spongeInstance, unsigned char *data, size_t dataByteLen);
-# 22 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h" 2
+# 22 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h" 2
 
 
 
@@ -1054,16 +1054,16 @@ typedef struct {
     unsigned int fixedOutputLength;
     unsigned char delimitedSuffix;
 } Keccak_HashInstance;
-# 54 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 54 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashInitialize(Keccak_HashInstance *hashInstance, unsigned int rate, unsigned int capacity, unsigned int hashbitlen, unsigned char delimitedSuffix);
-# 90 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 90 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashUpdate(Keccak_HashInstance *hashInstance, const BitSequence *data, BitLength databitlen);
-# 103 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 103 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashFinal(Keccak_HashInstance *hashInstance, BitSequence *hashval);
-# 114 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakHash.h"
+# 114 "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakHash.h"
 HashReturn Keccak_HashSqueeze(Keccak_HashInstance *hashInstance, BitSequence *data, BitLength databitlen);
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h" 2
-# 28 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/hash.h"
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h" 2
+# 28 "C:/picnic_keypair_16-master/project16-Optimized_Area/hash.h"
 static const uint8_t HASH_PREFIX_NONE = -1;
 static const uint8_t HASH_PREFIX_0 = 0;
 static const uint8_t HASH_PREFIX_1 = 1;
@@ -1086,9 +1086,9 @@ void HashSqueeze(HashInstance* ctx, uint8_t* digest, size_t byteLen);
 uint16_t toLittleEndian(uint16_t x);
 void HashUpdateIntLE(HashInstance* ctx, uint16_t x);
 uint16_t fromLittleEndian(uint16_t x);
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 1
-# 33 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 1
+# 33 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 
 
@@ -1604,7 +1604,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 205 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 #pragma pack(pop)
 # 630 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
-# 34 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 2
+# 34 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 2
 
 
 
@@ -1640,32 +1640,32 @@ typedef struct {
     uint8_t data[32];
     picnic_publickey_t pk;
 } picnic_privatekey_t;
-# 77 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 77 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 const char* picnic_get_param_name(picnic_params_t parameters);
-# 93 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 93 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_keygen(picnic_params_t parameters, picnic_publickey_t* pk,
                   picnic_privatekey_t* sk);
-# 116 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 116 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_sign(picnic_privatekey_t* sk, const uint8_t* message, size_t message_len,
                 uint8_t* signature, size_t* signature_len);
-# 134 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 134 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 size_t picnic_signature_size(picnic_params_t parameters);
-# 151 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 151 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_verify(picnic_publickey_t* pk, const uint8_t* message, size_t message_len,
                   const uint8_t* signature, size_t signature_len);
-# 164 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 164 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_write_public_key(const picnic_publickey_t* key, uint8_t* buf, size_t buflen);
-# 176 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 176 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_read_public_key(picnic_publickey_t* key, const uint8_t* buf, size_t buflen);
-# 188 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 188 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_write_private_key(const picnic_privatekey_t* key, uint8_t* buf, size_t buflen);
-# 200 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 200 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_read_private_key(picnic_privatekey_t* key, const uint8_t* buf, size_t buflen);
-# 210 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 210 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 int picnic_validate_keypair(const picnic_privatekey_t* privatekey, const picnic_publickey_t* publickey);
-# 230 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h" 1
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/rng.h"
+# 230 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h" 1
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/rng.h"
 typedef struct {
     unsigned char buffer[16];
     int buffer_pos;
@@ -1705,13 +1705,13 @@ randombytes(unsigned char *x, unsigned long long xlen);
 
 int
 randombytes_sign(unsigned char *x, unsigned long long xlen);
-# 231 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h" 2
-# 242 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic.h"
+# 231 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h" 2
+# 242 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic.h"
 void print_signature(const uint8_t* sigBytes, size_t sigBytesLen, picnic_params_t picnic_params);
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
 
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.h" 1
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.h" 1
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.h"
 typedef struct tree_t {
     size_t depth;
     uint8_t** nodes;
@@ -1731,18 +1731,18 @@ uint8_t** getLeaves(tree_t* tree);
 
 uint8_t* getLeaf(tree_t* tree, size_t leafIndex);
 void printLeaves(tree_t* tree);
-# 45 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.h"
+# 45 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.h"
 tree_t* generateSeeds(size_t nSeeds, uint8_t* rootSeed, uint8_t* salt, size_t repIndex, paramset_t* params);
 size_t revealSeeds(tree_t* tree, uint16_t* hideList, size_t hideListSize, uint8_t* output, size_t outputLen, paramset_t* params);
 size_t revealSeedsSize(size_t numNodes, uint16_t* hideList, size_t hideListSize, paramset_t* params);
 int reconstructSeeds(tree_t* tree, uint16_t* hideList, size_t hideListSize, uint8_t* input, size_t inputLen, uint8_t* salt, size_t repIndex, paramset_t* params);
-# 63 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.h"
+# 63 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.h"
 void buildMerkleTree(tree_t* tree, uint8_t** leafData, uint8_t* salt, paramset_t* params);
 uint8_t* openMerkleTree(tree_t* tree, uint16_t* missingLeaves, size_t missingLeavesSize, size_t* outputSizeBytes);
 size_t openMerkleTreeSize(size_t numNodes, uint16_t* notMissingLeaves, size_t notMissingLeavesSize, paramset_t* params);
 int addMerkleNodes(tree_t* tree, uint16_t* missingLeaves, size_t missingLeavesSize, uint8_t* input, size_t inputSize);
 int verifyMerkleTree(tree_t* tree, uint8_t** leafData, uint8_t* salt, paramset_t* params);
-# 23 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c" 2
+# 23 "C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c" 2
 
 static int contains(size_t* list, size_t len, size_t value)
 {
@@ -1810,7 +1810,7 @@ void freeTree(tree_t* tree)
 }
 int isLeftChild(size_t node)
 {
-    (void) ((!!(node != 0)) || (_assert("node != 0","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",90),0));
+    (void) ((!!(node != 0)) || (_assert("node != 0","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",90),0));
     return(node % 2 == 1);
 }
 
@@ -1824,7 +1824,7 @@ int hasLeftChild(tree_t* tree, size_t node)
 }
 size_t getParent(size_t node)
 {
-    (void) ((!!(node != 0)) || (_assert("node != 0","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",104),0));
+    (void) ((!!(node != 0)) || (_assert("node != 0","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",104),0));
 
     if (isLeftChild(node)) {
         return (node - 1) / 2;
@@ -1839,7 +1839,7 @@ uint8_t** getLeaves(tree_t* tree)
 
 uint8_t* getLeaf(tree_t* tree, size_t leafIndex)
 {
-    (void) ((!!(leafIndex < tree->numLeaves)) || (_assert("leafIndex < tree->numLeaves","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",119),0));
+    (void) ((!!(leafIndex < tree->numLeaves)) || (_assert("leafIndex < tree->numLeaves","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",119),0));
     size_t firstLeaf = tree->numNodes - tree->numLeaves;
     return tree->nodes[firstLeaf + leafIndex];
 }
@@ -1920,16 +1920,16 @@ int hasSibling(tree_t* tree, size_t node)
 
 size_t getSibling(tree_t* tree, size_t node)
 {
-    (void) ((!!(node < tree->numNodes)) || (_assert("node < tree->numNodes","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",200),0));
-    (void) ((!!(node != 0)) || (_assert("node != 0","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",201),0));
-    (void) ((!!(hasSibling(tree, node))) || (_assert("hasSibling(tree, node)","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",202),0));
+    (void) ((!!(node < tree->numNodes)) || (_assert("node < tree->numNodes","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",200),0));
+    (void) ((!!(node != 0)) || (_assert("node != 0","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",201),0));
+    (void) ((!!(hasSibling(tree, node))) || (_assert("hasSibling(tree, node)","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",202),0));
 
     if (isLeftChild(node)) {
         if (node + 1 < tree->numNodes) {
             return node + 1;
         }
         else {
-            (void) ((!!(!"getSibling: request for node with not sibling")) || (_assert("!\"getSibling: request for node with not sibling\"","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",209),0));
+            (void) ((!!(!"getSibling: request for node with not sibling")) || (_assert("!\"getSibling: request for node with not sibling\"","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",209),0));
             return 0;
         }
     }
@@ -2041,7 +2041,7 @@ size_t revealSeeds(tree_t* tree, uint16_t* hideList, size_t hideListSize, uint8_
     for (size_t i = 0; i < revealedSize; i++) {
         outLen -= params->seedSizeBytes;
         if (outLen < 0) {
-            (void) ((!!(!"Insufficient sized buffer provided to revealSeeds")) || (_assert("!\"Insufficient sized buffer provided to revealSeeds\"","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",321),0));
+            (void) ((!!(!"Insufficient sized buffer provided to revealSeeds")) || (_assert("!\"Insufficient sized buffer provided to revealSeeds\"","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",321),0));
             free(revealed);
             return 0;
         }
@@ -2237,7 +2237,7 @@ int addMerkleNodes(tree_t* tree, uint16_t* missingLeaves, size_t missingLeavesSi
 {
     int ret = 0;
 
-    (void) ((!!(missingLeavesSize < tree->numLeaves)) || (_assert("missingLeavesSize < tree->numLeaves","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",517),0));
+    (void) ((!!(missingLeavesSize < tree->numLeaves)) || (_assert("missingLeavesSize < tree->numLeaves","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",517),0));
 
     if (inputSize > 2147483647) {
         return -1;
@@ -2246,7 +2246,7 @@ int addMerkleNodes(tree_t* tree, uint16_t* missingLeaves, size_t missingLeavesSi
 
     size_t revealedSize = 0;
     size_t* revealed = getRevealedMerkleNodes(tree, missingLeaves, missingLeavesSize, &revealedSize);
-    (void) ((!!(!contains(revealed, revealedSize, 0))) || (_assert("!contains(revealed, revealedSize, 0)","D:/VLSI_Optimized_Models/project16-master-Optimized_Area/tree.c",526),0));
+    (void) ((!!(!contains(revealed, revealedSize, 0))) || (_assert("!contains(revealed, revealedSize, 0)","C:/picnic_keypair_16-master/project16-Optimized_Area/tree.c",526),0));
 
 
     for (size_t i = 0; i < revealedSize; i++) {

@@ -108,8 +108,8 @@ struct KeyExpansion : public sc_module {
     sc_signal< sc_lv<3> > l_reg_1163;
     sc_signal< sc_logic > ap_CS_fsm_state16;
     sc_signal< sc_lv<1> > icmp_ln229_fu_948_p2;
-    sc_signal< sc_lv<8> > tmp_4_fu_982_p6;
-    sc_signal< sc_lv<8> > tmp_4_reg_1173;
+    sc_signal< sc_lv<8> > tmp_3_fu_982_p6;
+    sc_signal< sc_lv<8> > tmp_3_reg_1173;
     sc_signal< sc_lv<8> > add_ln231_1_fu_996_p2;
     sc_signal< sc_lv<8> > add_ln231_1_reg_1178;
     sc_signal< sc_lv<6> > i_9_fu_1001_p2;
@@ -187,7 +187,7 @@ struct KeyExpansion : public sc_module {
     sc_signal< sc_lv<8> > k_1_fu_939_p2;
     sc_signal< sc_lv<9> > zext_ln231_2_fu_964_p1;
     sc_signal< sc_lv<9> > add_ln231_fu_968_p2;
-    sc_signal< sc_lv<2> > tmp_4_fu_982_p5;
+    sc_signal< sc_lv<2> > tmp_3_fu_982_p5;
     sc_signal< sc_lv<8> > zext_ln231_1_fu_960_p1;
     sc_signal< sc_lv<17> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -308,7 +308,7 @@ struct KeyExpansion : public sc_module {
     void thread_tempa_0_2_fu_892_p2();
     void thread_tmp_1_fu_858_p5();
     void thread_tmp_2_fu_920_p5();
-    void thread_tmp_4_fu_982_p5();
+    void thread_tmp_3_fu_982_p5();
     void thread_trunc_ln162_fu_740_p1();
     void thread_trunc_ln171_fu_832_p1();
     void thread_trunc_ln177_fu_828_p1();

@@ -22,13 +22,13 @@
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>69939</Average-caseLatency>
-<Worst-caseLatency>144996</Worst-caseLatency>
+<Average-caseLatency>69918</Average-caseLatency>
+<Worst-caseLatency>144955</Worst-caseLatency>
 <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.699 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>1.450 ms</Worst-caseRealTimeLatency>
 <Interval-min>1</Interval-min>
-<Interval-max>144996</Interval-max>
+<Interval-max>144955</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <memset_temp>
@@ -67,8 +67,8 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>78</BRAM_18K>
-<FF>2218</FF>
-<LUT>9712</LUT>
+<FF>2196</FF>
+<LUT>9708</LUT>
 <URAM>0</URAM>
 <DSP48E>0</DSP48E>
 </Resources>

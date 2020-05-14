@@ -129,7 +129,7 @@ static void matrix_mul(
     {
         matrix_mul_label5:for (uint32_t j = 0; j < params->stateSizeWords; j++)
      {
-
+			#pragma HLS PIPELINE II=2 rewind
             size_t index = i * params->stateSizeWords + j;
             prod[j] = (state[j] & matrix[index]);
         }

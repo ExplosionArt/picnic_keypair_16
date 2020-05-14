@@ -1,12 +1,12 @@
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c" 2
-# 38 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c" 2
+# 38 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
@@ -211,7 +211,7 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 39 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c" 2
+# 39 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 
 
@@ -376,9 +376,9 @@ __extension__ typedef unsigned long long uintmax_t;
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 40 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.h" 1
-# 43 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.h"
+# 40 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.h" 1
+# 43 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.h"
 struct AES_ctx
 {
   uint8_t RoundKey[240];
@@ -401,13 +401,13 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv);
 
 void AES_ECB_encrypt(struct AES_ctx* ctx, state_t* buf);
 void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf);
-# 74 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.h"
+# 74 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.h"
 void AES_CBC_encrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length);
 void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length);
-# 87 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.h"
+# 87 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.h"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length);
-# 41 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c" 2
-# 80 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 41 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c" 2
+# 80 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 static const uint8_t sbox[256] = {
 
   0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
@@ -449,7 +449,7 @@ static const uint8_t rsbox[256] = {
 
 static const uint8_t Rcon[11] = {
   0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36 };
-# 152 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 152 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 static void KeyExpansion(uint8_t* RoundKey, const uint8_t* Key)
 {
   uint8_t i, j, k;
@@ -633,7 +633,7 @@ static void MixColumns(state_t* state)
     Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
   }
 }
-# 363 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 363 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 static void InvMixColumns(state_t* state)
 {
   int i;
@@ -746,7 +746,7 @@ static void InvCipher(state_t* state,uint8_t* RoundKey)
   InvSubBytes(state);
   AddRoundKey(0, state, RoundKey);
 }
-# 483 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 483 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, state_t* buf)
 {
 
@@ -759,7 +759,7 @@ void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 
   InvCipher((state_t*)buf, ctx->RoundKey);
 }
-# 506 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 506 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 static void XorWithIv(uint8_t* buf, uint8_t* Iv)
 {
   uint8_t i;
@@ -799,7 +799,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
   }
 
 }
-# 553 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/NIST-KATs/aes.c"
+# 553 "C:/picnic_keypair_16-master/project16-Optimized_Area/NIST-KATs/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
   uint8_t buffer[16];

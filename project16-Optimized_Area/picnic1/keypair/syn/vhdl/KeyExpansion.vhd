@@ -158,8 +158,8 @@ architecture behav of KeyExpansion is
     signal ap_CS_fsm_state16 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state16 : signal is "none";
     signal icmp_ln229_fu_948_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_4_fu_982_p6 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_4_reg_1173 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_3_fu_982_p6 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_3_reg_1173 : STD_LOGIC_VECTOR (7 downto 0);
     signal add_ln231_1_fu_996_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal add_ln231_1_reg_1178 : STD_LOGIC_VECTOR (7 downto 0);
     signal i_9_fu_1001_p2 : STD_LOGIC_VECTOR (5 downto 0);
@@ -242,7 +242,7 @@ architecture behav of KeyExpansion is
     signal k_1_fu_939_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal zext_ln231_2_fu_964_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal add_ln231_fu_968_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal tmp_4_fu_982_p5 : STD_LOGIC_VECTOR (1 downto 0);
+    signal tmp_3_fu_982_p5 : STD_LOGIC_VECTOR (1 downto 0);
     signal zext_ln231_1_fu_960_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (16 downto 0);
 
@@ -371,8 +371,8 @@ begin
         din1 => tempa_1_8_reg_619,
         din2 => tempa_2_8_reg_606,
         din3 => tempa_3_8_reg_593,
-        din4 => tmp_4_fu_982_p5,
-        dout => tmp_4_fu_982_p6);
+        din4 => tmp_3_fu_982_p5,
+        dout => tmp_3_fu_982_p6);
 
 
 
@@ -823,7 +823,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((icmp_ln229_fu_948_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state16))) then
                 add_ln231_1_reg_1178 <= add_ln231_1_fu_996_p2;
-                tmp_4_reg_1173 <= tmp_4_fu_982_p6;
+                tmp_3_reg_1173 <= tmp_3_fu_982_p6;
             end if;
         end if;
     end process;
@@ -1250,13 +1250,13 @@ begin
     tempa_0_2_fu_892_p2 <= (tempa_0_32_reg_397 xor Rcon_q0);
     tmp_1_fu_858_p5 <= j_2_reg_408(2 - 1 downto 0);
     tmp_2_fu_920_p5 <= j_3_reg_582(2 - 1 downto 0);
-    tmp_4_fu_982_p5 <= l_0_reg_717(2 - 1 downto 0);
+    tmp_3_fu_982_p5 <= l_0_reg_717(2 - 1 downto 0);
     trunc_ln162_fu_740_p1 <= i_0_reg_155(3 - 1 downto 0);
     trunc_ln171_fu_832_p1 <= i_1_reg_225(3 - 1 downto 0);
     trunc_ln177_fu_828_p1 <= j_1_reg_281(2 - 1 downto 0);
     trunc_ln206_fu_854_p1 <= j_2_reg_408(2 - 1 downto 0);
     trunc_ln220_fu_916_p1 <= j_3_reg_582(2 - 1 downto 0);
-    xor_ln231_fu_1007_p2 <= (tmp_4_reg_1173 xor RoundKey_q0);
+    xor_ln231_fu_1007_p2 <= (tmp_3_reg_1173 xor RoundKey_q0);
     zext_ln162_1_fu_773_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln162_fu_768_p2),64));
     zext_ln162_fu_764_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(j_0_reg_166),5));
     zext_ln175_fu_798_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(k_fu_792_p2),9));

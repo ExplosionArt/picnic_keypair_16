@@ -126,8 +126,8 @@ wire   [2:0] l_fu_954_p2;
 reg   [2:0] l_reg_1163;
 wire    ap_CS_fsm_state16;
 wire   [0:0] icmp_ln229_fu_948_p2;
-wire   [7:0] tmp_4_fu_982_p6;
-reg   [7:0] tmp_4_reg_1173;
+wire   [7:0] tmp_3_fu_982_p6;
+reg   [7:0] tmp_3_reg_1173;
 wire   [7:0] add_ln231_1_fu_996_p2;
 reg   [7:0] add_ln231_1_reg_1178;
 wire   [5:0] i_9_fu_1001_p2;
@@ -205,7 +205,7 @@ wire   [7:0] tmp_2_fu_920_p6;
 wire   [7:0] k_1_fu_939_p2;
 wire   [8:0] zext_ln231_2_fu_964_p1;
 wire   [8:0] add_ln231_fu_968_p2;
-wire   [1:0] tmp_4_fu_982_p5;
+wire   [1:0] tmp_3_fu_982_p5;
 wire   [7:0] zext_ln231_1_fu_960_p1;
 reg   [16:0] ap_NS_fsm;
 
@@ -288,8 +288,8 @@ crypto_sign_keypabkb_U3(
     .din1(tempa_1_8_reg_619),
     .din2(tempa_2_8_reg_606),
     .din3(tempa_3_8_reg_593),
-    .din4(tmp_4_fu_982_p5),
-    .dout(tmp_4_fu_982_p6)
+    .din4(tmp_3_fu_982_p5),
+    .dout(tmp_3_fu_982_p6)
 );
 
 always @ (posedge ap_clk) begin
@@ -615,7 +615,7 @@ end
 always @ (posedge ap_clk) begin
     if (((icmp_ln229_fu_948_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state16))) begin
         add_ln231_1_reg_1178 <= add_ln231_1_fu_996_p2;
-        tmp_4_reg_1173 <= tmp_4_fu_982_p6;
+        tmp_3_reg_1173 <= tmp_3_fu_982_p6;
     end
 end
 
@@ -1037,7 +1037,7 @@ assign tmp_1_fu_858_p5 = j_2_reg_408[1:0];
 
 assign tmp_2_fu_920_p5 = j_3_reg_582[1:0];
 
-assign tmp_4_fu_982_p5 = l_0_reg_717[1:0];
+assign tmp_3_fu_982_p5 = l_0_reg_717[1:0];
 
 assign trunc_ln162_fu_740_p1 = i_0_reg_155[2:0];
 
@@ -1049,7 +1049,7 @@ assign trunc_ln206_fu_854_p1 = j_2_reg_408[1:0];
 
 assign trunc_ln220_fu_916_p1 = j_3_reg_582[1:0];
 
-assign xor_ln231_fu_1007_p2 = (tmp_4_reg_1173 ^ RoundKey_q0);
+assign xor_ln231_fu_1007_p2 = (tmp_3_reg_1173 ^ RoundKey_q0);
 
 assign zext_ln162_1_fu_773_p1 = add_ln162_fu_768_p2;
 

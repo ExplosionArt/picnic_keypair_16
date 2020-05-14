@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'KeyExpansion'" level="0">
-<item name = "Date">Wed May 13 21:28:57 2020
+<item name = "Date">Thu May 14 22:22:22 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">picnic1</item>
@@ -223,7 +223,7 @@
 <column name="tempa_3_8_reg_593">8, 0, 8, 0</column>
 <column name="tempa_3_be_reg_346">8, 0, 8, 0</column>
 <column name="tempa_3_reg_270">8, 0, 8, 0</column>
-<column name="tmp_4_reg_1173">8, 0, 8, 0</column>
+<column name="tmp_3_reg_1173">8, 0, 8, 0</column>
 <column name="trunc_ln171_reg_1079">3, 0, 3, 0</column>
 <column name="trunc_ln177_reg_1075">2, 0, 2, 0</column>
 <column name="trunc_ln206_reg_1104">2, 0, 2, 0</column>

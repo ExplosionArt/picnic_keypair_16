@@ -99,8 +99,8 @@ KeyExpansion::KeyExpansion(sc_module_name name) : sc_module(name), mVcdFile(0) {
     crypto_sign_keypabkb_U3->din1(tempa_1_8_reg_619);
     crypto_sign_keypabkb_U3->din2(tempa_2_8_reg_606);
     crypto_sign_keypabkb_U3->din3(tempa_3_8_reg_593);
-    crypto_sign_keypabkb_U3->din4(tmp_4_fu_982_p5);
-    crypto_sign_keypabkb_U3->dout(tmp_4_fu_982_p6);
+    crypto_sign_keypabkb_U3->din4(tmp_3_fu_982_p5);
+    crypto_sign_keypabkb_U3->dout(tmp_3_fu_982_p6);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -347,7 +347,7 @@ KeyExpansion::KeyExpansion(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_CS_fsm_state13 );
     sensitive << ( j_3_reg_582 );
 
-    SC_METHOD(thread_tmp_4_fu_982_p5);
+    SC_METHOD(thread_tmp_3_fu_982_p5);
     sensitive << ( ap_CS_fsm_state16 );
     sensitive << ( l_0_reg_717 );
 
@@ -368,7 +368,7 @@ KeyExpansion::KeyExpansion(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_xor_ln231_fu_1007_p2);
     sensitive << ( RoundKey_q0 );
-    sensitive << ( tmp_4_reg_1173 );
+    sensitive << ( tmp_3_reg_1173 );
 
     SC_METHOD(thread_zext_ln162_1_fu_773_p1);
     sensitive << ( add_ln162_fu_768_p2 );
@@ -515,8 +515,8 @@ KeyExpansion::KeyExpansion(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, l_reg_1163, "l_reg_1163");
     sc_trace(mVcdFile, ap_CS_fsm_state16, "ap_CS_fsm_state16");
     sc_trace(mVcdFile, icmp_ln229_fu_948_p2, "icmp_ln229_fu_948_p2");
-    sc_trace(mVcdFile, tmp_4_fu_982_p6, "tmp_4_fu_982_p6");
-    sc_trace(mVcdFile, tmp_4_reg_1173, "tmp_4_reg_1173");
+    sc_trace(mVcdFile, tmp_3_fu_982_p6, "tmp_3_fu_982_p6");
+    sc_trace(mVcdFile, tmp_3_reg_1173, "tmp_3_reg_1173");
     sc_trace(mVcdFile, add_ln231_1_fu_996_p2, "add_ln231_1_fu_996_p2");
     sc_trace(mVcdFile, add_ln231_1_reg_1178, "add_ln231_1_reg_1178");
     sc_trace(mVcdFile, i_9_fu_1001_p2, "i_9_fu_1001_p2");
@@ -594,7 +594,7 @@ KeyExpansion::KeyExpansion(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, k_1_fu_939_p2, "k_1_fu_939_p2");
     sc_trace(mVcdFile, zext_ln231_2_fu_964_p1, "zext_ln231_2_fu_964_p1");
     sc_trace(mVcdFile, add_ln231_fu_968_p2, "add_ln231_fu_968_p2");
-    sc_trace(mVcdFile, tmp_4_fu_982_p5, "tmp_4_fu_982_p5");
+    sc_trace(mVcdFile, tmp_3_fu_982_p5, "tmp_3_fu_982_p5");
     sc_trace(mVcdFile, zext_ln231_1_fu_960_p1, "zext_ln231_1_fu_960_p1");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -939,7 +939,7 @@ void KeyExpansion::thread_ap_clk_no_reset_() {
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, icmp_ln229_fu_948_p2.read()))) {
         add_ln231_1_reg_1178 = add_ln231_1_fu_996_p2.read();
-        tmp_4_reg_1173 = tmp_4_fu_982_p6.read();
+        tmp_3_reg_1173 = tmp_3_fu_982_p6.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
         i_reg_1020 = i_fu_734_p2.read();
@@ -1329,8 +1329,8 @@ void KeyExpansion::thread_tmp_2_fu_920_p5() {
     tmp_2_fu_920_p5 = j_3_reg_582.read().range(2-1, 0);
 }
 
-void KeyExpansion::thread_tmp_4_fu_982_p5() {
-    tmp_4_fu_982_p5 = l_0_reg_717.read().range(2-1, 0);
+void KeyExpansion::thread_tmp_3_fu_982_p5() {
+    tmp_3_fu_982_p5 = l_0_reg_717.read().range(2-1, 0);
 }
 
 void KeyExpansion::thread_trunc_ln162_fu_740_p1() {
@@ -1354,7 +1354,7 @@ void KeyExpansion::thread_trunc_ln220_fu_916_p1() {
 }
 
 void KeyExpansion::thread_xor_ln231_fu_1007_p2() {
-    xor_ln231_fu_1007_p2 = (RoundKey_q0.read() ^ tmp_4_reg_1173.read());
+    xor_ln231_fu_1007_p2 = (RoundKey_q0.read() ^ tmp_3_reg_1173.read());
 }
 
 void KeyExpansion::thread_zext_ln162_1_fu_773_p1() {

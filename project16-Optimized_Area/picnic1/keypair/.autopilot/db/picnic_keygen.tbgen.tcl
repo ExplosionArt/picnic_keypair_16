@@ -158,7 +158,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "144996",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "144955",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -321,8 +321,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"},
-					{"ID" : "17", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"}]},
+					{"ID" : "17", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"},
+					{"ID" : "18", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"}]},
 			{"Name" : "RoundKey", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "17", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "RoundKey"}]},
@@ -387,8 +387,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "buffer_r", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "sbox", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "29", "SubInstance" : "grp_Cipher_fu_145", "Port" : "sbox"},
-					{"ID" : "23", "SubInstance" : "grp_KeyExpansion_fu_133", "Port" : "sbox"}]},
+					{"ID" : "23", "SubInstance" : "grp_KeyExpansion_fu_133", "Port" : "sbox"},
+					{"ID" : "29", "SubInstance" : "grp_Cipher_fu_145", "Port" : "sbox"}]},
 			{"Name" : "Rcon", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "23", "SubInstance" : "grp_KeyExpansion_fu_133", "Port" : "Rcon"}]}]},
@@ -439,8 +439,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "31", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"},
-					{"ID" : "30", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"}]},
+					{"ID" : "30", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"},
+					{"ID" : "31", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"}]},
 			{"Name" : "RoundKey", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "30", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "RoundKey"}]},
@@ -487,7 +487,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "107470", "EstimateLatencyMax" : "107470",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "107429", "EstimateLatencyMax" : "107429",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -522,7 +522,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2570", "EstimateLatencyMax" : "2570",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2569", "EstimateLatencyMax" : "2569",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -542,7 +542,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2570", "EstimateLatencyMax" : "2570",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2569", "EstimateLatencyMax" : "2569",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -635,11 +635,11 @@ set ArgLastReadFirstWriteLatency {
 		temp_matrix2 {Type I LastRead -1 FirstWrite -1}
 		temp_matrix3 {Type I LastRead -1 FirstWrite -1}}
 	matrix_mul {
-		output_r {Type IO LastRead 2 FirstWrite 3}
+		output_r {Type IO LastRead 2 FirstWrite 10}
 		matrix_offset {Type I LastRead 0 FirstWrite -1}
 		temp_matrix2 {Type I LastRead -1 FirstWrite -1}}
 	matrix_mul_1 {
-		output_r {Type O LastRead -1 FirstWrite 3}
+		output_r {Type O LastRead -1 FirstWrite 10}
 		state {Type I LastRead 2 FirstWrite -1}
 		matrix_offset {Type I LastRead 0 FirstWrite -1}
 		temp_matrix {Type I LastRead -1 FirstWrite -1}}}
@@ -647,8 +647,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "144996"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "144996"}
+	{"Name" : "Latency", "Min" : "1", "Max" : "144955"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "144955"}
 ]}
 
 set PipelineEnableSignalInfo {[

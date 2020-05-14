@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'matrix_mul'" level="0">
-<item name = "Date">Wed May 13 21:28:54 2020
+<item name = "Date">Thu May 14 22:22:19 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">picnic1</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">2570, 2570, 25.700 us, 25.700 us, 2570, 2570, none</column>
+<column name="">2569, 2569, 25.690 us, 25.690 us, 2569, 2569, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- matrix_mul_label6">2560, 2560, 20, -, -, 128, no</column>
-<column name=" + matrix_mul_label5">8, 8, 2, -, -, 4, no</column>
+<column name="- matrix_mul_label6">2559, 2559, 20, -, -, 128, no</column>
+<column name=" + matrix_mul_label5">7, 7, 2, 2, 2, 4, yes</column>
 <column name=" + matrix_mul_label6.2">6, 6, 2, -, -, 3, no</column>
 <column name="- matrix_mul_label7">8, 8, 2, -, -, 4, no</column>
 </table>

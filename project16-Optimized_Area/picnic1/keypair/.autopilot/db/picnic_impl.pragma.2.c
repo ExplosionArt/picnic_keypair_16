@@ -1961,8 +1961,8 @@ static void matrix_mul(
     {
         matrix_mul_label5:for (uint32_t j = 0; j < params->stateSizeWords; j++)
      {
-
-            size_t index = i * params->stateSizeWords + j;
+_ssdm_op_SpecPipeline(2, 1, 1, 0, ""); _ssdm_SpecLoopRewind(0, "");
+ size_t index = i * params->stateSizeWords + j;
             prod[j] = (state[j] & matrix[index]);
         }
         setBit((uint8_t*)temp, i, parity(&prod[0], params->stateSizeWords));

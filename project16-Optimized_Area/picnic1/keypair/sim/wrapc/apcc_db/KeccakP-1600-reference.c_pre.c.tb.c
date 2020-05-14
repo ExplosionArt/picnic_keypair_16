@@ -173,7 +173,7 @@ void KeccakP1600_DisplayRhoOffsets(l_struct_OC__iobuf *llvm_cbe_f);
 
 /* Global Variable Definitions and Initialization */
 static  char aesl_internal__OC_str[13] = "offset < 200";
-static  char aesl_internal__OC_str1[87] = "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/sha3/KeccakP-1600-reference.c";
+static  char aesl_internal__OC_str1[83] = "C:/picnic_keypair_16-master/project16-Optimized_Area/sha3/KeccakP-1600-reference.c";
 static  char aesl_internal__OC_str2[21] = "offset+length <= 200";
 static  char aesl_internal__OC_str3[17] = "byteCount <= 200";
 static  char aesl_internal__OC_str4[18] = "RC[%02i][0][0] = ";
@@ -262,14 +262,14 @@ printf("\n\{ BEGIN @KeccakP1600_AddByte\n");
 
 llvm_cbe_tmp__7:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 148) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_AddByte  --> \n", ++aesl_llvm_cbe_18_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 148) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_AddByte  --> \n", ++aesl_llvm_cbe_18_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 13
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 148u);
 if (AESL_DEBUG_TRACE) {
@@ -492,14 +492,14 @@ printf("\n\{ BEGIN @KeccakP1600_OverwriteBytes\n");
 
 llvm_cbe_tmp__23:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 168) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_OverwriteBytes  --> \n", ++aesl_llvm_cbe_76_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 168) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_OverwriteBytes  --> \n", ++aesl_llvm_cbe_76_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 13
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 168u);
 if (AESL_DEBUG_TRACE) {
@@ -521,14 +521,14 @@ printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__17&4294967295ull)));
 
 llvm_cbe_tmp__25:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([21 x i8]* @aesl_internal_.str2, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 169) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_OverwriteBytes  --> \n", ++aesl_llvm_cbe_81_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([21 x i8]* @aesl_internal_.str2, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 169) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_OverwriteBytes  --> \n", ++aesl_llvm_cbe_81_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str2[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 21
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 169u);
 if (AESL_DEBUG_TRACE) {
@@ -593,14 +593,14 @@ printf("\n\{ BEGIN @KeccakP1600_OverwriteWithZeroes\n");
 
 llvm_cbe_tmp__29:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([17 x i8]* @aesl_internal_.str3, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 177) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_OverwriteWithZeroes  --> \n", ++aesl_llvm_cbe_95_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([17 x i8]* @aesl_internal_.str3, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 177) nounwind, !dbg !16 for 0x%I64xth hint within @KeccakP1600_OverwriteWithZeroes  --> \n", ++aesl_llvm_cbe_95_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str3[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 17
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 177u);
 if (AESL_DEBUG_TRACE) {
@@ -4957,14 +4957,14 @@ printf("\n\{ BEGIN @KeccakP1600_ExtractBytes\n");
 
 llvm_cbe_tmp__401:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 389) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractBytes  --> \n", ++aesl_llvm_cbe_1301_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 389) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractBytes  --> \n", ++aesl_llvm_cbe_1301_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 13
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 389u);
 if (AESL_DEBUG_TRACE) {
@@ -4986,14 +4986,14 @@ printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__392&4294967295ull)));
 
 llvm_cbe_tmp__403:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([21 x i8]* @aesl_internal_.str2, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 390) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractBytes  --> \n", ++aesl_llvm_cbe_1306_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([21 x i8]* @aesl_internal_.str2, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 390) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractBytes  --> \n", ++aesl_llvm_cbe_1306_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str2[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 21
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 390u);
 if (AESL_DEBUG_TRACE) {
@@ -5153,14 +5153,14 @@ printf("\n\{ BEGIN @KeccakP1600_ExtractAndAddBytes\n");
 
 llvm_cbe_tmp__416:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 403) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractAndAddBytes  --> \n", ++aesl_llvm_cbe_1345_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([13 x i8]* @aesl_internal_.str, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 403) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractAndAddBytes  --> \n", ++aesl_llvm_cbe_1345_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 13
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 403u);
 if (AESL_DEBUG_TRACE) {
@@ -5182,14 +5182,14 @@ printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__404&4294967295ull)));
 
 llvm_cbe_tmp__418:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([21 x i8]* @aesl_internal_.str2, i64 0, i64 0), i8* getelementptr inbounds ([87 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 404) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractAndAddBytes  --> \n", ++aesl_llvm_cbe_1350_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([21 x i8]* @aesl_internal_.str2, i64 0, i64 0), i8* getelementptr inbounds ([83 x i8]* @aesl_internal_.str1, i64 0, i64 0), i32 404) nounwind, !dbg !17 for 0x%I64xth hint within @KeccakP1600_ExtractAndAddBytes  --> \n", ++aesl_llvm_cbe_1350_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str2[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 21
 #endif
 ])), ( char *)((&aesl_internal__OC_str1[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 87
+ % 83
 #endif
 ])), 404u);
 if (AESL_DEBUG_TRACE) {

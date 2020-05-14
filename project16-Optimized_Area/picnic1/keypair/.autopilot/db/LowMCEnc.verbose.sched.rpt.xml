@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'LowMCEnc'" level="0">
-<item name = "Date">Wed May 13 21:28:55 2020
+<item name = "Date">Thu May 14 22:22:19 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">picnic1</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">107470, 107470, 1.075 ms, 1.075 ms, 107470, 107470, none</column>
+<column name="">107429, 107429, 1.074 ms, 1.074 ms, 107429, 107429, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -37,7 +37,7 @@
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">8, 8, 2, -, -, 4, no</column>
 <column name="- xor_array_label4">8, 8, 2, -, -, 4, no</column>
-<column name="- Loop 3">104880, 104880, 5244, -, -, 20, no</column>
+<column name="- Loop 3">104840, 104840, 5242, -, -, 20, no</column>
 <column name=" + Loop 3.1">8, 8, 2, -, -, 4, no</column>
 <column name=" + Loop 3.2">70, 70, 7, -, -, 10, no</column>
 <column name=" + xor_array_label4">8, 8, 2, -, -, 4, no</column>

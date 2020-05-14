@@ -2,17 +2,17 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c" 1
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c" 2
-# 12 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.h" 1
-# 15 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.h"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c" 2
+# 12 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.h" 1
+# 15 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
@@ -217,13 +217,13 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 16 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.h" 2
+# 16 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.h" 2
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 17 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.h" 2
-# 1 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 1
-# 20 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h"
+# 17 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.h" 2
+# 1 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 1
+# 20 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h"
 # 1 "D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 21 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h" 2
+# 21 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h" 2
 
 typedef enum {
     TRANSFORM_FS = 0,
@@ -248,7 +248,7 @@ typedef struct paramset_t {
     uint32_t digestSizeBytes;
     transform_t transform;
 } paramset_t;
-# 63 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic_impl.h"
+# 63 "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic_impl.h"
 typedef struct proof_t {
     uint8_t seed1[16];
     uint8_t seed2[16];
@@ -302,7 +302,7 @@ void setBit(uint8_t* bytes, uint32_t bitNumber, uint8_t val);
 void setBitInWordArray(uint32_t* array, uint32_t bitNumber, uint8_t val);
 uint8_t parity(uint32_t* data, size_t len);
 void xor_array(uint32_t* out, const uint32_t * in1, const uint32_t * in2, uint32_t length);
-# 18 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.h" 2
+# 18 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.h" 2
 
 
 
@@ -317,7 +317,7 @@ const uint32_t* KMatrix(uint32_t round, paramset_t* params);
 
 
 const uint32_t* RConstant(uint32_t round, paramset_t* params);
-# 13 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c" 2
+# 13 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c" 2
 
 typedef struct matrices {
     size_t nmatrices;
@@ -337,13 +337,13 @@ typedef struct matrices {
  const matrices_t LMatrix_L1 = {20, 128, 4, (uint32_t*) linearMatrices_L1};
  const matrices_t KMatrix_L1 = {21, 128, 4, (uint32_t*) keyMatrices_L1};
  const matrices_t RConstants_L1 = {20, 1, 4, (uint32_t*) roundConstants_L1};
-# 43 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
+# 43 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
 const uint32_t* LMatrix(uint32_t round, paramset_t* params)
 {
 
 
         return (&(LMatrix_L1).data[(round)*((LMatrix_L1).rows*((LMatrix_L1).columns))]);
-# 58 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
+# 58 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
 }
 
 
@@ -351,14 +351,14 @@ const uint32_t* KMatrix(uint32_t round, paramset_t* params)
 {
 
         return (&(KMatrix_L1).data[(round)*((KMatrix_L1).rows*((KMatrix_L1).columns))]);
-# 75 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
+# 75 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
 }
 
 const uint32_t* KMatrix_2(uint32_t round, paramset_t* params)
 {
 
         return (&(KMatrix_L1).data[(0)*((KMatrix_L1).rows*((KMatrix_L1).columns))]);
-# 91 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
+# 91 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
 }
 
 
@@ -366,5 +366,5 @@ const uint32_t* RConstant(uint32_t round, paramset_t* params)
 {
 
         return (&(RConstants_L1).data[(round)*((RConstants_L1).rows*((RConstants_L1).columns))]);
-# 108 "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/lowmc_constants.c"
+# 108 "C:/picnic_keypair_16-master/project16-Optimized_Area/lowmc_constants.c"
 }

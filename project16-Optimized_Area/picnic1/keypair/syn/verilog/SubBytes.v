@@ -68,7 +68,7 @@ reg   [2:0] j_0_reg_68;
 wire    ap_CS_fsm_state5;
 wire   [63:0] zext_ln279_1_fu_124_p1;
 wire   [63:0] zext_ln279_2_fu_129_p1;
-wire   [4:0] tmp_9_fu_107_p3;
+wire   [4:0] tmp_s_fu_107_p3;
 wire   [5:0] zext_ln279_fu_115_p1;
 wire   [5:0] add_ln279_fu_119_p2;
 reg   [4:0] ap_NS_fsm;
@@ -255,7 +255,7 @@ assign sbox_address0 = zext_ln279_2_fu_129_p1;
 
 assign state_d0 = sbox_q0;
 
-assign tmp_9_fu_107_p3 = {{j_0_reg_68}, {2'd0}};
+assign tmp_s_fu_107_p3 = {{j_0_reg_68}, {2'd0}};
 
 assign zext_ln277_fu_91_p1 = i_0_reg_57;
 
@@ -263,7 +263,7 @@ assign zext_ln279_1_fu_124_p1 = add_ln279_fu_119_p2;
 
 assign zext_ln279_2_fu_129_p1 = state_q0;
 
-assign zext_ln279_fu_115_p1 = tmp_9_fu_107_p3;
+assign zext_ln279_fu_115_p1 = tmp_s_fu_107_p3;
 
 always @ (posedge ap_clk) begin
     zext_ln277_reg_142[5:3] <= 3'b000;

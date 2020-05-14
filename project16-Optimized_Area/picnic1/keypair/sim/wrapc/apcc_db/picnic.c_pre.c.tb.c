@@ -243,16 +243,16 @@ static  char aesl_internal__OC_str9[22] = "Unknown parameter set";
 static  char aesl_internal___func___OC_picnic_write_private_key[25] = "picnic_write_private_key";
 static  char aesl_internal__OC_str14[27] = "Unsupported parameter set\n";
 static  char aesl_internal__OC_str18[10] = "challenge";
+static  char aesl_internal__OC_str21[17] = "Iteration t: %u\n";
 static  char aesl_internal__OC_str24[6] = "seed1";
-static  char aesl_internal_str[15] = "INVALID PARAMS";
-static  char aesl_internal_str1[22] = "Invalid parameter set";
 static  char aesl_internal__OC_str25[6] = "seed2";
 static  char aesl_internal__OC_str26[11] = "inputShare";
-static  char aesl_internal__OC_str23[11] = "transcript";
-static  char aesl_internal__OC_str21[17] = "Iteration t: %u\n";
+static  char aesl_internal_str3[41] = "Invalid signature; deserialization fails";
+static  char aesl_internal_str1[22] = "Invalid parameter set";
 static  char aesl_internal__OC_str22[10] = "e_%u: %u\n";
 static  char aesl_internal_str2[100] = "Printing intermediate values of signatures created with Picnic2 parameter sets is not supported yet";
-static  char aesl_internal_str3[41] = "Invalid signature; deserialization fails";
+static  char aesl_internal_str[15] = "INVALID PARAMS";
+static  char aesl_internal__OC_str23[11] = "transcript";
 
 
 /* Function Bodies */

@@ -61,7 +61,7 @@ struct SubBytes : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_state5;
     sc_signal< sc_lv<64> > zext_ln279_1_fu_124_p1;
     sc_signal< sc_lv<64> > zext_ln279_2_fu_129_p1;
-    sc_signal< sc_lv<5> > tmp_9_fu_107_p3;
+    sc_signal< sc_lv<5> > tmp_s_fu_107_p3;
     sc_signal< sc_lv<6> > zext_ln279_fu_115_p1;
     sc_signal< sc_lv<6> > add_ln279_fu_119_p2;
     sc_signal< sc_lv<5> > ap_NS_fsm;
@@ -105,7 +105,7 @@ struct SubBytes : public sc_module {
     void thread_state_ce0();
     void thread_state_d0();
     void thread_state_we0();
-    void thread_tmp_9_fu_107_p3();
+    void thread_tmp_s_fu_107_p3();
     void thread_zext_ln277_fu_91_p1();
     void thread_zext_ln279_1_fu_124_p1();
     void thread_zext_ln279_2_fu_129_p1();

@@ -40,9 +40,9 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7a200t:-fbg676:-2
-set SourceFiles {sc {} c {../../tree.c ../../NIST-KATs/rng.c ../../picnic_types.c ../../picnic_impl.c ../../picnic2_impl.c ../../picnic.c ../../lowmc_constants.c ../../hash.c ../../api.c ../../NIST-KATs/aes.c ../../sha3/KeccakSpongeWidth1600.c ../../sha3/KeccakP-1600-reference.c ../../sha3/KeccakHash.c}}
+set SourceFiles {sc {} c {../../sha3/KeccakHash.c ../../sha3/KeccakP-1600-reference.c ../../sha3/KeccakSpongeWidth1600.c ../../NIST-KATs/aes.c ../../api.c ../../hash.c ../../lowmc_constants.c ../../picnic.c ../../picnic2_impl.c ../../picnic_impl.c ../../picnic_types.c ../../NIST-KATs/rng.c ../../tree.c}}
 set SourceFlags {sc {} c {{} {} {} {} {} {} {} {} {} {} {} {} {}}}
-set DirectiveFile D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic1/keypair/keypair.directive
+set DirectiveFile C:/picnic_keypair_16-master/project16-Optimized_Area/picnic1/keypair/keypair.directive
 set TBFiles {verilog ../../newtest_sign_2.c bc ../../newtest_sign_2.c vhdl ../../newtest_sign_2.c sc ../../newtest_sign_2.c cas ../../newtest_sign_2.c c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

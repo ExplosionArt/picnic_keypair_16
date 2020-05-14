@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'KeyExpansion'
 ================================================================
-* Date:           Wed May 13 21:28:51 2020
+* Date:           Thu May 14 22:22:16 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        picnic1
@@ -110,8 +110,8 @@ ST_2 : Operation 20 [1/1] (1.21ns)   --->   "%icmp_ln158 = icmp eq i4 %i_0, -8" 
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 21 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (1.49ns)   --->   "%i = add i4 %i_0, 1" [NIST-KATs/aes.c:158]   --->   Operation 22 'add' 'i' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %icmp_ln158, label %.preheader1.preheader, label %KeyExpansion_label4_begin" [NIST-KATs/aes.c:158]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str6109) nounwind" [NIST-KATs/aes.c:159]   --->   Operation 24 'specloopname' <Predicate = (!icmp_ln158)> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str6109)" [NIST-KATs/aes.c:159]   --->   Operation 25 'specregionbegin' 'tmp' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str617) nounwind" [NIST-KATs/aes.c:159]   --->   Operation 24 'specloopname' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str617)" [NIST-KATs/aes.c:159]   --->   Operation 25 'specregionbegin' 'tmp' <Predicate = (!icmp_ln158)> <Delay = 0.00>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln162 = trunc i4 %i_0 to i3" [NIST-KATs/aes.c:162]   --->   Operation 26 'trunc' 'trunc_ln162' <Predicate = (!icmp_ln158)> <Delay = 0.00>
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%shl_ln = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %trunc_ln162, i2 0)" [NIST-KATs/aes.c:162]   --->   Operation 27 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln158)> <Delay = 0.00>
 ST_2 : Operation 28 [1/1] (1.35ns)   --->   "br label %2" [NIST-KATs/aes.c:160]   --->   Operation 28 'br' <Predicate = (!icmp_ln158)> <Delay = 1.35>
@@ -120,7 +120,7 @@ ST_2 : Operation 29 [1/1] (1.35ns)   --->   "br label %.preheader1" [NIST-KATs/a
 State 3 <SV = 2> <Delay = 3.30>
 ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ 0, %KeyExpansion_label4_begin ], [ %j, %3 ]"   --->   Operation 30 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 31 [1/1] (1.00ns)   --->   "%icmp_ln160 = icmp eq i3 %j_0, -4" [NIST-KATs/aes.c:160]   --->   Operation 31 'icmp' 'icmp_ln160' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%empty_126 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 32 'speclooptripcount' 'empty_126' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%empty_130 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 32 'speclooptripcount' 'empty_130' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 33 [1/1] (1.34ns)   --->   "%j = add i3 %j_0, 1" [NIST-KATs/aes.c:160]   --->   Operation 33 'add' 'j' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %icmp_ln160, label %KeyExpansion_label4_end, label %3" [NIST-KATs/aes.c:160]   --->   Operation 34 'br' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln162 = zext i3 %j_0 to i5" [NIST-KATs/aes.c:162]   --->   Operation 35 'zext' 'zext_ln162' <Predicate = (!icmp_ln160)> <Delay = 0.00>
@@ -128,7 +128,7 @@ ST_3 : Operation 36 [1/1] (1.54ns)   --->   "%add_ln162 = add i5 %shl_ln, %zext_
 ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln162_1 = zext i5 %add_ln162 to i64" [NIST-KATs/aes.c:162]   --->   Operation 37 'zext' 'zext_ln162_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
 ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%Key_addr = getelementptr [32 x i8]* %Key, i64 0, i64 %zext_ln162_1" [NIST-KATs/aes.c:162]   --->   Operation 38 'getelementptr' 'Key_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
 ST_3 : Operation 39 [2/2] (1.75ns)   --->   "%Key_load = load i8* %Key_addr, align 1" [NIST-KATs/aes.c:162]   --->   Operation 39 'load' 'Key_load' <Predicate = (!icmp_ln160)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%empty_127 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str6109, i32 %tmp)" [NIST-KATs/aes.c:168]   --->   Operation 40 'specregionend' 'empty_127' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%empty_131 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str617, i32 %tmp)" [NIST-KATs/aes.c:168]   --->   Operation 40 'specregionend' 'empty_131' <Predicate = (icmp_ln160)> <Delay = 0.00>
 ST_3 : Operation 41 [1/1] (0.00ns)   --->   "br label %1" [NIST-KATs/aes.c:158]   --->   Operation 41 'br' <Predicate = (icmp_ln160)> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 4.52>
@@ -144,10 +144,10 @@ ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%tempa_1_0 = phi i8 [ %tempa_1_8, %
 ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%tempa_0_0 = phi i8 [ %tempa_0_85, %KeyExpansion_label5_end ], [ undef, %.preheader1.preheader ]" [NIST-KATs/aes.c:212]   --->   Operation 49 'phi' 'tempa_0_0' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%i_1 = phi i6 [ %i_9, %KeyExpansion_label5_end ], [ 8, %.preheader1.preheader ]"   --->   Operation 50 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 51 [1/1] (1.22ns)   --->   "%icmp_ln171 = icmp eq i6 %i_1, -4" [NIST-KATs/aes.c:171]   --->   Operation 51 'icmp' 'icmp_ln171' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%empty_128 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 52, i64 52, i64 52)"   --->   Operation 52 'speclooptripcount' 'empty_128' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%empty_132 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 52, i64 52, i64 52)"   --->   Operation 52 'speclooptripcount' 'empty_132' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %icmp_ln171, label %11, label %KeyExpansion_label5_begin" [NIST-KATs/aes.c:171]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str7110) nounwind" [NIST-KATs/aes.c:172]   --->   Operation 54 'specloopname' <Predicate = (!icmp_ln171)> <Delay = 0.00>
-ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str7110)" [NIST-KATs/aes.c:172]   --->   Operation 55 'specregionbegin' 'tmp_3' <Predicate = (!icmp_ln171)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str718) nounwind" [NIST-KATs/aes.c:172]   --->   Operation 54 'specloopname' <Predicate = (!icmp_ln171)> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str718)" [NIST-KATs/aes.c:172]   --->   Operation 55 'specregionbegin' 'tmp_5' <Predicate = (!icmp_ln171)> <Delay = 0.00>
 ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%j_6 = call i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6 %i_1, i2 0)" [NIST-KATs/aes.c:174]   --->   Operation 56 'bitconcatenate' 'j_6' <Predicate = (!icmp_ln171)> <Delay = 0.00>
 ST_5 : Operation 57 [1/1] (1.71ns)   --->   "%k = add i8 %j_6, -4" [NIST-KATs/aes.c:174]   --->   Operation 57 'add' 'k' <Predicate = (!icmp_ln171)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln175 = zext i8 %k to i9" [NIST-KATs/aes.c:175]   --->   Operation 58 'zext' 'zext_ln175' <Predicate = (!icmp_ln171)> <Delay = 0.00>
@@ -161,7 +161,7 @@ ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%tempa_0 = phi i8 [ %tempa_1_0, %Ke
 ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%tempa_3 = phi i8 [ %tempa_0_0, %KeyExpansion_label5_begin ], [ %tempa_3_be, %branch8.backedge ]" [NIST-KATs/aes.c:212]   --->   Operation 64 'phi' 'tempa_3' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%j_1 = phi i3 [ 0, %KeyExpansion_label5_begin ], [ %j_4, %branch8.backedge ]"   --->   Operation 65 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 66 [1/1] (1.00ns)   --->   "%icmp_ln175 = icmp eq i3 %j_1, -4" [NIST-KATs/aes.c:175]   --->   Operation 66 'icmp' 'icmp_ln175' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%empty_129 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 67 'speclooptripcount' 'empty_129' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%empty_133 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 67 'speclooptripcount' 'empty_133' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 68 [1/1] (1.34ns)   --->   "%j_4 = add i3 %j_1, 1" [NIST-KATs/aes.c:175]   --->   Operation 68 'add' 'j_4' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %icmp_ln175, label %5, label %4" [NIST-KATs/aes.c:175]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln177 = zext i3 %j_1 to i9" [NIST-KATs/aes.c:177]   --->   Operation 70 'zext' 'zext_ln177' <Predicate = (!icmp_ln175)> <Delay = 0.00>
@@ -200,7 +200,7 @@ ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%tempa_1_3 = phi i8 [ %tempa_1, %.p
 ST_9 : Operation 93 [1/1] (0.00ns)   --->   "%tempa_0_32 = phi i8 [ %tempa_0, %.preheader10.preheader ], [ %tempa_0_32_be, %.preheader10.backedge ]"   --->   Operation 93 'phi' 'tempa_0_32' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 94 [1/1] (0.00ns)   --->   "%j_2 = phi i3 [ 0, %.preheader10.preheader ], [ %j_5, %.preheader10.backedge ]"   --->   Operation 94 'phi' 'j_2' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 95 [1/1] (1.00ns)   --->   "%icmp_ln204 = icmp eq i3 %j_2, -4" [NIST-KATs/aes.c:204]   --->   Operation 95 'icmp' 'icmp_ln204' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%empty_130 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 96 'speclooptripcount' 'empty_130' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%empty_134 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 96 'speclooptripcount' 'empty_134' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 97 [1/1] (1.34ns)   --->   "%j_5 = add i3 %j_2, 1" [NIST-KATs/aes.c:204]   --->   Operation 97 'add' 'j_5' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_9 : Operation 98 [1/1] (0.00ns)   --->   "br i1 %icmp_ln204, label %7, label %6" [NIST-KATs/aes.c:204]   --->   Operation 98 'br' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 99 [1/1] (0.00ns)   --->   "%trunc_ln206 = trunc i3 %j_2 to i2" [NIST-KATs/aes.c:206]   --->   Operation 99 'trunc' 'trunc_ln206' <Predicate = (!icmp_ln204)> <Delay = 0.00>
@@ -250,7 +250,7 @@ ST_13 : Operation 130 [1/1] (0.00ns)   --->   "%tempa_1_6 = phi i8 [ %tempa_1_5,
 ST_13 : Operation 131 [1/1] (0.00ns)   --->   "%tempa_0_63 = phi i8 [ %tempa_0_5, %.preheader.preheader ], [ %tempa_0_63_be, %.preheader.backedge ]" [NIST-KATs/aes.c:212]   --->   Operation 131 'phi' 'tempa_0_63' <Predicate = (icmp_ln215)> <Delay = 0.00>
 ST_13 : Operation 132 [1/1] (0.00ns)   --->   "%j_3 = phi i3 [ 0, %.preheader.preheader ], [ %j_7, %.preheader.backedge ]"   --->   Operation 132 'phi' 'j_3' <Predicate = (icmp_ln215)> <Delay = 0.00>
 ST_13 : Operation 133 [1/1] (1.00ns)   --->   "%icmp_ln218 = icmp eq i3 %j_3, -4" [NIST-KATs/aes.c:218]   --->   Operation 133 'icmp' 'icmp_ln218' <Predicate = (icmp_ln215)> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 134 [1/1] (0.00ns)   --->   "%empty_131 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 134 'speclooptripcount' 'empty_131' <Predicate = (icmp_ln215)> <Delay = 0.00>
+ST_13 : Operation 134 [1/1] (0.00ns)   --->   "%empty_135 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 134 'speclooptripcount' 'empty_135' <Predicate = (icmp_ln215)> <Delay = 0.00>
 ST_13 : Operation 135 [1/1] (1.34ns)   --->   "%j_7 = add i3 %j_3, 1" [NIST-KATs/aes.c:218]   --->   Operation 135 'add' 'j_7' <Predicate = (icmp_ln215)> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_13 : Operation 136 [1/1] (0.00ns)   --->   "br i1 %icmp_ln218, label %.loopexit.loopexit, label %8" [NIST-KATs/aes.c:218]   --->   Operation 136 'br' <Predicate = (icmp_ln215)> <Delay = 0.00>
 ST_13 : Operation 137 [1/1] (0.00ns)   --->   "%trunc_ln220 = trunc i3 %j_3 to i2" [NIST-KATs/aes.c:220]   --->   Operation 137 'trunc' 'trunc_ln220' <Predicate = (icmp_ln215 & !icmp_ln218)> <Delay = 0.00>
@@ -288,7 +288,7 @@ ST_15 : Operation 159 [1/1] (0.00ns)   --->   "br label %.preheader"   --->   Op
 State 16 <SV = 7> <Delay = 4.49>
 ST_16 : Operation 160 [1/1] (0.00ns)   --->   "%l_0 = phi i3 [ 0, %.loopexit ], [ %l, %10 ]"   --->   Operation 160 'phi' 'l_0' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 161 [1/1] (1.00ns)   --->   "%icmp_ln229 = icmp eq i3 %l_0, -4" [NIST-KATs/aes.c:229]   --->   Operation 161 'icmp' 'icmp_ln229' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_16 : Operation 162 [1/1] (0.00ns)   --->   "%empty_132 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 162 'speclooptripcount' 'empty_132' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 162 [1/1] (0.00ns)   --->   "%empty_136 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 162 'speclooptripcount' 'empty_136' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 163 [1/1] (1.34ns)   --->   "%l = add i3 %l_0, 1" [NIST-KATs/aes.c:229]   --->   Operation 163 'add' 'l' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_16 : Operation 164 [1/1] (0.00ns)   --->   "br i1 %icmp_ln229, label %KeyExpansion_label5_end, label %10" [NIST-KATs/aes.c:229]   --->   Operation 164 'br' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 165 [1/1] (0.00ns)   --->   "%zext_ln231_1 = zext i3 %l_0 to i8" [NIST-KATs/aes.c:231]   --->   Operation 165 'zext' 'zext_ln231_1' <Predicate = (!icmp_ln229)> <Delay = 0.00>
@@ -298,15 +298,15 @@ ST_16 : Operation 168 [1/1] (0.00ns)   --->   "%zext_ln231_3 = zext i9 %add_ln23
 ST_16 : Operation 169 [1/1] (0.00ns)   --->   "%RoundKey_addr_2 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln231_3" [NIST-KATs/aes.c:231]   --->   Operation 169 'getelementptr' 'RoundKey_addr_2' <Predicate = (!icmp_ln229)> <Delay = 0.00>
 ST_16 : Operation 170 [2/2] (2.77ns)   --->   "%RoundKey_load = load i8* %RoundKey_addr_2, align 1" [NIST-KATs/aes.c:231]   --->   Operation 170 'load' 'RoundKey_load' <Predicate = (!icmp_ln229)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
 ST_16 : Operation 171 [1/1] (0.00ns)   --->   "%trunc_ln231 = trunc i3 %l_0 to i2" [NIST-KATs/aes.c:231]   --->   Operation 171 'trunc' 'trunc_ln231' <Predicate = (!icmp_ln229)> <Delay = 0.00>
-ST_16 : Operation 172 [1/1] (1.42ns)   --->   "%tmp_4 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %tempa_0_85, i8 %tempa_1_8, i8 %tempa_2_8, i8 %tempa_3_8, i2 %trunc_ln231)" [NIST-KATs/aes.c:231]   --->   Operation 172 'mux' 'tmp_4' <Predicate = (!icmp_ln229)> <Delay = 1.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 172 [1/1] (1.42ns)   --->   "%tmp_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %tempa_0_85, i8 %tempa_1_8, i8 %tempa_2_8, i8 %tempa_3_8, i2 %trunc_ln231)" [NIST-KATs/aes.c:231]   --->   Operation 172 'mux' 'tmp_3' <Predicate = (!icmp_ln229)> <Delay = 1.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_16 : Operation 173 [1/1] (1.71ns)   --->   "%add_ln231_1 = add i8 %j_6, %zext_ln231_1" [NIST-KATs/aes.c:231]   --->   Operation 173 'add' 'add_ln231_1' <Predicate = (!icmp_ln229)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_16 : Operation 174 [1/1] (0.00ns)   --->   "%empty_133 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str7110, i32 %tmp_3)" [NIST-KATs/aes.c:237]   --->   Operation 174 'specregionend' 'empty_133' <Predicate = (icmp_ln229)> <Delay = 0.00>
+ST_16 : Operation 174 [1/1] (0.00ns)   --->   "%empty_137 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str718, i32 %tmp_5)" [NIST-KATs/aes.c:237]   --->   Operation 174 'specregionend' 'empty_137' <Predicate = (icmp_ln229)> <Delay = 0.00>
 ST_16 : Operation 175 [1/1] (1.60ns)   --->   "%i_9 = add i6 %i_1, 1" [NIST-KATs/aes.c:171]   --->   Operation 175 'add' 'i_9' <Predicate = (icmp_ln229)> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_16 : Operation 176 [1/1] (0.00ns)   --->   "br label %.preheader1" [NIST-KATs/aes.c:171]   --->   Operation 176 'br' <Predicate = (icmp_ln229)> <Delay = 0.00>
 
 State 17 <SV = 8> <Delay = 6.34>
 ST_17 : Operation 177 [1/2] (2.77ns)   --->   "%RoundKey_load = load i8* %RoundKey_addr_2, align 1" [NIST-KATs/aes.c:231]   --->   Operation 177 'load' 'RoundKey_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
-ST_17 : Operation 178 [1/1] (0.80ns)   --->   "%xor_ln231 = xor i8 %RoundKey_load, %tmp_4" [NIST-KATs/aes.c:231]   --->   Operation 178 'xor' 'xor_ln231' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 178 [1/1] (0.80ns)   --->   "%xor_ln231 = xor i8 %RoundKey_load, %tmp_3" [NIST-KATs/aes.c:231]   --->   Operation 178 'xor' 'xor_ln231' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_17 : Operation 179 [1/1] (0.00ns)   --->   "%zext_ln231_4 = zext i8 %add_ln231_1 to i64" [NIST-KATs/aes.c:231]   --->   Operation 179 'zext' 'zext_ln231_4' <Predicate = true> <Delay = 0.00>
 ST_17 : Operation 180 [1/1] (0.00ns)   --->   "%RoundKey_addr_3 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln231_4" [NIST-KATs/aes.c:231]   --->   Operation 180 'getelementptr' 'RoundKey_addr_3' <Predicate = true> <Delay = 0.00>
 ST_17 : Operation 181 [1/1] (2.77ns)   --->   "store i8 %xor_ln231, i8* %RoundKey_addr_3, align 1" [NIST-KATs/aes.c:231]   --->   Operation 181 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
@@ -348,14 +348,14 @@ br_ln160           (br               ) [ 001110000000000000]
 br_ln171           (br               ) [ 001111111111111111]
 j_0                (phi              ) [ 000100000000000000]
 icmp_ln160         (icmp             ) [ 001110000000000000]
-empty_126          (speclooptripcount) [ 000000000000000000]
+empty_130          (speclooptripcount) [ 000000000000000000]
 j                  (add              ) [ 001110000000000000]
 br_ln160           (br               ) [ 000000000000000000]
 zext_ln162         (zext             ) [ 000000000000000000]
 add_ln162          (add              ) [ 000000000000000000]
 zext_ln162_1       (zext             ) [ 000010000000000000]
 Key_addr           (getelementptr    ) [ 000010000000000000]
-empty_127          (specregionend    ) [ 000000000000000000]
+empty_131          (specregionend    ) [ 000000000000000000]
 br_ln158           (br               ) [ 011110000000000000]
 Key_load           (load             ) [ 000000000000000000]
 RoundKey_addr      (getelementptr    ) [ 000000000000000000]
@@ -367,10 +367,10 @@ tempa_1_0          (phi              ) [ 000001111000000000]
 tempa_0_0          (phi              ) [ 000001111000000000]
 i_1                (phi              ) [ 000001111111111111]
 icmp_ln171         (icmp             ) [ 000001111111111111]
-empty_128          (speclooptripcount) [ 000000000000000000]
+empty_132          (speclooptripcount) [ 000000000000000000]
 br_ln171           (br               ) [ 000000000000000000]
 specloopname_ln172 (specloopname     ) [ 000000000000000000]
-tmp_3              (specregionbegin  ) [ 000000111111111111]
+tmp_5              (specregionbegin  ) [ 000000111111111111]
 j_6                (bitconcatenate   ) [ 000000111111111111]
 k                  (add              ) [ 000000000000000000]
 zext_ln175         (zext             ) [ 000000111000000000]
@@ -382,7 +382,7 @@ tempa_0            (phi              ) [ 000000111111100000]
 tempa_3            (phi              ) [ 000000111111100000]
 j_1                (phi              ) [ 000000100000000000]
 icmp_ln175         (icmp             ) [ 000001111111111111]
-empty_129          (speclooptripcount) [ 000000000000000000]
+empty_133          (speclooptripcount) [ 000000000000000000]
 j_4                (add              ) [ 000001111111111111]
 br_ln175           (br               ) [ 000000000000000000]
 zext_ln177         (zext             ) [ 000000000000000000]
@@ -410,7 +410,7 @@ tempa_1_3          (phi              ) [ 000001111111111111]
 tempa_0_32         (phi              ) [ 000000000111100000]
 j_2                (phi              ) [ 000000000100000000]
 icmp_ln204         (icmp             ) [ 000001111111111111]
-empty_130          (speclooptripcount) [ 000000000000000000]
+empty_134          (speclooptripcount) [ 000000000000000000]
 j_5                (add              ) [ 000001111111111111]
 br_ln204           (br               ) [ 000000000000000000]
 trunc_ln206        (trunc            ) [ 000000000010000000]
@@ -446,7 +446,7 @@ tempa_1_6          (phi              ) [ 000000000000011100]
 tempa_0_63         (phi              ) [ 000000000000011100]
 j_3                (phi              ) [ 000000000000010000]
 icmp_ln218         (icmp             ) [ 000001111111111111]
-empty_131          (speclooptripcount) [ 000000000000000000]
+empty_135          (speclooptripcount) [ 000000000000000000]
 j_7                (add              ) [ 000001111111111111]
 br_ln218           (br               ) [ 000000000000000000]
 trunc_ln220        (trunc            ) [ 000000000000001000]
@@ -473,7 +473,7 @@ tempa_0_63_be      (phi              ) [ 000001111111110111]
 br_ln0             (br               ) [ 000001111111111111]
 l_0                (phi              ) [ 000000000000000010]
 icmp_ln229         (icmp             ) [ 000001111111111111]
-empty_132          (speclooptripcount) [ 000000000000000000]
+empty_136          (speclooptripcount) [ 000000000000000000]
 l                  (add              ) [ 000001111111111111]
 br_ln229           (br               ) [ 000000000000000000]
 zext_ln231_1       (zext             ) [ 000000000000000000]
@@ -482,9 +482,9 @@ add_ln231          (add              ) [ 000000000000000000]
 zext_ln231_3       (zext             ) [ 000000000000000000]
 RoundKey_addr_2    (getelementptr    ) [ 000000000000000001]
 trunc_ln231        (trunc            ) [ 000000000000000000]
-tmp_4              (mux              ) [ 000000000000000001]
+tmp_3              (mux              ) [ 000000000000000001]
 add_ln231_1        (add              ) [ 000000000000000001]
-empty_133          (specregionend    ) [ 000000000000000000]
+empty_137          (specregionend    ) [ 000000000000000000]
 i_9                (add              ) [ 001001111111111111]
 br_ln171           (br               ) [ 001001111111111111]
 RoundKey_load      (load             ) [ 000000000000000000]
@@ -597,7 +597,7 @@ br_ln229           (br               ) [ 000001111111111111]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str6109"/></StgValue>
+<StgValue><ssdm name="p_str617"/></StgValue>
 </bind>
 </comp>
 
@@ -723,7 +723,7 @@ br_ln229           (br               ) [ 000001111111111111]
 <pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str7110"/></StgValue>
+<StgValue><ssdm name="p_str718"/></StgValue>
 </bind>
 </comp>
 
@@ -2575,7 +2575,7 @@ br_ln229           (br               ) [ 000001111111111111]
 </bind>
 </comp>
 
-<comp id="982" class="1004" name="tmp_4_fu_982">
+<comp id="982" class="1004" name="tmp_3_fu_982">
 <pin_list>
 <pin id="983" dir="0" index="0" bw="8" slack="0"/>
 <pin id="984" dir="0" index="1" bw="8" slack="1"/>
@@ -2587,7 +2587,7 @@ br_ln229           (br               ) [ 000001111111111111]
 </pin_list>
 <bind>
 <opcode="mux(1196) " fcode="mux"/>
-<opset="tmp_4/16 "/>
+<opset="tmp_3/16 "/>
 </bind>
 </comp>
 
@@ -2898,13 +2898,13 @@ br_ln229           (br               ) [ 000001111111111111]
 </bind>
 </comp>
 
-<comp id="1173" class="1005" name="tmp_4_reg_1173">
+<comp id="1173" class="1005" name="tmp_3_reg_1173">
 <pin_list>
 <pin id="1174" dir="0" index="0" bw="8" slack="1"/>
 <pin id="1175" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_4 "/>
+<opset="tmp_3 "/>
 </bind>
 </comp>
 
@@ -3675,7 +3675,7 @@ br_ln229           (br               ) [ 000001111111111111]
 		RoundKey_addr_2 : 4
 		RoundKey_load : 5
 		trunc_ln231 : 1
-		tmp_4 : 2
+		tmp_3 : 2
 		add_ln231_1 : 2
 	State 17
 		xor_ln231 : 1
@@ -3717,7 +3717,7 @@ br_ln229           (br               ) [ 000001111111111111]
 |----------|----------------------|---------|---------|
 |          |     tmp_1_fu_858     |    0    |    17   |
 |    mux   |     tmp_2_fu_920     |    0    |    17   |
-|          |     tmp_4_fu_982     |    0    |    17   |
+|          |     tmp_3_fu_982     |    0    |    17   |
 |----------|----------------------|---------|---------|
 |    xor   |   tempa_0_2_fu_892   |    0    |    8    |
 |          |   xor_ln231_fu_1007  |    0    |    8    |
@@ -3822,7 +3822,7 @@ N/A
 |    tempa_3_8_reg_593   |    8   |
 |   tempa_3_be_reg_346   |    8   |
 |     tempa_3_reg_270    |    8   |
-|     tmp_4_reg_1173     |    8   |
+|     tmp_3_reg_1173     |    8   |
 |  trunc_ln171_reg_1079  |    3   |
 |  trunc_ln177_reg_1075  |    2   |
 |  trunc_ln206_reg_1104  |    2   |

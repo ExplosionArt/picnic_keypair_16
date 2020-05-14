@@ -317,24 +317,24 @@ void allocateRandomTape(l_struct_OC_randomTape_t *, l_struct_OC_paramset_t *);
 
 /* Global Variable Definitions and Initialization */
 static  char aesl_internal__OC_str[43] = "Failed to reconstruct seeds for round %lu\n";
-static  char aesl_internal__OC_str9[51] = "!\"Invalid input to bitsToChunks: not enough input\"";
-static  char aesl_internal__OC_str12[7] = "pubKey";
-static  char aesl_internal__OC_str15[31] = "dst->numWords == src->numWords";
-static  char aesl_internal___func___OC_deserializeSignature2[22] = "deserializeSignature2";
-static  char aesl_internal__OC_str5[41] = "%s: failed while deserializing aux bits\n";
 static  char aesl_internal___func___OC_simulateOnline[15] = "simulateOnline";
-static  char aesl_internal__OC_str10[32] = "chunks[i] < (1 << chunkLenBits)";
-static  char aesl_internal__OC_str4[53] = "%s: sigBytesLen = %lu, expected bytesRequired = %lu\n";
-static  char aesl_internal__OC_str1[56] = "MPC simulation failed for round %lu, signature invalid\n";
+static  char aesl_internal__OC_str5[41] = "%s: failed while deserializing aux bits\n";
+static  char aesl_internal__OC_str8[68] = "C:/picnic_keypair_16-master/project16-Optimized_Area/picnic2_impl.c";
+static  char aesl_internal__OC_str9[51] = "!\"Invalid input to bitsToChunks: not enough input\"";
 static  char aesl_internal__OC_str13[7] = "output";
-static  char aesl_internal__OC_str7[47] = "params->numOpenedRounds < params->numMPCRounds";
-static  char aesl_internal__OC_str8[72] = "D:/VLSI_Optimized_Models/project16-master-Optimized_Area/picnic2_impl.c";
-static  char aesl_internal_str2[42] = "MPC simulation failed, aborting signature";
-static  char aesl_internal__OC_str14[59] = "out->numWords == a->numWords && a->numWords == b->numWords";
-static  char aesl_internal_str[44] = "Challenge does not match, signature invalid";
-static  char aesl_internal__OC_str16[65] = "!\"indexOf called on list where value is not found. (caller bug)\"";
-static  char aesl_internal__OC_str6[42] = "%s: failed while deserializing msgs bits\n";
+static  char aesl_internal__OC_str15[31] = "dst->numWords == src->numWords";
 static  char aesl_internal__OC_str11[34] = "%s: output does not match pubKey\n";
+static  char aesl_internal__OC_str1[56] = "MPC simulation failed for round %lu, signature invalid\n";
+static  char aesl_internal_str[44] = "Challenge does not match, signature invalid";
+static  char aesl_internal__OC_str7[47] = "params->numOpenedRounds < params->numMPCRounds";
+static  char aesl_internal__OC_str6[42] = "%s: failed while deserializing msgs bits\n";
+static  char aesl_internal__OC_str10[32] = "chunks[i] < (1 << chunkLenBits)";
+static  char aesl_internal__OC_str12[7] = "pubKey";
+static  char aesl_internal___func___OC_deserializeSignature2[22] = "deserializeSignature2";
+static  char aesl_internal__OC_str14[59] = "out->numWords == a->numWords && a->numWords == b->numWords";
+static  char aesl_internal__OC_str16[65] = "!\"indexOf called on list where value is not found. (caller bug)\"";
+static  char aesl_internal__OC_str4[53] = "%s: sigBytesLen = %lu, expected bytesRequired = %lu\n";
+static  char aesl_internal_str2[42] = "MPC simulation failed, aborting signature";
 
 
 /* Function Bodies */
@@ -4183,14 +4183,14 @@ printf("\n = 0x%X\n", llvm_cbe_tmp__324);
 
 llvm_cbe_tmp__327:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([65 x i8]* @aesl_internal_.str16, i64 0, i64 0), i8* getelementptr inbounds ([72 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 467) nounwind, !dbg !42 for 0x%I64xth hint within @aesl_internal_indexOf  --> \n", ++aesl_llvm_cbe_1308_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([65 x i8]* @aesl_internal_.str16, i64 0, i64 0), i8* getelementptr inbounds ([68 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 467) nounwind, !dbg !42 for 0x%I64xth hint within @aesl_internal_indexOf  --> \n", ++aesl_llvm_cbe_1308_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str16[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 65
 #endif
 ])), ( char *)((&aesl_internal__OC_str8[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 72
+ % 68
 #endif
 ])), 467u);
 if (AESL_DEBUG_TRACE) {
@@ -7639,14 +7639,14 @@ printf("\n = 0x%X\n", llvm_cbe_tmp__588);
 
 llvm_cbe_tmp__673:
 if (AESL_DEBUG_TRACE)
-printf("\n  call void @_assert(i8* getelementptr inbounds ([47 x i8]* @aesl_internal_.str7, i64 0, i64 0), i8* getelementptr inbounds ([72 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 599) nounwind, !dbg !49 for 0x%I64xth hint within @aesl_internal_HCP  --> \n", ++aesl_llvm_cbe_2081_count);
+printf("\n  call void @_assert(i8* getelementptr inbounds ([47 x i8]* @aesl_internal_.str7, i64 0, i64 0), i8* getelementptr inbounds ([68 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 599) nounwind, !dbg !49 for 0x%I64xth hint within @aesl_internal_HCP  --> \n", ++aesl_llvm_cbe_2081_count);
   _assert(( char *)((&aesl_internal__OC_str7[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 47
 #endif
 ])), ( char *)((&aesl_internal__OC_str8[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 72
+ % 68
 #endif
 ])), 599u);
 if (AESL_DEBUG_TRACE) {
@@ -17630,14 +17630,14 @@ printf("\n = 0x%I64X\n", llvm_cbe_tmp__1474);
 
 llvm_cbe_tmp__1497:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([51 x i8]* @aesl_internal_.str9, i64 0, i64 0), i8* getelementptr inbounds ([72 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 559) nounwind, !dbg !42 for 0x%I64xth hint within @aesl_internal_bitsToChunks  --> \n", ++aesl_llvm_cbe_5372_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([51 x i8]* @aesl_internal_.str9, i64 0, i64 0), i8* getelementptr inbounds ([68 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 559) nounwind, !dbg !42 for 0x%I64xth hint within @aesl_internal_bitsToChunks  --> \n", ++aesl_llvm_cbe_5372_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str9[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 51
 #endif
 ])), ( char *)((&aesl_internal__OC_str8[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 72
+ % 68
 #endif
 ])), 559u);
 if (AESL_DEBUG_TRACE) {
@@ -17824,14 +17824,14 @@ printf("\n = 0x%I64X\n", ((unsigned long long )(llvm_cbe_tmp__1481&1844674407370
 
 llvm_cbe_tmp__1504:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([32 x i8]* @aesl_internal_.str10, i64 0, i64 0), i8* getelementptr inbounds ([72 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 568) nounwind, !dbg !43 for 0x%I64xth hint within @aesl_internal_bitsToChunks  --> \n", ++aesl_llvm_cbe_5415_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([32 x i8]* @aesl_internal_.str10, i64 0, i64 0), i8* getelementptr inbounds ([68 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 568) nounwind, !dbg !43 for 0x%I64xth hint within @aesl_internal_bitsToChunks  --> \n", ++aesl_llvm_cbe_5415_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str10[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 32
 #endif
 ])), ( char *)((&aesl_internal__OC_str8[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 72
+ % 68
 #endif
 ])), 568u);
 if (AESL_DEBUG_TRACE) {
@@ -18126,14 +18126,14 @@ printf("\n = 0x%I64X\n", llvm_cbe_tmp__1517);
 
 llvm_cbe_tmp__1528:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([31 x i8]* @aesl_internal_.str15, i64 0, i64 0), i8* getelementptr inbounds ([72 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 104) nounwind, !dbg !41 for 0x%I64xth hint within @aesl_internal_copyShares  --> \n", ++aesl_llvm_cbe_5513_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([31 x i8]* @aesl_internal_.str15, i64 0, i64 0), i8* getelementptr inbounds ([68 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 104) nounwind, !dbg !41 for 0x%I64xth hint within @aesl_internal_copyShares  --> \n", ++aesl_llvm_cbe_5513_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str15[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 31
 #endif
 ])), ( char *)((&aesl_internal__OC_str8[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 72
+ % 68
 #endif
 ])), 104u);
 if (AESL_DEBUG_TRACE) {
@@ -20556,14 +20556,14 @@ printf("\n = 0x%I64X\n", llvm_cbe_tmp__1758);
 
 llvm_cbe_tmp__1775:
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @_assert(i8* getelementptr inbounds ([59 x i8]* @aesl_internal_.str14, i64 0, i64 0), i8* getelementptr inbounds ([72 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 168) nounwind, !dbg !41 for 0x%I64xth hint within @aesl_internal_mpc_xor_masks  --> \n", ++aesl_llvm_cbe_6094_count);
+printf("\n  tail call void @_assert(i8* getelementptr inbounds ([59 x i8]* @aesl_internal_.str14, i64 0, i64 0), i8* getelementptr inbounds ([68 x i8]* @aesl_internal_.str8, i64 0, i64 0), i32 168) nounwind, !dbg !41 for 0x%I64xth hint within @aesl_internal_mpc_xor_masks  --> \n", ++aesl_llvm_cbe_6094_count);
    /*tail*/ _assert(( char *)((&aesl_internal__OC_str14[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
  % 59
 #endif
 ])), ( char *)((&aesl_internal__OC_str8[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 72
+ % 68
 #endif
 ])), 168u);
 if (AESL_DEBUG_TRACE) {

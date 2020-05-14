@@ -187,11 +187,11 @@ void AES_ECB_encrypt(l_struct_OC_AES_ctx *,  char (*)[4][4]);
 
 
 /* Global Variable Definitions and Initialization */
+static  char aesl_internal__OC_str[17] = "Key_enc[%d]=%d;\n";
 l_struct_OC_AES256_CTR_DRBG_struct DRBG_ctx __ATTRIBUTE_WEAK__;
 static  char aesl_internal__OC_str1[15] = "V_enc[%d]=%d;\n";
-static  char aesl_internal__OC_str3[24] = "reseed_counter_enc=%d;\n";
-static  char aesl_internal__OC_str[17] = "Key_enc[%d]=%d;\n";
 static  char aesl_internal__OC_str2[23] = "reseed_counter_enc=%d\n";
+static  char aesl_internal__OC_str3[24] = "reseed_counter_enc=%d;\n";
 
 
 /* Function Bodies */

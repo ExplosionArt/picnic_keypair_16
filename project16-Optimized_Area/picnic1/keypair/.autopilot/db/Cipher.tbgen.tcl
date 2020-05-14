@@ -87,8 +87,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"},
-					{"ID" : "1", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"}]},
+					{"ID" : "1", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"},
+					{"ID" : "2", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"}]},
 			{"Name" : "RoundKey", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "RoundKey"}]},

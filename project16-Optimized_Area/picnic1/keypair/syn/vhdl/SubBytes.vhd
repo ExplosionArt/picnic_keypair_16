@@ -75,7 +75,7 @@ architecture behav of SubBytes is
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal zext_ln279_1_fu_124_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal zext_ln279_2_fu_129_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_9_fu_107_p3 : STD_LOGIC_VECTOR (4 downto 0);
+    signal tmp_s_fu_107_p3 : STD_LOGIC_VECTOR (4 downto 0);
     signal zext_ln279_fu_115_p1 : STD_LOGIC_VECTOR (5 downto 0);
     signal add_ln279_fu_119_p2 : STD_LOGIC_VECTOR (5 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (4 downto 0);
@@ -292,9 +292,9 @@ begin
         end if; 
     end process;
 
-    tmp_9_fu_107_p3 <= (j_0_reg_68 & ap_const_lv2_0);
+    tmp_s_fu_107_p3 <= (j_0_reg_68 & ap_const_lv2_0);
     zext_ln277_fu_91_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(i_0_reg_57),6));
     zext_ln279_1_fu_124_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln279_fu_119_p2),64));
     zext_ln279_2_fu_129_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(state_q0),64));
-    zext_ln279_fu_115_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_9_fu_107_p3),6));
+    zext_ln279_fu_115_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_s_fu_107_p3),6));
 end behav;

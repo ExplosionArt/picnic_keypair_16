@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="KeccakHash.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\sha3\KeccakHash.c"/>
-    <originFiles name="KeccakP-1600-reference.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\sha3\KeccakP-1600-reference.c"/>
-    <originFiles name="KeccakSpongeWidth1600.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\sha3\KeccakSpongeWidth1600.c"/>
-    <originFiles name="aes.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\NIST-KATs\aes.c"/>
-    <originFiles name="api.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\api.c"/>
-    <originFiles name="hash.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\hash.c"/>
-    <originFiles name="lowmc_constants.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\lowmc_constants.c"/>
-    <originFiles name="picnic.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\picnic.c"/>
-    <originFiles name="picnic2_impl.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\picnic2_impl.c"/>
-    <originFiles name="picnic_impl.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\picnic_impl.c"/>
-    <originFiles name="picnic_types.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\picnic_types.c"/>
-    <originFiles name="rng.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\NIST-KATs\rng.c"/>
-    <originFiles name="tree.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\tree.c"/>
+    <originFiles name="tree.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\tree.c"/>
+    <originFiles name="rng.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\NIST-KATs\rng.c"/>
+    <originFiles name="picnic_types.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\picnic_types.c"/>
+    <originFiles name="picnic_impl.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\picnic_impl.c"/>
+    <originFiles name="picnic2_impl.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\picnic2_impl.c"/>
+    <originFiles name="picnic.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\picnic.c"/>
+    <originFiles name="lowmc_constants.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\lowmc_constants.c"/>
+    <originFiles name="hash.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\hash.c"/>
+    <originFiles name="api.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\api.c"/>
+    <originFiles name="aes.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\NIST-KATs\aes.c"/>
+    <originFiles name="KeccakSpongeWidth1600.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\sha3\KeccakSpongeWidth1600.c"/>
+    <originFiles name="KeccakP-1600-reference.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\sha3\KeccakP-1600-reference.c"/>
+    <originFiles name="KeccakHash.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\sha3\KeccakHash.c"/>
   </source>
   <testbench>
-    <originFiles name="newtest_sign_2.c" path="D:\VLSI_Optimized_Models\project16-master-Optimized_Area\newtest_sign_2.c"/>
+    <originFiles name="newtest_sign_2.c" path="C:\picnic_keypair_16-master\project16-Optimized_Area\newtest_sign_2.c"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

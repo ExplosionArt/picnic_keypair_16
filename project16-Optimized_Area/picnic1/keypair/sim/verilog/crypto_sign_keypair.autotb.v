@@ -52,7 +52,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 145113;
+parameter LATENCY_ESTIMATION = 145072;
 parameter LENGTH_pk = 33;
 parameter LENGTH_sk = 49;
 parameter LENGTH_params = 1;

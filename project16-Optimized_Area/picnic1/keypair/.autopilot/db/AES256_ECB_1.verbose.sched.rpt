@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AES256_ECB_1'
 ================================================================
-* Date:           Wed May 13 21:28:52 2020
+* Date:           Thu May 14 22:22:17 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        picnic1
@@ -115,7 +115,7 @@ ST_3 : Operation 25 [2/2] (0.00ns)   --->   "call fastcc void @Cipher([16 x i8]*
 State 4 <SV = 3> <Delay = 3.24>
 ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ %j, %1 ], [ 0, %.preheader1.preheader ]"   --->   Operation 26 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 27 [1/1] (1.00ns)   --->   "%icmp_ln166 = icmp eq i3 %j_0, -4" [NIST-KATs/rng.c:166]   --->   Operation 27 'icmp' 'icmp_ln166' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_137 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 28 'speclooptripcount' 'empty_137' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_141 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 28 'speclooptripcount' 'empty_141' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 29 [1/1] (1.34ns)   --->   "%j = add i3 %j_0, 1" [NIST-KATs/rng.c:166]   --->   Operation 29 'add' 'j' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_4 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %icmp_ln166, label %.loopexit1.loopexit, label %1" [NIST-KATs/rng.c:166]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%zext_ln168 = zext i3 %j_0 to i4" [NIST-KATs/rng.c:168]   --->   Operation 31 'zext' 'zext_ln168' <Predicate = (!icmp_ln166)> <Delay = 0.00>
@@ -141,7 +141,7 @@ ST_6 : Operation 45 [1/1] (1.35ns)   --->   "br label %.loopexit" [NIST-KATs/rng
 State 7 <SV = 4> <Delay = 1.35>
 ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%i_1 = phi i3 [ 0, %2 ], [ %i_10, %.loopexit.loopexit ]"   --->   Operation 46 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 47 [1/1] (1.00ns)   --->   "%icmp_ln191 = icmp eq i3 %i_1, -4" [NIST-KATs/rng.c:191]   --->   Operation 47 'icmp' 'icmp_ln191' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%empty_138 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 48 'speclooptripcount' 'empty_138' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%empty_142 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 48 'speclooptripcount' 'empty_142' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 49 [1/1] (1.34ns)   --->   "%i_10 = add i3 %i_1, 1" [NIST-KATs/rng.c:191]   --->   Operation 49 'add' 'i_10' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %icmp_ln191, label %4, label %.preheader.preheader" [NIST-KATs/rng.c:191]   --->   Operation 50 'br' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_3 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %i_1, i2 0)" [NIST-KATs/rng.c:195]   --->   Operation 51 'bitconcatenate' 'tmp_3' <Predicate = (!icmp_ln191)> <Delay = 0.00>
@@ -154,7 +154,7 @@ ST_7 : Operation 56 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/rng.c:219]   -
 State 8 <SV = 5> <Delay = 3.30>
 ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%j_1 = phi i3 [ %j_8, %3 ], [ 0, %.preheader.preheader ]"   --->   Operation 57 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 58 [1/1] (1.00ns)   --->   "%icmp_ln193 = icmp eq i3 %j_1, -4" [NIST-KATs/rng.c:193]   --->   Operation 58 'icmp' 'icmp_ln193' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%empty_139 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 59 'speclooptripcount' 'empty_139' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%empty_143 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 59 'speclooptripcount' 'empty_143' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 60 [1/1] (1.34ns)   --->   "%j_8 = add i3 %j_1, 1" [NIST-KATs/rng.c:193]   --->   Operation 60 'add' 'j_8' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 61 [1/1] (0.00ns)   --->   "br i1 %icmp_ln193, label %.loopexit.loopexit, label %3" [NIST-KATs/rng.c:193]   --->   Operation 61 'br' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln195_1 = zext i3 %j_1 to i6" [NIST-KATs/rng.c:195]   --->   Operation 62 'zext' 'zext_ln195_1' <Predicate = (!icmp_ln193)> <Delay = 0.00>

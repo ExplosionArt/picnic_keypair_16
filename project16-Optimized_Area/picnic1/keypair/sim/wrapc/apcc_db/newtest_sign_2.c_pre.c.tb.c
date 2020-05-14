@@ -160,38 +160,38 @@ signed int crypto_sign_open( char *, signed long long *,  char *, signed long lo
 
 
 /* Global Variable Definitions and Initialization */
-static  char aesl_internal__OC_str4[2] = "r";
-static  char aesl_internal__OC_str6[3] = "%d";
-static  char aesl_internal__OC_str5[9] = "count = ";
-static  char aesl_internal__OC_str10[5] = "%lld";
-static  char aesl_internal__OC_str15[6] = "pk = ";
-static  char aesl_internal__OC_str23[6] = "sm = ";
 static  char aesl_internal__OC_str[27] = "../../../../sign_init.data";
-static  char aesl_internal__OC_str2[29] = "Couldn't open <%s> for read\n";
-static  char aesl_internal__OC_str7[8] = "seed = ";
-static  char aesl_internal__OC_str3[45] = "../../../../KAT/picnicl1fs/PQCsignKAT_L1.rsp";
-static  char aesl_internal__OC_str8[40] = "ERROR: unable to read 'seed' from <%s>\n";
-static  char aesl_internal__OC_str14[35] = "crypto_sign_keypair returned <%d>\n";
-static  char aesl_internal__OC_str9[8] = "mlen = ";
-static  char aesl_internal__OC_str13[39] = "ERROR: unable to read 'msg' from <%s>\n";
-static  char aesl_internal__OC_str17[6] = "sk = ";
-static  char aesl_internal__OC_str19[32] = "ERR: pk is different from <%s>\n";
-static  char aesl_internal__OC_str20[34] = "ERROR: sk is different from <%s>\n";
-static  char aesl_internal__OC_str12[7] = "msg = ";
-static  char aesl_internal__OC_str21[27] = "crypto_sign returned <%d>\n";
-static  char aesl_internal__OC_str24[38] = "ERROR: unable to read 'sm' from <%s>\n";
-static  char aesl_internal__OC_str11[40] = "ERROR: unable to read 'mlen' from <%s>\n";
-static  char aesl_internal__OC_str16[38] = "ERROR: unable to read 'pk' from <%s>\n";
 static  char aesl_internal__OC_str1[2] = "w";
-static  char aesl_internal__OC_str18[38] = "ERROR: unable to read 'sk' from <%s>\n";
-static  char aesl_internal__OC_str22[9] = "smlen = ";
+static  char aesl_internal__OC_str2[29] = "Couldn't open <%s> for read\n";
+static  char aesl_internal__OC_str3[45] = "../../../../KAT/picnicl1fs/PQCsignKAT_L1.rsp";
+static  char aesl_internal__OC_str4[2] = "r";
+static  char aesl_internal__OC_str10[5] = "%lld";
+static  char aesl_internal__OC_str5[9] = "count = ";
+static  char aesl_internal__OC_str6[3] = "%d";
+static  char aesl_internal__OC_str14[35] = "crypto_sign_keypair returned <%d>\n";
+static  char aesl_internal__OC_str7[8] = "seed = ";
+static  char aesl_internal__OC_str8[40] = "ERROR: unable to read 'seed' from <%s>\n";
+static  char aesl_internal__OC_str9[8] = "mlen = ";
+static  char aesl_internal__OC_str11[40] = "ERROR: unable to read 'mlen' from <%s>\n";
+static  char aesl_internal__OC_str12[7] = "msg = ";
+static  char aesl_internal__OC_str13[39] = "ERROR: unable to read 'msg' from <%s>\n";
+static  char aesl_internal__OC_str15[6] = "pk = ";
+static  char aesl_internal__OC_str16[38] = "ERROR: unable to read 'pk' from <%s>\n";
 static  char aesl_internal_str[40] = "crypto_sign_open returned bad 'm' value";
-static  char aesl_internal__OC_str26[34] = "ERROR: sm is different from <%s>\n";
-static  char aesl_internal__OC_str25[18] = "Total error = %d\n";
 static  char aesl_internal__OC_str27[32] = "crypto_sign_open returned <%d>\n";
 static  char aesl_internal__OC_str28[67] = "crypto_sign_open returned bad 'mlen': Got <%lld>, expected <%lld>\n";
+static  char aesl_internal__OC_str26[34] = "ERROR: sm is different from <%s>\n";
+static  char aesl_internal__OC_str17[6] = "sk = ";
+static  char aesl_internal__OC_str18[38] = "ERROR: unable to read 'sk' from <%s>\n";
+static  char aesl_internal__OC_str19[32] = "ERR: pk is different from <%s>\n";
+static  char aesl_internal__OC_str20[34] = "ERROR: sk is different from <%s>\n";
+static  char aesl_internal__OC_str22[9] = "smlen = ";
+static  char aesl_internal__OC_str23[6] = "sm = ";
+static  char aesl_internal__OC_str24[38] = "ERROR: unable to read 'sm' from <%s>\n";
 static  char aesl_internal_str1[28] = "Known Answer Tests PASSED. ";
+static  char aesl_internal__OC_str21[27] = "crypto_sign returned <%d>\n";
 static  char aesl_internal_str2[2] = "\n";
+static  char aesl_internal__OC_str25[18] = "Total error = %d\n";
 
 
 /* Function Bodies */

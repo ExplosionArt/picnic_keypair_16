@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'picnic_keygen'" level="0">
-<item name = "Date">Wed May 13 21:29:01 2020
+<item name = "Date">Thu May 14 22:22:26 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">picnic1</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 144996, 10.000 ns, 1.450 ms, 1, 144996, none</column>
+<column name="">1, 144955, 10.000 ns, 1.450 ms, 1, 144955, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_randombytes_fu_456">randombytes, 13347, 18671, 0.133 ms, 0.187 ms, 13347, 18671, none</column>
-<column name="grp_LowMCEnc_fu_473">LowMCEnc, 107470, 107470, 1.075 ms, 1.075 ms, 107470, 107470, none</column>
+<column name="grp_LowMCEnc_fu_473">LowMCEnc, 107429, 107429, 1.074 ms, 1.074 ms, 107429, 107429, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -57,7 +57,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 222, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">78, -, 1857, 8898, 0</column>
+<column name="Instance">78, -, 1835, 8894, 0</column>
 <column name="Memory">0, -, 192, 12, 0</column>
 <column name="Multiplexer">-, -, -, 580, -</column>
 <column name="Register">-, -, 169, -, -</column>
@@ -69,7 +69,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_LowMCEnc_fu_473">LowMCEnc, 70, 0, 420, 3997, 0</column>
+<column name="grp_LowMCEnc_fu_473">LowMCEnc, 70, 0, 398, 3993, 0</column>
 <column name="grp_randombytes_fu_456">randombytes, 8, 0, 1437, 4901, 0</column>
 </table>
 </item>

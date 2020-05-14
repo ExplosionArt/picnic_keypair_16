@@ -191,8 +191,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "14", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"},
-					{"ID" : "13", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"}]},
+					{"ID" : "13", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"},
+					{"ID" : "14", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"}]},
 			{"Name" : "RoundKey", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "13", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "RoundKey"}]},
@@ -257,8 +257,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "buffer_r", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "sbox", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "25", "SubInstance" : "grp_Cipher_fu_145", "Port" : "sbox"},
-					{"ID" : "19", "SubInstance" : "grp_KeyExpansion_fu_133", "Port" : "sbox"}]},
+					{"ID" : "19", "SubInstance" : "grp_KeyExpansion_fu_133", "Port" : "sbox"},
+					{"ID" : "25", "SubInstance" : "grp_Cipher_fu_145", "Port" : "sbox"}]},
 			{"Name" : "Rcon", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "19", "SubInstance" : "grp_KeyExpansion_fu_133", "Port" : "Rcon"}]}]},
@@ -309,8 +309,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "state", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "27", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"},
-					{"ID" : "26", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"}]},
+					{"ID" : "26", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "state"},
+					{"ID" : "27", "SubInstance" : "grp_SubBytes_fu_256", "Port" : "state"}]},
 			{"Name" : "RoundKey", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "26", "SubInstance" : "grp_AddRoundKey_fu_245", "Port" : "RoundKey"}]},

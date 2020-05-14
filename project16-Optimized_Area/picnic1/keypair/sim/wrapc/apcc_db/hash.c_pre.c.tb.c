@@ -198,8 +198,8 @@ void HashUpdateIntLE(l_struct_OC_Keccak_HashInstance *llvm_cbe_ctx, signed short
 
 /* Global Variable Definitions and Initialization */
 static  char aesl_internal__OC_str[43] = "%s: Keccak_HashFinal failed (returned %d)\n";
-static  char aesl_internal__OC_str1[45] = "%s: Keccak_HashSqueeze failed (returned %d)\n";
 static  char aesl_internal___func___OC_HashFinal[10] = "HashFinal";
+static  char aesl_internal__OC_str1[45] = "%s: Keccak_HashSqueeze failed (returned %d)\n";
 static  char aesl_internal___func___OC_HashSqueeze[12] = "HashSqueeze";
 
 
