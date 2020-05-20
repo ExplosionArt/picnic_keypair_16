@@ -1,0 +1,358 @@
+
+
+================================================================
+== Vivado HLS Report for 'KeyExpansion'
+================================================================
+* Date:           Tue May 12 20:22:30 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.620 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      338|      338| 3.380 us | 3.380 us |  338|  338|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- KeyExpansion_label4  |       24|       24|         3|          -|          -|     8|    no    |
+        |- KeyExpansion_label5  |      312|      312|         6|          -|          -|    52|    no    |
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 5 
+3 --> 4 
+4 --> 2 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 11 [1/1] (1.35ns)   --->   "br label %1" [NIST-KATs/aes.c:158]   --->   Operation 11 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ 0, %0 ], [ %i, %2 ]"   --->   Operation 12 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.21ns)   --->   "%icmp_ln158 = icmp eq i4 %i_0, -8" [NIST-KATs/aes.c:158]   --->   Operation 13 'icmp' 'icmp_ln158' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.49ns)   --->   "%i = add i4 %i_0, 1" [NIST-KATs/aes.c:158]   --->   Operation 15 'add' 'i' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "br i1 %icmp_ln158, label %.preheader.preheader, label %2" [NIST-KATs/aes.c:158]   --->   Operation 16 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln160 = trunc i4 %i_0 to i3" [NIST-KATs/aes.c:160]   --->   Operation 17 'trunc' 'trunc_ln160' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%shl_ln = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %trunc_ln160, i2 0)" [NIST-KATs/aes.c:160]   --->   Operation 18 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln160 = zext i5 %shl_ln to i64" [NIST-KATs/aes.c:160]   --->   Operation 19 'zext' 'zext_ln160' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%Key_addr = getelementptr [32 x i8]* %Key, i64 0, i64 %zext_ln160" [NIST-KATs/aes.c:160]   --->   Operation 20 'getelementptr' 'Key_addr' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 21 [2/2] (1.75ns)   --->   "%Key_load = load i8* %Key_addr, align 1" [NIST-KATs/aes.c:160]   --->   Operation 21 'load' 'Key_load' <Predicate = (!icmp_ln158)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%or_ln161 = or i5 %shl_ln, 1" [NIST-KATs/aes.c:161]   --->   Operation 22 'or' 'or_ln161' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln161 = zext i5 %or_ln161 to i64" [NIST-KATs/aes.c:161]   --->   Operation 23 'zext' 'zext_ln161' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%Key_addr_1 = getelementptr [32 x i8]* %Key, i64 0, i64 %zext_ln161" [NIST-KATs/aes.c:161]   --->   Operation 24 'getelementptr' 'Key_addr_1' <Predicate = (!icmp_ln158)> <Delay = 0.00>
+ST_2 : Operation 25 [2/2] (1.75ns)   --->   "%Key_load_1 = load i8* %Key_addr_1, align 1" [NIST-KATs/aes.c:161]   --->   Operation 25 'load' 'Key_load_1' <Predicate = (!icmp_ln158)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_2 : Operation 26 [1/1] (1.35ns)   --->   "br label %.preheader" [NIST-KATs/aes.c:167]   --->   Operation 26 'br' <Predicate = (icmp_ln158)> <Delay = 1.35>
+
+State 3 <SV = 2> <Delay = 4.52>
+ST_3 : Operation 27 [1/2] (1.75ns)   --->   "%Key_load = load i8* %Key_addr, align 1" [NIST-KATs/aes.c:160]   --->   Operation 27 'load' 'Key_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%RoundKey_addr = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln160" [NIST-KATs/aes.c:160]   --->   Operation 28 'getelementptr' 'RoundKey_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (2.77ns)   --->   "store i8 %Key_load, i8* %RoundKey_addr, align 1" [NIST-KATs/aes.c:160]   --->   Operation 29 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_3 : Operation 30 [1/2] (1.75ns)   --->   "%Key_load_1 = load i8* %Key_addr_1, align 1" [NIST-KATs/aes.c:161]   --->   Operation 30 'load' 'Key_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%RoundKey_addr_1 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln161" [NIST-KATs/aes.c:161]   --->   Operation 31 'getelementptr' 'RoundKey_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (2.77ns)   --->   "store i8 %Key_load_1, i8* %RoundKey_addr_1, align 1" [NIST-KATs/aes.c:161]   --->   Operation 32 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%or_ln162 = or i5 %shl_ln, 2" [NIST-KATs/aes.c:162]   --->   Operation 33 'or' 'or_ln162' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln162 = zext i5 %or_ln162 to i64" [NIST-KATs/aes.c:162]   --->   Operation 34 'zext' 'zext_ln162' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%Key_addr_2 = getelementptr [32 x i8]* %Key, i64 0, i64 %zext_ln162" [NIST-KATs/aes.c:162]   --->   Operation 35 'getelementptr' 'Key_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [2/2] (1.75ns)   --->   "%Key_load_2 = load i8* %Key_addr_2, align 1" [NIST-KATs/aes.c:162]   --->   Operation 36 'load' 'Key_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%or_ln163 = or i5 %shl_ln, 3" [NIST-KATs/aes.c:163]   --->   Operation 37 'or' 'or_ln163' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln163 = zext i5 %or_ln163 to i64" [NIST-KATs/aes.c:163]   --->   Operation 38 'zext' 'zext_ln163' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%Key_addr_3 = getelementptr [32 x i8]* %Key, i64 0, i64 %zext_ln163" [NIST-KATs/aes.c:163]   --->   Operation 39 'getelementptr' 'Key_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [2/2] (1.75ns)   --->   "%Key_load_3 = load i8* %Key_addr_3, align 1" [NIST-KATs/aes.c:163]   --->   Operation 40 'load' 'Key_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+
+State 4 <SV = 3> <Delay = 4.52>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str6110) nounwind" [NIST-KATs/aes.c:159]   --->   Operation 41 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/2] (1.75ns)   --->   "%Key_load_2 = load i8* %Key_addr_2, align 1" [NIST-KATs/aes.c:162]   --->   Operation 42 'load' 'Key_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%RoundKey_addr_2 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln162" [NIST-KATs/aes.c:162]   --->   Operation 43 'getelementptr' 'RoundKey_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (2.77ns)   --->   "store i8 %Key_load_2, i8* %RoundKey_addr_2, align 1" [NIST-KATs/aes.c:162]   --->   Operation 44 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_4 : Operation 45 [1/2] (1.75ns)   --->   "%Key_load_3 = load i8* %Key_addr_3, align 1" [NIST-KATs/aes.c:163]   --->   Operation 45 'load' 'Key_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%RoundKey_addr_3 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln163" [NIST-KATs/aes.c:163]   --->   Operation 46 'getelementptr' 'RoundKey_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (2.77ns)   --->   "store i8 %Key_load_3, i8* %RoundKey_addr_3, align 1" [NIST-KATs/aes.c:163]   --->   Operation 47 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "br label %1" [NIST-KATs/aes.c:158]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 4.49>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%i_1 = phi i6 [ %i_7, %_ifconv ], [ 8, %.preheader.preheader ]"   --->   Operation 49 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (1.22ns)   --->   "%icmp_ln167 = icmp eq i6 %i_1, -4" [NIST-KATs/aes.c:167]   --->   Operation 50 'icmp' 'icmp_ln167' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%empty_126 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 52, i64 52, i64 52)"   --->   Operation 51 'speclooptripcount' 'empty_126' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "br i1 %icmp_ln167, label %3, label %_ifconv" [NIST-KATs/aes.c:167]   --->   Operation 52 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%j = call i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6 %i_1, i2 0)" [NIST-KATs/aes.c:170]   --->   Operation 53 'bitconcatenate' 'j' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (1.71ns)   --->   "%add_ln171 = add i8 -4, %j" [NIST-KATs/aes.c:171]   --->   Operation 54 'add' 'add_ln171' <Predicate = (!icmp_ln167)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln171 = zext i8 %add_ln171 to i64" [NIST-KATs/aes.c:171]   --->   Operation 55 'zext' 'zext_ln171' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%RoundKey_addr_4 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln171" [NIST-KATs/aes.c:171]   --->   Operation 56 'getelementptr' 'RoundKey_addr_4' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 57 [2/2] (2.77ns)   --->   "%tempa_0_5 = load i8* %RoundKey_addr_4, align 1" [NIST-KATs/aes.c:171]   --->   Operation 57 'load' 'tempa_0_5' <Predicate = (!icmp_ln167)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_5 : Operation 58 [1/1] (1.71ns)   --->   "%add_ln172 = add i8 -3, %j" [NIST-KATs/aes.c:172]   --->   Operation 58 'add' 'add_ln172' <Predicate = (!icmp_ln167)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln172 = zext i8 %add_ln172 to i64" [NIST-KATs/aes.c:172]   --->   Operation 59 'zext' 'zext_ln172' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%RoundKey_addr_5 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln172" [NIST-KATs/aes.c:172]   --->   Operation 60 'getelementptr' 'RoundKey_addr_5' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 61 [2/2] (2.77ns)   --->   "%tempa_1 = load i8* %RoundKey_addr_5, align 1" [NIST-KATs/aes.c:172]   --->   Operation 61 'load' 'tempa_1' <Predicate = (!icmp_ln167)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%trunc_ln167 = trunc i6 %i_1 to i3" [NIST-KATs/aes.c:167]   --->   Operation 62 'trunc' 'trunc_ln167' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (1.00ns)   --->   "%icmp_ln178 = icmp eq i3 %trunc_ln167, 0" [NIST-KATs/aes.c:178]   --->   Operation 63 'icmp' 'icmp_ln178' <Predicate = (!icmp_ln167)> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%lshr_ln = call i3 @_ssdm_op_PartSelect.i3.i6.i32.i32(i6 %i_1, i32 3, i32 5)" [NIST-KATs/aes.c:203]   --->   Operation 64 'partselect' 'lshr_ln' <Predicate = (!icmp_ln167)> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (1.00ns)   --->   "%icmp_ln206 = icmp eq i3 %trunc_ln167, -4" [NIST-KATs/aes.c:206]   --->   Operation 65 'icmp' 'icmp_ln206' <Predicate = (!icmp_ln167)> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 66 [1/1] (1.60ns)   --->   "%i_7 = add i6 1, %i_1" [NIST-KATs/aes.c:167]   --->   Operation 66 'add' 'i_7' <Predicate = (!icmp_ln167)> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/aes.c:223]   --->   Operation 67 'ret' <Predicate = (icmp_ln167)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 5.54>
+ST_6 : Operation 68 [1/2] (2.77ns)   --->   "%tempa_0_5 = load i8* %RoundKey_addr_4, align 1" [NIST-KATs/aes.c:171]   --->   Operation 68 'load' 'tempa_0_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_6 : Operation 69 [1/2] (2.77ns)   --->   "%tempa_1 = load i8* %RoundKey_addr_5, align 1" [NIST-KATs/aes.c:172]   --->   Operation 69 'load' 'tempa_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_6 : Operation 70 [1/1] (1.71ns)   --->   "%add_ln173 = add i8 -2, %j" [NIST-KATs/aes.c:173]   --->   Operation 70 'add' 'add_ln173' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i8 %add_ln173 to i64" [NIST-KATs/aes.c:173]   --->   Operation 71 'zext' 'zext_ln173' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%RoundKey_addr_6 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln173" [NIST-KATs/aes.c:173]   --->   Operation 72 'getelementptr' 'RoundKey_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [2/2] (2.77ns)   --->   "%tempa_2 = load i8* %RoundKey_addr_6, align 1" [NIST-KATs/aes.c:173]   --->   Operation 73 'load' 'tempa_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_6 : Operation 74 [1/1] (1.71ns)   --->   "%add_ln174 = add i8 -1, %j" [NIST-KATs/aes.c:174]   --->   Operation 74 'add' 'add_ln174' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln174 = zext i8 %add_ln174 to i64" [NIST-KATs/aes.c:174]   --->   Operation 75 'zext' 'zext_ln174' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%RoundKey_addr_7 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln174" [NIST-KATs/aes.c:174]   --->   Operation 76 'getelementptr' 'RoundKey_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [2/2] (2.77ns)   --->   "%tempa_3 = load i8* %RoundKey_addr_7, align 1" [NIST-KATs/aes.c:174]   --->   Operation 77 'load' 'tempa_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln197 = zext i8 %tempa_1 to i64" [NIST-KATs/aes.c:197]   --->   Operation 78 'zext' 'zext_ln197' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%sbox_addr = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln197" [NIST-KATs/aes.c:197]   --->   Operation 79 'getelementptr' 'sbox_addr' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_6 : Operation 80 [2/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [NIST-KATs/aes.c:197]   --->   Operation 80 'load' 'sbox_load' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln203 = zext i3 %lshr_ln to i64" [NIST-KATs/aes.c:203]   --->   Operation 81 'zext' 'zext_ln203' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%Rcon_addr = getelementptr inbounds [11 x i8]* @Rcon, i64 0, i64 %zext_ln203" [NIST-KATs/aes.c:203]   --->   Operation 82 'getelementptr' 'Rcon_addr' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_6 : Operation 83 [2/2] (2.77ns)   --->   "%Rcon_load = load i8* %Rcon_addr, align 1" [NIST-KATs/aes.c:203]   --->   Operation 83 'load' 'Rcon_load' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 7 <SV = 4> <Delay = 6.62>
+ST_7 : Operation 84 [1/2] (2.77ns)   --->   "%tempa_2 = load i8* %RoundKey_addr_6, align 1" [NIST-KATs/aes.c:173]   --->   Operation 84 'load' 'tempa_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_7 : Operation 85 [1/2] (2.77ns)   --->   "%tempa_3 = load i8* %RoundKey_addr_7, align 1" [NIST-KATs/aes.c:174]   --->   Operation 85 'load' 'tempa_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_7 : Operation 86 [1/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [NIST-KATs/aes.c:197]   --->   Operation 86 'load' 'sbox_load' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln198 = zext i8 %tempa_2 to i64" [NIST-KATs/aes.c:198]   --->   Operation 87 'zext' 'zext_ln198' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%sbox_addr_1 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln198" [NIST-KATs/aes.c:198]   --->   Operation 88 'getelementptr' 'sbox_addr_1' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_7 : Operation 89 [2/2] (2.77ns)   --->   "%tempa_1_1 = load i8* %sbox_addr_1, align 1" [NIST-KATs/aes.c:198]   --->   Operation 89 'load' 'tempa_1_1' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%zext_ln199 = zext i8 %tempa_3 to i64" [NIST-KATs/aes.c:199]   --->   Operation 90 'zext' 'zext_ln199' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%sbox_addr_2 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln199" [NIST-KATs/aes.c:199]   --->   Operation 91 'getelementptr' 'sbox_addr_2' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_7 : Operation 92 [2/2] (2.77ns)   --->   "%tempa_2_1 = load i8* %sbox_addr_2, align 1" [NIST-KATs/aes.c:199]   --->   Operation 92 'load' 'tempa_2_1' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%zext_ln200 = zext i8 %tempa_0_5 to i64" [NIST-KATs/aes.c:200]   --->   Operation 93 'zext' 'zext_ln200' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%sbox_addr_3 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln200" [NIST-KATs/aes.c:200]   --->   Operation 94 'getelementptr' 'sbox_addr_3' <Predicate = (icmp_ln178)> <Delay = 0.00>
+ST_7 : Operation 95 [2/2] (2.77ns)   --->   "%tempa_3_1 = load i8* %sbox_addr_3, align 1" [NIST-KATs/aes.c:200]   --->   Operation 95 'load' 'tempa_3_1' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 96 [1/2] (2.77ns)   --->   "%Rcon_load = load i8* %Rcon_addr, align 1" [NIST-KATs/aes.c:203]   --->   Operation 96 'load' 'Rcon_load' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node tempa_0_2)   --->   "%tempa_0 = xor i8 %Rcon_load, %sbox_load" [NIST-KATs/aes.c:203]   --->   Operation 97 'xor' 'tempa_0' <Predicate = (icmp_ln178)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 98 [1/1] (1.07ns) (out node of the LUT)   --->   "%tempa_0_2 = select i1 %icmp_ln178, i8 %tempa_0, i8 %tempa_0_5" [NIST-KATs/aes.c:178]   --->   Operation 98 'select' 'tempa_0_2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln210 = zext i8 %tempa_0_2 to i64" [NIST-KATs/aes.c:210]   --->   Operation 99 'zext' 'zext_ln210' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "%sbox_addr_4 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln210" [NIST-KATs/aes.c:210]   --->   Operation 100 'getelementptr' 'sbox_addr_4' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_7 : Operation 101 [2/2] (2.77ns)   --->   "%tempa_0_3 = load i8* %sbox_addr_4, align 1" [NIST-KATs/aes.c:210]   --->   Operation 101 'load' 'tempa_0_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 102 [1/1] (1.71ns)   --->   "%add_ln218 = add i8 -32, %j" [NIST-KATs/aes.c:218]   --->   Operation 102 'add' 'add_ln218' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln218 = zext i8 %add_ln218 to i64" [NIST-KATs/aes.c:218]   --->   Operation 103 'zext' 'zext_ln218' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "%RoundKey_addr_8 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln218" [NIST-KATs/aes.c:218]   --->   Operation 104 'getelementptr' 'RoundKey_addr_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 105 [2/2] (2.77ns)   --->   "%RoundKey_load = load i8* %RoundKey_addr_8, align 1" [NIST-KATs/aes.c:218]   --->   Operation 105 'load' 'RoundKey_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_7 : Operation 106 [1/1] (1.71ns)   --->   "%add_ln219 = add i8 -31, %j" [NIST-KATs/aes.c:219]   --->   Operation 106 'add' 'add_ln219' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln219 = zext i8 %add_ln219 to i64" [NIST-KATs/aes.c:219]   --->   Operation 107 'zext' 'zext_ln219' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%RoundKey_addr_10 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln219" [NIST-KATs/aes.c:219]   --->   Operation 108 'getelementptr' 'RoundKey_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 109 [2/2] (2.77ns)   --->   "%RoundKey_load_4 = load i8* %RoundKey_addr_10, align 1" [NIST-KATs/aes.c:219]   --->   Operation 109 'load' 'RoundKey_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+
+State 8 <SV = 5> <Delay = 6.62>
+ST_8 : Operation 110 [1/2] (2.77ns)   --->   "%tempa_1_1 = load i8* %sbox_addr_1, align 1" [NIST-KATs/aes.c:198]   --->   Operation 110 'load' 'tempa_1_1' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 111 [1/2] (2.77ns)   --->   "%tempa_2_1 = load i8* %sbox_addr_2, align 1" [NIST-KATs/aes.c:199]   --->   Operation 111 'load' 'tempa_2_1' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 112 [1/2] (2.77ns)   --->   "%tempa_3_1 = load i8* %sbox_addr_3, align 1" [NIST-KATs/aes.c:200]   --->   Operation 112 'load' 'tempa_3_1' <Predicate = (icmp_ln178)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 113 [1/1] (1.07ns)   --->   "%tempa_3_2 = select i1 %icmp_ln178, i8 %tempa_3_1, i8 %tempa_3" [NIST-KATs/aes.c:178]   --->   Operation 113 'select' 'tempa_3_2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 114 [1/1] (1.07ns)   --->   "%tempa_2_2 = select i1 %icmp_ln178, i8 %tempa_2_1, i8 %tempa_2" [NIST-KATs/aes.c:178]   --->   Operation 114 'select' 'tempa_2_2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 115 [1/1] (1.07ns)   --->   "%tempa_1_2 = select i1 %icmp_ln178, i8 %tempa_1_1, i8 %tempa_1" [NIST-KATs/aes.c:178]   --->   Operation 115 'select' 'tempa_1_2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 116 [1/2] (2.77ns)   --->   "%tempa_0_3 = load i8* %sbox_addr_4, align 1" [NIST-KATs/aes.c:210]   --->   Operation 116 'load' 'tempa_0_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 117 [1/1] (0.00ns)   --->   "%zext_ln211 = zext i8 %tempa_1_2 to i64" [NIST-KATs/aes.c:211]   --->   Operation 117 'zext' 'zext_ln211' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_8 : Operation 118 [1/1] (0.00ns)   --->   "%sbox_addr_5 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln211" [NIST-KATs/aes.c:211]   --->   Operation 118 'getelementptr' 'sbox_addr_5' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_8 : Operation 119 [2/2] (2.77ns)   --->   "%tempa_1_3 = load i8* %sbox_addr_5, align 1" [NIST-KATs/aes.c:211]   --->   Operation 119 'load' 'tempa_1_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%zext_ln212 = zext i8 %tempa_2_2 to i64" [NIST-KATs/aes.c:212]   --->   Operation 120 'zext' 'zext_ln212' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%sbox_addr_6 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln212" [NIST-KATs/aes.c:212]   --->   Operation 121 'getelementptr' 'sbox_addr_6' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_8 : Operation 122 [2/2] (2.77ns)   --->   "%tempa_2_3 = load i8* %sbox_addr_6, align 1" [NIST-KATs/aes.c:212]   --->   Operation 122 'load' 'tempa_2_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%zext_ln213 = zext i8 %tempa_3_2 to i64" [NIST-KATs/aes.c:213]   --->   Operation 123 'zext' 'zext_ln213' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%sbox_addr_7 = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %zext_ln213" [NIST-KATs/aes.c:213]   --->   Operation 124 'getelementptr' 'sbox_addr_7' <Predicate = (icmp_ln206)> <Delay = 0.00>
+ST_8 : Operation 125 [2/2] (2.77ns)   --->   "%tempa_3_3 = load i8* %sbox_addr_7, align 1" [NIST-KATs/aes.c:213]   --->   Operation 125 'load' 'tempa_3_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node xor_ln218)   --->   "%tempa_0_4 = select i1 %icmp_ln206, i8 %tempa_0_3, i8 %tempa_0_2" [NIST-KATs/aes.c:206]   --->   Operation 126 'select' 'tempa_0_4' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 127 [1/2] (2.77ns)   --->   "%RoundKey_load = load i8* %RoundKey_addr_8, align 1" [NIST-KATs/aes.c:218]   --->   Operation 127 'load' 'RoundKey_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_8 : Operation 128 [1/1] (1.07ns) (out node of the LUT)   --->   "%xor_ln218 = xor i8 %RoundKey_load, %tempa_0_4" [NIST-KATs/aes.c:218]   --->   Operation 128 'xor' 'xor_ln218' <Predicate = true> <Delay = 1.07> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 129 [1/2] (2.77ns)   --->   "%RoundKey_load_4 = load i8* %RoundKey_addr_10, align 1" [NIST-KATs/aes.c:219]   --->   Operation 129 'load' 'RoundKey_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_8 : Operation 130 [1/1] (1.71ns)   --->   "%add_ln220 = add i8 -30, %j" [NIST-KATs/aes.c:220]   --->   Operation 130 'add' 'add_ln220' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 131 [1/1] (0.00ns)   --->   "%zext_ln220 = zext i8 %add_ln220 to i64" [NIST-KATs/aes.c:220]   --->   Operation 131 'zext' 'zext_ln220' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%RoundKey_addr_12 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln220" [NIST-KATs/aes.c:220]   --->   Operation 132 'getelementptr' 'RoundKey_addr_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 133 [2/2] (2.77ns)   --->   "%RoundKey_load_5 = load i8* %RoundKey_addr_12, align 1" [NIST-KATs/aes.c:220]   --->   Operation 133 'load' 'RoundKey_load_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_8 : Operation 134 [1/1] (1.71ns)   --->   "%add_ln221 = add i8 -29, %j" [NIST-KATs/aes.c:221]   --->   Operation 134 'add' 'add_ln221' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln221 = zext i8 %add_ln221 to i64" [NIST-KATs/aes.c:221]   --->   Operation 135 'zext' 'zext_ln221' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 136 [1/1] (0.00ns)   --->   "%RoundKey_addr_14 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln221" [NIST-KATs/aes.c:221]   --->   Operation 136 'getelementptr' 'RoundKey_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 137 [2/2] (2.77ns)   --->   "%RoundKey_load_6 = load i8* %RoundKey_addr_14, align 1" [NIST-KATs/aes.c:221]   --->   Operation 137 'load' 'RoundKey_load_6' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+
+State 9 <SV = 6> <Delay = 6.62>
+ST_9 : Operation 138 [1/2] (2.77ns)   --->   "%tempa_1_3 = load i8* %sbox_addr_5, align 1" [NIST-KATs/aes.c:211]   --->   Operation 138 'load' 'tempa_1_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 139 [1/2] (2.77ns)   --->   "%tempa_2_3 = load i8* %sbox_addr_6, align 1" [NIST-KATs/aes.c:212]   --->   Operation 139 'load' 'tempa_2_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 140 [1/2] (2.77ns)   --->   "%tempa_3_3 = load i8* %sbox_addr_7, align 1" [NIST-KATs/aes.c:213]   --->   Operation 140 'load' 'tempa_3_3' <Predicate = (icmp_ln206)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node xor_ln221)   --->   "%tempa_3_4 = select i1 %icmp_ln206, i8 %tempa_3_3, i8 %tempa_3_2" [NIST-KATs/aes.c:206]   --->   Operation 141 'select' 'tempa_3_4' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 142 [1/1] (0.00ns) (grouped into LUT with out node xor_ln220)   --->   "%tempa_2_4 = select i1 %icmp_ln206, i8 %tempa_2_3, i8 %tempa_2_2" [NIST-KATs/aes.c:206]   --->   Operation 142 'select' 'tempa_2_4' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node xor_ln219)   --->   "%tempa_1_4 = select i1 %icmp_ln206, i8 %tempa_1_3, i8 %tempa_1_2" [NIST-KATs/aes.c:206]   --->   Operation 143 'select' 'tempa_1_4' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln218_1 = zext i8 %j to i64" [NIST-KATs/aes.c:218]   --->   Operation 144 'zext' 'zext_ln218_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%RoundKey_addr_9 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln218_1" [NIST-KATs/aes.c:218]   --->   Operation 145 'getelementptr' 'RoundKey_addr_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 146 [1/1] (2.77ns)   --->   "store i8 %xor_ln218, i8* %RoundKey_addr_9, align 1" [NIST-KATs/aes.c:218]   --->   Operation 146 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_9 : Operation 147 [1/1] (1.07ns) (out node of the LUT)   --->   "%xor_ln219 = xor i8 %RoundKey_load_4, %tempa_1_4" [NIST-KATs/aes.c:219]   --->   Operation 147 'xor' 'xor_ln219' <Predicate = true> <Delay = 1.07> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 148 [1/1] (0.00ns)   --->   "%or_ln219 = or i8 %j, 1" [NIST-KATs/aes.c:219]   --->   Operation 148 'or' 'or_ln219' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 149 [1/1] (0.00ns)   --->   "%zext_ln219_1 = zext i8 %or_ln219 to i64" [NIST-KATs/aes.c:219]   --->   Operation 149 'zext' 'zext_ln219_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 150 [1/1] (0.00ns)   --->   "%RoundKey_addr_11 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln219_1" [NIST-KATs/aes.c:219]   --->   Operation 150 'getelementptr' 'RoundKey_addr_11' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 151 [1/1] (2.77ns)   --->   "store i8 %xor_ln219, i8* %RoundKey_addr_11, align 1" [NIST-KATs/aes.c:219]   --->   Operation 151 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_9 : Operation 152 [1/2] (2.77ns)   --->   "%RoundKey_load_5 = load i8* %RoundKey_addr_12, align 1" [NIST-KATs/aes.c:220]   --->   Operation 152 'load' 'RoundKey_load_5' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_9 : Operation 153 [1/1] (1.07ns) (out node of the LUT)   --->   "%xor_ln220 = xor i8 %RoundKey_load_5, %tempa_2_4" [NIST-KATs/aes.c:220]   --->   Operation 153 'xor' 'xor_ln220' <Predicate = true> <Delay = 1.07> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 154 [1/2] (2.77ns)   --->   "%RoundKey_load_6 = load i8* %RoundKey_addr_14, align 1" [NIST-KATs/aes.c:221]   --->   Operation 154 'load' 'RoundKey_load_6' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_9 : Operation 155 [1/1] (1.07ns) (out node of the LUT)   --->   "%xor_ln221 = xor i8 %RoundKey_load_6, %tempa_3_4" [NIST-KATs/aes.c:221]   --->   Operation 155 'xor' 'xor_ln221' <Predicate = true> <Delay = 1.07> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 7> <Delay = 2.77>
+ST_10 : Operation 156 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str7111) nounwind" [NIST-KATs/aes.c:168]   --->   Operation 156 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 157 [1/1] (0.00ns)   --->   "%or_ln220 = or i8 %j, 2" [NIST-KATs/aes.c:220]   --->   Operation 157 'or' 'or_ln220' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln220_1 = zext i8 %or_ln220 to i64" [NIST-KATs/aes.c:220]   --->   Operation 158 'zext' 'zext_ln220_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 159 [1/1] (0.00ns)   --->   "%RoundKey_addr_13 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln220_1" [NIST-KATs/aes.c:220]   --->   Operation 159 'getelementptr' 'RoundKey_addr_13' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 160 [1/1] (2.77ns)   --->   "store i8 %xor_ln220, i8* %RoundKey_addr_13, align 1" [NIST-KATs/aes.c:220]   --->   Operation 160 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_10 : Operation 161 [1/1] (0.00ns)   --->   "%or_ln221 = or i8 %j, 3" [NIST-KATs/aes.c:221]   --->   Operation 161 'or' 'or_ln221' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln221_1 = zext i8 %or_ln221 to i64" [NIST-KATs/aes.c:221]   --->   Operation 162 'zext' 'zext_ln221_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 163 [1/1] (0.00ns)   --->   "%RoundKey_addr_15 = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %zext_ln221_1" [NIST-KATs/aes.c:221]   --->   Operation 163 'getelementptr' 'RoundKey_addr_15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 164 [1/1] (2.77ns)   --->   "store i8 %xor_ln221, i8* %RoundKey_addr_15, align 1" [NIST-KATs/aes.c:221]   --->   Operation 164 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 240> <RAM>
+ST_10 : Operation 165 [1/1] (0.00ns)   --->   "br label %.preheader" [NIST-KATs/aes.c:167]   --->   Operation 165 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', NIST-KATs/aes.c:158) [9]  (1.35 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NIST-KATs/aes.c:158) [9]  (0 ns)
+	'getelementptr' operation ('Key_addr', NIST-KATs/aes.c:160) [19]  (0 ns)
+	'load' operation ('Key_load', NIST-KATs/aes.c:160) on array 'Key' [20]  (1.75 ns)
+
+ <State 3>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('Key_load', NIST-KATs/aes.c:160) on array 'Key' [20]  (1.75 ns)
+	'store' operation ('store_ln160', NIST-KATs/aes.c:160) of variable 'Key_load', NIST-KATs/aes.c:160 on array 'RoundKey' [22]  (2.77 ns)
+
+ <State 4>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('Key_load_2', NIST-KATs/aes.c:162) on array 'Key' [32]  (1.75 ns)
+	'store' operation ('store_ln162', NIST-KATs/aes.c:162) of variable 'Key_load_2', NIST-KATs/aes.c:162 on array 'RoundKey' [34]  (2.77 ns)
+
+ <State 5>: 4.49ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NIST-KATs/aes.c:167) [45]  (0 ns)
+	'add' operation ('add_ln171', NIST-KATs/aes.c:171) [52]  (1.72 ns)
+	'getelementptr' operation ('RoundKey_addr_4', NIST-KATs/aes.c:171) [54]  (0 ns)
+	'load' operation ('tempa[0]', NIST-KATs/aes.c:171) on array 'RoundKey' [55]  (2.77 ns)
+
+ <State 6>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('tempa[1]', NIST-KATs/aes.c:172) on array 'RoundKey' [59]  (2.77 ns)
+	'getelementptr' operation ('sbox_addr', NIST-KATs/aes.c:197) [71]  (0 ns)
+	'load' operation ('sbox_load', NIST-KATs/aes.c:197) on array 'sbox' [72]  (2.77 ns)
+
+ <State 7>: 6.62ns
+The critical path consists of the following:
+	'load' operation ('sbox_load', NIST-KATs/aes.c:197) on array 'sbox' [72]  (2.77 ns)
+	'xor' operation ('tempa[0]', NIST-KATs/aes.c:203) [86]  (0 ns)
+	'select' operation ('tempa[0]', NIST-KATs/aes.c:178) [90]  (1.08 ns)
+	'getelementptr' operation ('sbox_addr_4', NIST-KATs/aes.c:210) [93]  (0 ns)
+	'load' operation ('tempa[0]', NIST-KATs/aes.c:210) on array 'sbox' [94]  (2.77 ns)
+
+ <State 8>: 6.62ns
+The critical path consists of the following:
+	'load' operation ('tempa[1]', NIST-KATs/aes.c:198) on array 'sbox' [75]  (2.77 ns)
+	'select' operation ('tempa[1]', NIST-KATs/aes.c:178) [89]  (1.08 ns)
+	'getelementptr' operation ('sbox_addr_5', NIST-KATs/aes.c:211) [96]  (0 ns)
+	'load' operation ('tempa[1]', NIST-KATs/aes.c:211) on array 'sbox' [97]  (2.77 ns)
+
+ <State 9>: 6.62ns
+The critical path consists of the following:
+	'load' operation ('tempa[1]', NIST-KATs/aes.c:211) on array 'sbox' [97]  (2.77 ns)
+	'select' operation ('tempa[1]', NIST-KATs/aes.c:206) [106]  (0 ns)
+	'xor' operation ('xor_ln219', NIST-KATs/aes.c:219) [120]  (1.08 ns)
+	'store' operation ('store_ln219', NIST-KATs/aes.c:219) of variable 'xor_ln219', NIST-KATs/aes.c:219 on array 'RoundKey' [124]  (2.77 ns)
+
+ <State 10>: 2.77ns
+The critical path consists of the following:
+	'or' operation ('or_ln220', NIST-KATs/aes.c:220) [130]  (0 ns)
+	'getelementptr' operation ('RoundKey_addr_13', NIST-KATs/aes.c:220) [132]  (0 ns)
+	'store' operation ('store_ln220', NIST-KATs/aes.c:220) of variable 'xor_ln220', NIST-KATs/aes.c:220 on array 'RoundKey' [133]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

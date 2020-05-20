@@ -1,0 +1,386 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx_Vivado/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_crypto_sign_keypair.cpp
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:06 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) hash.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:10 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) api.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:13 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lowmc_constants.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:16 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) KeccakP-1600-reference.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:19 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) newtest_sign_2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:23 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic_impl.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:26 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/project16-master/picnic_impl.c:1:
+C:/project16-master/picnic_impl.c:682:16: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'void *' [-Wint-conversion]
+        memcpy(proof->view3UnruhG, gs->G[(challenge + 2) % 3], view3UnruhLength);
+               ^~~~~~~~~~~~~~~~~~
+D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:41:44: note: passing argument to parameter '_Dst' here
+  void *__cdecl memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                           ^
+In file included from C:/project16-master/picnic_impl.c:1:
+C:/project16-master/picnic_impl.c:1630:12: warning: incompatible pointer types returning 'seeds_2t *' (aka 'struct seeds_2t *') from a function with result type 'seeds_t *' (aka 'struct seeds_t *') [-Wincompatible-pointer-types]
+    return allSeeds;
+           ^~~~~~~~
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) KeccakHash.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:33 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/project16-master/sha3/KeccakHash.c:1:
+C:/project16-master/sha3/KeccakHash.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) rng.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:36 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic2_impl.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:39 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/project16-master/picnic2_impl.c:1:
+C:/project16-master/picnic2_impl.c:749:65: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+                printf("Failed to reconstruct seeds for round %lu\n", t);
+                                                              ~~^     ~
+                                                              %llu
+C:/project16-master/picnic2_impl.c:818:59: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+                printf("MPC simulation failed for round %lu, signature invalid\n", t);
+                                                        ~~^                        ~
+                                                        %llu
+C:/project16-master/picnic2_impl.c:1140:37: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+        printf("%s: sigBytesLen = %lu, expected bytesRequired = %lu\n", __func__, sigBytesLen, bytesRequired);
+                                  ~~^                                             ~~~~~~~~~~~
+                                  %llu
+C:/project16-master/picnic2_impl.c:1140:67: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+        printf("%s: sigBytesLen = %lu, expected bytesRequired = %lu\n", __func__, sigBytesLen, bytesRequired);
+                                                                ~~^                            ~~~~~~~~~~~~~
+                                                                %llu
+4 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:44 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/project16-master/picnic.c:1:
+C:/project16-master/picnic.c:756:20: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'void *' [-Wint-conversion]
+            memcpy(proofs[i].view3UnruhG, sigBytes, view3UnruhLength);
+                   ^~~~~~~~~~~~~~~~~~~~~
+D:/Xilinx_Vivado/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\memory.h:28:44: note: passing argument to parameter '_Dst' here
+  void *__cdecl memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                           ^
+In file included from C:/project16-master/picnic.c:1:
+C:/project16-master/picnic.c:759:29: warning: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'const uint8_t *' (aka 'const unsigned char *'); take the address with & [-Wint-conversion]
+            printHex(label, proofs[i].view3UnruhG, view3UnruhLength);
+                            ^~~~~~~~~~~~~~~~~~~~~
+                            &
+C:/project16-master/picnic_impl.h:88:45: note: passing argument to parameter 'data' here
+void printHex(const char* s, const uint8_t* data, size_t len);
+                                            ^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) picnic_types.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:48 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) tree.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:52 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/project16-master/tree.c:1:
+C:/project16-master/tree.c:221:24: warning: format specifies type 'unsigned long' but the argument has type 'size_t' (aka 'unsigned long long') [-Wformat]
+        printf("seed %lu", i);
+                     ~~^   ~
+                     %llu
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) KeccakSpongeWidth1600.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Dhananjay Shukla' on host 'desktop-r2lv5vl' (Windows NT_amd64 version 6.2) on Tue May 12 20:26:55 +0530 2020
+INFO: [HLS 200-10] In directory 'C:/project16-master/picnic1/keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Num bytes = 55
+Known Answer Tests PASSED. 
+
+
+
+C:\project16-master\picnic1\keypair\sim\verilog>set PATH= 
+
+C:\project16-master\picnic1\keypair\sim\verilog>call D:/Xilinx_Vivado/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_crypto_sign_keypair_top glbl -prj crypto_sign_keypair.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx_Vivado/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s crypto_sign_keypair  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx_Vivado/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_Vivado/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_crypto_sign_keypair_top glbl -prj crypto_sign_keypair.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx_Vivado/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_sign_keypair 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AddRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddRoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_CTR_DRBG_UdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_UdEe_ram
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_UdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_CTR_DRBG_Upda.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_ECB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_ECB_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_ECB_1_ctx_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_bkb_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_ECB_1_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AES256_ECB_ctx_Rocud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_Rocud_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_Rocud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AESL_automem_DRBG_ctx_Key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_Key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AESL_automem_DRBG_ctx_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AESL_automem_pk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_pk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/Cipher.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/crypto_sign_keypahbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypahbi_ram
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypahbi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/crypto_sign_keypair.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_sign_keypair_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/crypto_sign_keypair.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypair
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/crypto_sign_keypakbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypakbM_ram
+INFO: [VRFC 10-311] analyzing module crypto_sign_keypakbM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/KeyExpansion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/KeyExpansion_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/LowMCEnc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/LowMCEnc_roundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc_roundKey_ram
+INFO: [VRFC 10-311] analyzing module LowMCEnc_roundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/LowMCEnc_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp_ram
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/LowMCEnc_temp_matg8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp_matg8j_rom
+INFO: [VRFC 10-311] analyzing module LowMCEnc_temp_matg8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/matrix_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/matrix_mul_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/matrix_mul_1_prod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_prod_ram
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_prod
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/matrix_mul_1_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_temp_ram
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/matrix_mul_1_tempeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_tempeOg_rom
+INFO: [VRFC 10-311] analyzing module matrix_mul_1_tempeOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/matrix_mul_temp_mfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_mul_temp_mfYi_rom
+INFO: [VRFC 10-311] analyzing module matrix_mul_temp_mfYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/picnic_keygen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module picnic_keygen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/picnic_keygen_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module picnic_keygen_temp_ram
+INFO: [VRFC 10-311] analyzing module picnic_keygen_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/randombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/randombytes_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_block_ram
+INFO: [VRFC 10-311] analyzing module randombytes_block
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/SubBytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project16-master/picnic1/keypair/sim/verilog/SubBytes_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes_sbox_rom
+INFO: [VRFC 10-311] analyzing module SubBytes_sbox
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_sign_keypahbi_ram
+Compiling module xil_defaultlib.crypto_sign_keypahbi(DataWidth=8...
+Compiling module xil_defaultlib.crypto_sign_keypakbM_ram
+Compiling module xil_defaultlib.crypto_sign_keypakbM(DataWidth=8...
+Compiling module xil_defaultlib.picnic_keygen_temp_ram
+Compiling module xil_defaultlib.picnic_keygen_temp(DataWidth=32,...
+Compiling module xil_defaultlib.randombytes_block_ram
+Compiling module xil_defaultlib.randombytes_block(DataWidth=8,Ad...
+Compiling module xil_defaultlib.AES256_CTR_DRBG_UdEe_ram
+Compiling module xil_defaultlib.AES256_CTR_DRBG_UdEe(DataWidth=8...
+Compiling module xil_defaultlib.AES256_ECB_ctx_Rocud_ram
+Compiling module xil_defaultlib.AES256_ECB_ctx_Rocud(DataWidth=8...
+Compiling module xil_defaultlib.AES256_ECB_1_test_ram
+Compiling module xil_defaultlib.AES256_ECB_1_test(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_sbox_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
+Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion
+Compiling module xil_defaultlib.AddRoundKey
+Compiling module xil_defaultlib.SubBytes_sbox_rom
+Compiling module xil_defaultlib.SubBytes_sbox(DataWidth=8,Addres...
+Compiling module xil_defaultlib.SubBytes
+Compiling module xil_defaultlib.Cipher
+Compiling module xil_defaultlib.AES256_ECB
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_bkb_ram
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_bkb(DataWidth=8...
+Compiling module xil_defaultlib.AES256_ECB_1
+Compiling module xil_defaultlib.randombytes
+Compiling module xil_defaultlib.LowMCEnc_temp_matg8j_rom
+Compiling module xil_defaultlib.LowMCEnc_temp_matg8j(DataWidth=3...
+Compiling module xil_defaultlib.LowMCEnc_roundKey_ram
+Compiling module xil_defaultlib.LowMCEnc_roundKey(DataWidth=32,A...
+Compiling module xil_defaultlib.LowMCEnc_temp_ram
+Compiling module xil_defaultlib.LowMCEnc_temp(DataWidth=8,Addres...
+Compiling module xil_defaultlib.matrix_mul_temp_mfYi_rom
+Compiling module xil_defaultlib.matrix_mul_temp_mfYi(DataWidth=3...
+Compiling module xil_defaultlib.matrix_mul_1_prod_ram
+Compiling module xil_defaultlib.matrix_mul_1_prod(DataWidth=32,A...
+Compiling module xil_defaultlib.matrix_mul_1_temp_ram_default
+Compiling module xil_defaultlib.matrix_mul_1_temp(DataWidth=32,A...
+Compiling module xil_defaultlib.matrix_mul
+Compiling module xil_defaultlib.matrix_mul_1_tempeOg_rom
+Compiling module xil_defaultlib.matrix_mul_1_tempeOg(DataWidth=3...
+Compiling module xil_defaultlib.matrix_mul_1
+Compiling module xil_defaultlib.LowMCEnc
+Compiling module xil_defaultlib.picnic_keygen
+Compiling module xil_defaultlib.crypto_sign_keypair
+Compiling module xil_defaultlib.AESL_automem_pk
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_V
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_Key
+Compiling module xil_defaultlib.apatb_crypto_sign_keypair_top
+Compiling module work.glbl
+Built simulation snapshot crypto_sign_keypair
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/project16-master/picnic1/keypair/sim/verilog/xsim.dir/crypto_sign_keypair/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue May 12 20:28:31 2020...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/crypto_sign_keypair/xsim_script.tcl
+# xsim {crypto_sign_keypair} -autoloadwcfg -tclbatch {crypto_sign_keypair.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source crypto_sign_keypair.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "1256055000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1256095 ns : File "C:/project16-master/picnic1/keypair/sim/verilog/crypto_sign_keypair.autotb.v" Line 634
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue May 12 20:28:43 2020...
+Num bytes = 55
+Known Answer Tests PASSED. 
+
+
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

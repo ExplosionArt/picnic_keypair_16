@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../newtest_sign_2.c in debug mode
+   Compiling ../../../../sha3/KeccakHash.c in debug mode
+   Compiling ../../../../sha3/KeccakP-1600-reference.c in debug mode
+   Compiling ../../../../sha3/KeccakSpongeWidth1600.c in debug mode
+   Compiling ../../../../NIST-KATs/aes.c in debug mode
+   Compiling ../../../../api.c in debug mode
+   Compiling ../../../../hash.c in debug mode
+   Compiling ../../../../lowmc_constants.c in debug mode
+   Compiling ../../../../picnic.c in debug mode
+   Compiling ../../../../picnic2_impl.c in debug mode
+   Compiling ../../../../picnic_impl.c in debug mode
+   Compiling ../../../../picnic_types.c in debug mode
+   Compiling ../../../../NIST-KATs/rng.c in debug mode
+   Compiling ../../../../tree.c in debug mode
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

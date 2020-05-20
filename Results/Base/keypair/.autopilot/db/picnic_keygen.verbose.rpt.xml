@@ -1,0 +1,266 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'picnic_keygen'" level="0">
+<item name = "Date">Tue May 12 20:22:42 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">picnic1</item>
+<item name = "Solution">keypair</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200t-fbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.366 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_randombytes_fu_454">randombytes, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_LowMCEnc_fu_471">LowMCEnc, 107470, 107470, 1.075 ms, 1.075 ms, 107470, 107470, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- memset_temp">7, 7, 1, -, -, 8, no</column>
+<column name="- memset_temp2">7, 7, 1, -, -, 8, no</column>
+<column name="- memset_temp3">7, 7, 1, -, -, 8, no</column>
+<column name="- Loop 4">24, 24, 3, -, -, 8, no</column>
+<column name="- Loop 5">64, 64, 2, -, -, 32, no</column>
+<column name="- Loop 6">64, 64, 2, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 222, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">82, -, 1403, 9708, 0</column>
+<column name="Memory">0, -, 192, 12, 0</column>
+<column name="Multiplexer">-, -, -, 598, -</column>
+<column name="Register">-, -, 169, -, -</column>
+<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
+<specialColumn name="Utilization (%)">11, 0, ~0, 7, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_LowMCEnc_fu_471">LowMCEnc, 70, 0, 420, 3997, 0</column>
+<column name="grp_randombytes_fu_454">randombytes, 12, 0, 983, 5711, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="temp_U">picnic_keygen_temp, 0, 64, 4, 0, 8, 32, 1, 256</column>
+<column name="temp2_U">picnic_keygen_temp, 0, 64, 4, 0, 8, 32, 1, 256</column>
+<column name="temp3_U">picnic_keygen_temp, 0, 64, 4, 0, 8, 32, 1, 256</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln210_1_fu_579_p2">+, 0, 0, 12, 3, 1</column>
+<column name="add_ln210_2_fu_596_p2">+, 0, 0, 12, 3, 1</column>
+<column name="add_ln210_fu_562_p2">+, 0, 0, 12, 3, 1</column>
+<column name="loop_3_fu_730_p2">+, 0, 0, 15, 6, 1</column>
+<column name="loop_4_fu_782_p2">+, 0, 0, 15, 6, 1</column>
+<column name="loop_fu_655_p2">+, 0, 0, 15, 3, 6</column>
+<column name="empty_19_fu_490_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="empty_21_fu_502_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="empty_23_fu_514_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_25_fu_526_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_27_fu_538_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_29_fu_550_p2">icmp, 0, 0, 9, 4, 1</column>
+<column name="empty_fu_484_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="icmp_ln210_1_fu_590_p2">icmp, 0, 0, 9, 3, 2</column>
+<column name="icmp_ln210_2_fu_607_p2">icmp, 0, 0, 9, 3, 2</column>
+<column name="icmp_ln210_fu_573_p2">icmp, 0, 0, 9, 3, 2</column>
+<column name="icmp_ln221_fu_724_p2">icmp, 0, 0, 11, 6, 7</column>
+<column name="icmp_ln230_fu_776_p2">icmp, 0, 0, 11, 6, 7</column>
+<column name="empty_20_fu_496_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_22_fu_508_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_24_fu_520_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_26_fu_532_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_28_fu_544_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_30_fu_556_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln212_1_fu_661_p2">or, 0, 0, 5, 5, 2</column>
+<column name="or_ln212_2_fu_673_p2">or, 0, 0, 5, 5, 2</column>
+<column name="or_ln212_fu_632_p2">or, 0, 0, 5, 5, 1</column>
+<column name="select_ln166_fu_794_p3">select, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="DRBG_ctx_Key_ce0">9, 2, 1, 2</column>
+<column name="DRBG_ctx_Key_ce1">9, 2, 1, 2</column>
+<column name="DRBG_ctx_Key_we0">9, 2, 1, 2</column>
+<column name="DRBG_ctx_V_ce0">9, 2, 1, 2</column>
+<column name="DRBG_ctx_V_ce1">9, 2, 1, 2</column>
+<column name="DRBG_ctx_V_we0">9, 2, 1, 2</column>
+<column name="DRBG_ctx_reseed_counter_o">9, 2, 32, 64</column>
+<column name="DRBG_ctx_reseed_counter_o_ap_vld">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">85, 17, 1, 17</column>
+<column name="ap_return_0">9, 2, 32, 64</column>
+<column name="ap_return_1">9, 2, 4, 8</column>
+<column name="ap_return_2">9, 2, 4, 8</column>
+<column name="loop_0_reg_407">9, 2, 6, 12</column>
+<column name="loop_1_reg_418">9, 2, 6, 12</column>
+<column name="loop_2_reg_430">9, 2, 6, 12</column>
+<column name="phi_ln210_1_reg_385">9, 2, 3, 6</column>
+<column name="phi_ln210_2_reg_396">9, 2, 3, 6</column>
+<column name="phi_ln210_reg_374">9, 2, 3, 6</column>
+<column name="pk_ciphertext_address0">21, 4, 5, 20</column>
+<column name="pk_ciphertext_address1">21, 4, 5, 20</column>
+<column name="pk_plaintext_address0">27, 5, 5, 25</column>
+<column name="pk_plaintext_address1">15, 3, 5, 15</column>
+<column name="pk_plaintext_ce0">15, 3, 1, 3</column>
+<column name="pk_plaintext_we0">9, 2, 1, 2</column>
+<column name="sk_data_address0">21, 4, 5, 20</column>
+<column name="sk_data_address1">15, 3, 5, 15</column>
+<column name="sk_data_ce0">15, 3, 1, 3</column>
+<column name="sk_data_we0">9, 2, 1, 2</column>
+<column name="temp2_address0">21, 4, 3, 12</column>
+<column name="temp2_ce0">15, 3, 1, 3</column>
+<column name="temp2_d0">15, 3, 32, 96</column>
+<column name="temp3_address0">21, 4, 3, 12</column>
+<column name="temp3_ce0">15, 3, 1, 3</column>
+<column name="temp3_d0">15, 3, 32, 96</column>
+<column name="temp_address0">33, 6, 3, 18</column>
+<column name="temp_ce0">15, 3, 1, 3</column>
+<column name="temp_d0">27, 5, 32, 160</column>
+<column name="temp_we0">15, 3, 1, 3</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="ap_return_0_preg">32, 0, 32, 0</column>
+<column name="ap_return_1_preg">4, 0, 4, 0</column>
+<column name="ap_return_2_preg">4, 0, 4, 0</column>
+<column name="grp_LowMCEnc_fu_471_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_randombytes_fu_454_ap_start_reg">1, 0, 1, 0</column>
+<column name="loop_0_reg_407">6, 0, 6, 0</column>
+<column name="loop_1_reg_418">6, 0, 6, 0</column>
+<column name="loop_2_reg_430">6, 0, 6, 0</column>
+<column name="loop_3_reg_963">6, 0, 6, 0</column>
+<column name="loop_4_reg_976">6, 0, 6, 0</column>
+<column name="loop_reg_895">6, 0, 6, 0</column>
+<column name="p_0_reg_441">1, 0, 1, 0</column>
+<column name="phi_ln210_1_reg_385">3, 0, 3, 0</column>
+<column name="phi_ln210_2_reg_396">3, 0, 3, 0</column>
+<column name="phi_ln210_reg_374">3, 0, 3, 0</column>
+<column name="pk_ciphertext_load_1_reg_905">8, 0, 8, 0</column>
+<column name="pk_ciphertext_load_reg_900">8, 0, 8, 0</column>
+<column name="pk_plaintext_load_1_reg_925">8, 0, 8, 0</column>
+<column name="pk_plaintext_load_reg_920">8, 0, 8, 0</column>
+<column name="sk_data_load_1_reg_945">8, 0, 8, 0</column>
+<column name="sk_data_load_reg_940">8, 0, 8, 0</column>
+<column name="temp_addr_2_reg_968">3, 0, 3, 0</column>
+<column name="trunc_ln211_reg_859">5, 0, 5, 0</column>
+<column name="trunc_ln212_1_reg_870">3, 0, 3, 0</column>
+<column name="zext_ln231_reg_981">6, 0, 64, 58</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_return_0">out, 32, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_return_1">out, 4, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="ap_return_2">out, 4, ap_ctrl_hs, picnic_keygen, return value</column>
+<column name="parameters">in, 4, ap_none, parameters, scalar</column>
+<column name="pk_plaintext_address0">out, 5, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_ce0">out, 1, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_we0">out, 1, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_d0">out, 8, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_q0">in, 8, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_address1">out, 5, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_ce1">out, 1, ap_memory, pk_plaintext, array</column>
+<column name="pk_plaintext_q1">in, 8, ap_memory, pk_plaintext, array</column>
+<column name="pk_ciphertext_address0">out, 5, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_ce0">out, 1, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_we0">out, 1, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_d0">out, 8, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_q0">in, 8, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_address1">out, 5, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_ce1">out, 1, ap_memory, pk_ciphertext, array</column>
+<column name="pk_ciphertext_q1">in, 8, ap_memory, pk_ciphertext, array</column>
+<column name="sk_data_address0">out, 5, ap_memory, sk_data, array</column>
+<column name="sk_data_ce0">out, 1, ap_memory, sk_data, array</column>
+<column name="sk_data_we0">out, 1, ap_memory, sk_data, array</column>
+<column name="sk_data_d0">out, 8, ap_memory, sk_data, array</column>
+<column name="sk_data_q0">in, 8, ap_memory, sk_data, array</column>
+<column name="sk_data_address1">out, 5, ap_memory, sk_data, array</column>
+<column name="sk_data_ce1">out, 1, ap_memory, sk_data, array</column>
+<column name="sk_data_q1">in, 8, ap_memory, sk_data, array</column>
+<column name="sk_pk_plaintext_address0">out, 5, ap_memory, sk_pk_plaintext, array</column>
+<column name="sk_pk_plaintext_ce0">out, 1, ap_memory, sk_pk_plaintext, array</column>
+<column name="sk_pk_plaintext_we0">out, 1, ap_memory, sk_pk_plaintext, array</column>
+<column name="sk_pk_plaintext_d0">out, 8, ap_memory, sk_pk_plaintext, array</column>
+<column name="sk_pk_ciphertext_address0">out, 5, ap_memory, sk_pk_ciphertext, array</column>
+<column name="sk_pk_ciphertext_ce0">out, 1, ap_memory, sk_pk_ciphertext, array</column>
+<column name="sk_pk_ciphertext_we0">out, 1, ap_memory, sk_pk_ciphertext, array</column>
+<column name="sk_pk_ciphertext_d0">out, 8, ap_memory, sk_pk_ciphertext, array</column>
+<column name="DRBG_ctx_V_address0">out, 4, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_ce0">out, 1, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_we0">out, 1, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_d0">out, 8, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_q0">in, 8, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_address1">out, 4, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_ce1">out, 1, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_V_q1">in, 8, ap_memory, DRBG_ctx_V, array</column>
+<column name="DRBG_ctx_Key_address0">out, 5, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_ce0">out, 1, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_we0">out, 1, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_d0">out, 8, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_q0">in, 8, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_address1">out, 5, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_ce1">out, 1, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_Key_q1">in, 8, ap_memory, DRBG_ctx_Key, array</column>
+<column name="DRBG_ctx_reseed_counter_i">in, 32, ap_ovld, DRBG_ctx_reseed_counter, pointer</column>
+<column name="DRBG_ctx_reseed_counter_o">out, 32, ap_ovld, DRBG_ctx_reseed_counter, pointer</column>
+<column name="DRBG_ctx_reseed_counter_o_ap_vld">out, 1, ap_ovld, DRBG_ctx_reseed_counter, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,413 @@
+
+
+================================================================
+== Vivado HLS Report for 'picnic_keygen'
+================================================================
+* Date:           Tue May 12 20:22:35 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.366 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- memset_temp   |        7|        7|         1|          -|          -|     8|    no    |
+        |- memset_temp2  |        7|        7|         1|          -|          -|     8|    no    |
+        |- memset_temp3  |        7|        7|         1|          -|          -|     8|    no    |
+        |- Loop 4        |       24|       24|         3|          -|          -|     8|    no    |
+        |- Loop 5        |       64|       64|         2|          -|          -|    32|    no    |
+        |- Loop 6        |       64|       64|         2|          -|          -|    32|    no    |
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 16 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 5 6 
+6 --> 6 7 
+7 --> 7 8 
+8 --> 9 11 
+9 --> 10 
+10 --> 8 
+11 --> 12 
+12 --> 13 14 
+13 --> 12 
+14 --> 15 16 
+15 --> 14 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.81>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%parameters_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %parameters)"   --->   Operation 17 'read' 'parameters_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%temp = alloca [8 x i32], align 16" [picnic.c:210]   --->   Operation 18 'alloca' 'temp' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%temp2 = alloca [8 x i32], align 16" [picnic.c:210]   --->   Operation 19 'alloca' 'temp2' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%temp3 = alloca [8 x i32], align 16" [picnic.c:210]   --->   Operation 20 'alloca' 'temp3' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 21 [1/1] (1.21ns)   --->   "%empty = icmp eq i4 %parameters_read, -1"   --->   Operation 21 'icmp' 'empty' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (1.21ns)   --->   "%empty_19 = icmp eq i4 %parameters_read, -2"   --->   Operation 22 'icmp' 'empty_19' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node empty_28)   --->   "%empty_20 = or i1 %empty_19, %empty"   --->   Operation 23 'or' 'empty_20' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (1.21ns)   --->   "%empty_21 = icmp eq i4 %parameters_read, -3"   --->   Operation 24 'icmp' 'empty_21' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node empty_28)   --->   "%empty_22 = or i1 %empty_21, %empty_20"   --->   Operation 25 'or' 'empty_22' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (1.21ns)   --->   "%empty_23 = icmp eq i4 %parameters_read, -4"   --->   Operation 26 'icmp' 'empty_23' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node empty_28)   --->   "%empty_24 = or i1 %empty_23, %empty_22"   --->   Operation 27 'or' 'empty_24' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (1.21ns)   --->   "%empty_25 = icmp eq i4 %parameters_read, -5"   --->   Operation 28 'icmp' 'empty_25' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node empty_28)   --->   "%empty_26 = or i1 %empty_25, %empty_24"   --->   Operation 29 'or' 'empty_26' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (1.21ns)   --->   "%empty_27 = icmp eq i4 %parameters_read, -6"   --->   Operation 30 'icmp' 'empty_27' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.80ns) (out node of the LUT)   --->   "%empty_28 = or i1 %empty_27, %empty_26"   --->   Operation 31 'or' 'empty_28' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (1.21ns)   --->   "%empty_29 = icmp eq i4 %parameters_read, 0"   --->   Operation 32 'icmp' 'empty_29' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.80ns) (out node of the LUT)   --->   "%empty_30 = or i1 %empty_29, %empty_28"   --->   Operation 33 'or' 'empty_30' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %empty_30, label %._crit_edge7.i, label %is_valid_params.exit"   --->   Operation 34 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [2/2] (1.35ns)   --->   "call fastcc void @randombytes([32 x i8]* %sk_data)" [picnic.c:197]   --->   Operation 35 'call' <Predicate = (!empty_30)> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 36 [1/1] (1.35ns)   --->   "br label %.loopexit"   --->   Operation 36 'br' <Predicate = (empty_30)> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 37 [1/2] (0.00ns)   --->   "call fastcc void @randombytes([32 x i8]* %sk_data)" [picnic.c:197]   --->   Operation 37 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.35>
+ST_3 : Operation 38 [2/2] (1.35ns)   --->   "call fastcc void @randombytes([32 x i8]* %pk_plaintext)" [picnic.c:204]   --->   Operation 38 'call' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.35>
+ST_4 : Operation 39 [1/2] (0.00ns)   --->   "call fastcc void @randombytes([32 x i8]* %pk_plaintext)" [picnic.c:204]   --->   Operation 39 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 40 [1/1] (1.35ns)   --->   "br label %meminst"   --->   Operation 40 'br' <Predicate = true> <Delay = 1.35>
+
+State 5 <SV = 4> <Delay = 1.75>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%phi_ln210 = phi i3 [ 0, %is_valid_params.exit ], [ %add_ln210, %meminst ]" [picnic.c:210]   --->   Operation 41 'phi' 'phi_ln210' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (1.34ns)   --->   "%add_ln210 = add i3 %phi_ln210, 1" [picnic.c:210]   --->   Operation 42 'add' 'add_ln210' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln210 = zext i3 %phi_ln210 to i64" [picnic.c:210]   --->   Operation 43 'zext' 'zext_ln210' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%temp_addr = getelementptr [8 x i32]* %temp, i64 0, i64 %zext_ln210" [picnic.c:210]   --->   Operation 44 'getelementptr' 'temp_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (1.75ns)   --->   "store i32 0, i32* %temp_addr, align 4" [picnic.c:210]   --->   Operation 45 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 46 [1/1] (1.00ns)   --->   "%icmp_ln210 = icmp eq i3 %phi_ln210, -1" [picnic.c:210]   --->   Operation 46 'icmp' 'icmp_ln210' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @memset_temp_str)"   --->   Operation 47 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 48 'speclooptripcount' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %icmp_ln210, label %meminst1.preheader, label %meminst" [picnic.c:210]   --->   Operation 49 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (1.35ns)   --->   "br label %meminst1" [picnic.c:210]   --->   Operation 50 'br' <Predicate = (icmp_ln210)> <Delay = 1.35>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%phi_ln210_1 = phi i3 [ %add_ln210_1, %meminst1 ], [ 0, %meminst1.preheader ]" [picnic.c:210]   --->   Operation 51 'phi' 'phi_ln210_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (1.34ns)   --->   "%add_ln210_1 = add i3 %phi_ln210_1, 1" [picnic.c:210]   --->   Operation 52 'add' 'add_ln210_1' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln210_1 = zext i3 %phi_ln210_1 to i64" [picnic.c:210]   --->   Operation 53 'zext' 'zext_ln210_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%temp2_addr = getelementptr [8 x i32]* %temp2, i64 0, i64 %zext_ln210_1" [picnic.c:210]   --->   Operation 54 'getelementptr' 'temp2_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (1.75ns)   --->   "store i32 0, i32* %temp2_addr, align 4" [picnic.c:210]   --->   Operation 55 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_6 : Operation 56 [1/1] (1.00ns)   --->   "%icmp_ln210_1 = icmp eq i3 %phi_ln210_1, -1" [picnic.c:210]   --->   Operation 56 'icmp' 'icmp_ln210_1' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @memset_temp2_str)"   --->   Operation 57 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 58 'speclooptripcount' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "br i1 %icmp_ln210_1, label %meminst4.preheader, label %meminst1" [picnic.c:210]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (1.35ns)   --->   "br label %meminst4" [picnic.c:210]   --->   Operation 60 'br' <Predicate = (icmp_ln210_1)> <Delay = 1.35>
+
+State 7 <SV = 6> <Delay = 1.75>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%phi_ln210_2 = phi i3 [ %add_ln210_2, %meminst4 ], [ 0, %meminst4.preheader ]" [picnic.c:210]   --->   Operation 61 'phi' 'phi_ln210_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (1.34ns)   --->   "%add_ln210_2 = add i3 %phi_ln210_2, 1" [picnic.c:210]   --->   Operation 62 'add' 'add_ln210_2' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln210_2 = zext i3 %phi_ln210_2 to i64" [picnic.c:210]   --->   Operation 63 'zext' 'zext_ln210_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%temp3_addr = getelementptr [8 x i32]* %temp3, i64 0, i64 %zext_ln210_2" [picnic.c:210]   --->   Operation 64 'getelementptr' 'temp3_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (1.75ns)   --->   "store i32 0, i32* %temp3_addr, align 4" [picnic.c:210]   --->   Operation 65 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_7 : Operation 66 [1/1] (1.00ns)   --->   "%icmp_ln210_2 = icmp eq i3 %phi_ln210_2, -1" [picnic.c:210]   --->   Operation 66 'icmp' 'icmp_ln210_2' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @memset_temp3_str)"   --->   Operation 67 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 68 'speclooptripcount' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %icmp_ln210_2, label %.preheader.preheader, label %meminst4" [picnic.c:210]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/1] (1.35ns)   --->   "br label %.preheader" [picnic.c:211]   --->   Operation 70 'br' <Predicate = (icmp_ln210_2)> <Delay = 1.35>
+
+State 8 <SV = 7> <Delay = 1.75>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%loop_0 = phi i6 [ %loop, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 71 'phi' 'loop_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i6.i32(i6 %loop_0, i32 5)" [picnic.c:211]   --->   Operation 72 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 73 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "br i1 %tmp, label %2, label %1" [picnic.c:211]   --->   Operation 74 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln212 = zext i6 %loop_0 to i64" [picnic.c:212]   --->   Operation 75 'zext' 'zext_ln212' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%pk_ciphertext_addr = getelementptr [32 x i8]* %pk_ciphertext, i64 0, i64 %zext_ln212" [picnic.c:212]   --->   Operation 76 'getelementptr' 'pk_ciphertext_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 77 [2/2] (1.75ns)   --->   "%pk_ciphertext_load = load i8* %pk_ciphertext_addr, align 1" [picnic.c:212]   --->   Operation 77 'load' 'pk_ciphertext_load' <Predicate = (!tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%trunc_ln211 = trunc i6 %loop_0 to i5" [picnic.c:211]   --->   Operation 78 'trunc' 'trunc_ln211' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%or_ln212 = or i5 %trunc_ln211, 1" [picnic.c:212]   --->   Operation 79 'or' 'or_ln212' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln212_1 = zext i5 %or_ln212 to i64" [picnic.c:212]   --->   Operation 80 'zext' 'zext_ln212_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%pk_ciphertext_addr_1 = getelementptr [32 x i8]* %pk_ciphertext, i64 0, i64 %zext_ln212_1" [picnic.c:212]   --->   Operation 81 'getelementptr' 'pk_ciphertext_addr_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 82 [2/2] (1.75ns)   --->   "%pk_ciphertext_load_1 = load i8* %pk_ciphertext_addr_1, align 1" [picnic.c:212]   --->   Operation 82 'load' 'pk_ciphertext_load_1' <Predicate = (!tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln212_1 = call i3 @_ssdm_op_PartSelect.i3.i6.i32.i32(i6 %loop_0, i32 2, i32 4)" [picnic.c:212]   --->   Operation 83 'partselect' 'trunc_ln212_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%pk_plaintext_addr = getelementptr [32 x i8]* %pk_plaintext, i64 0, i64 %zext_ln212" [picnic.c:213]   --->   Operation 84 'getelementptr' 'pk_plaintext_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 85 [2/2] (1.75ns)   --->   "%pk_plaintext_load = load i8* %pk_plaintext_addr, align 1" [picnic.c:213]   --->   Operation 85 'load' 'pk_plaintext_load' <Predicate = (!tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%pk_plaintext_addr_1 = getelementptr [32 x i8]* %pk_plaintext, i64 0, i64 %zext_ln212_1" [picnic.c:213]   --->   Operation 86 'getelementptr' 'pk_plaintext_addr_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 87 [2/2] (1.75ns)   --->   "%pk_plaintext_load_1 = load i8* %pk_plaintext_addr_1, align 1" [picnic.c:213]   --->   Operation 87 'load' 'pk_plaintext_load_1' <Predicate = (!tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%sk_data_addr = getelementptr [32 x i8]* %sk_data, i64 0, i64 %zext_ln212" [picnic.c:214]   --->   Operation 88 'getelementptr' 'sk_data_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 89 [2/2] (1.75ns)   --->   "%sk_data_load = load i8* %sk_data_addr, align 1" [picnic.c:214]   --->   Operation 89 'load' 'sk_data_load' <Predicate = (!tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%sk_data_addr_1 = getelementptr [32 x i8]* %sk_data, i64 0, i64 %zext_ln212_1" [picnic.c:214]   --->   Operation 90 'getelementptr' 'sk_data_addr_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 91 [2/2] (1.75ns)   --->   "%sk_data_load_1 = load i8* %sk_data_addr_1, align 1" [picnic.c:214]   --->   Operation 91 'load' 'sk_data_load_1' <Predicate = (!tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 92 [1/1] (1.60ns)   --->   "%loop = add i6 4, %loop_0" [picnic.c:211]   --->   Operation 92 'add' 'loop' <Predicate = (!tmp)> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 93 [2/2] (0.00ns)   --->   "call fastcc void @LowMCEnc([8 x i32]* %temp2, [8 x i32]* %temp, [8 x i32]* %temp3)" [picnic.c:219]   --->   Operation 93 'call' <Predicate = (tmp)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 1.75>
+ST_9 : Operation 94 [1/2] (1.75ns)   --->   "%pk_ciphertext_load = load i8* %pk_ciphertext_addr, align 1" [picnic.c:212]   --->   Operation 94 'load' 'pk_ciphertext_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 95 [1/2] (1.75ns)   --->   "%pk_ciphertext_load_1 = load i8* %pk_ciphertext_addr_1, align 1" [picnic.c:212]   --->   Operation 95 'load' 'pk_ciphertext_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%or_ln212_1 = or i5 %trunc_ln211, 2" [picnic.c:212]   --->   Operation 96 'or' 'or_ln212_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln212_2 = zext i5 %or_ln212_1 to i64" [picnic.c:212]   --->   Operation 97 'zext' 'zext_ln212_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "%pk_ciphertext_addr_2 = getelementptr [32 x i8]* %pk_ciphertext, i64 0, i64 %zext_ln212_2" [picnic.c:212]   --->   Operation 98 'getelementptr' 'pk_ciphertext_addr_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 99 [2/2] (1.75ns)   --->   "%pk_ciphertext_load_2 = load i8* %pk_ciphertext_addr_2, align 1" [picnic.c:212]   --->   Operation 99 'load' 'pk_ciphertext_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 100 [1/1] (0.00ns)   --->   "%or_ln212_2 = or i5 %trunc_ln211, 3" [picnic.c:212]   --->   Operation 100 'or' 'or_ln212_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln212_3 = zext i5 %or_ln212_2 to i64" [picnic.c:212]   --->   Operation 101 'zext' 'zext_ln212_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%pk_ciphertext_addr_3 = getelementptr [32 x i8]* %pk_ciphertext, i64 0, i64 %zext_ln212_3" [picnic.c:212]   --->   Operation 102 'getelementptr' 'pk_ciphertext_addr_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 103 [2/2] (1.75ns)   --->   "%pk_ciphertext_load_3 = load i8* %pk_ciphertext_addr_3, align 1" [picnic.c:212]   --->   Operation 103 'load' 'pk_ciphertext_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 104 [1/2] (1.75ns)   --->   "%pk_plaintext_load = load i8* %pk_plaintext_addr, align 1" [picnic.c:213]   --->   Operation 104 'load' 'pk_plaintext_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 105 [1/2] (1.75ns)   --->   "%pk_plaintext_load_1 = load i8* %pk_plaintext_addr_1, align 1" [picnic.c:213]   --->   Operation 105 'load' 'pk_plaintext_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%pk_plaintext_addr_2 = getelementptr [32 x i8]* %pk_plaintext, i64 0, i64 %zext_ln212_2" [picnic.c:213]   --->   Operation 106 'getelementptr' 'pk_plaintext_addr_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 107 [2/2] (1.75ns)   --->   "%pk_plaintext_load_2 = load i8* %pk_plaintext_addr_2, align 1" [picnic.c:213]   --->   Operation 107 'load' 'pk_plaintext_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%pk_plaintext_addr_3 = getelementptr [32 x i8]* %pk_plaintext, i64 0, i64 %zext_ln212_3" [picnic.c:213]   --->   Operation 108 'getelementptr' 'pk_plaintext_addr_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 109 [2/2] (1.75ns)   --->   "%pk_plaintext_load_3 = load i8* %pk_plaintext_addr_3, align 1" [picnic.c:213]   --->   Operation 109 'load' 'pk_plaintext_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 110 [1/2] (1.75ns)   --->   "%sk_data_load = load i8* %sk_data_addr, align 1" [picnic.c:214]   --->   Operation 110 'load' 'sk_data_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 111 [1/2] (1.75ns)   --->   "%sk_data_load_1 = load i8* %sk_data_addr_1, align 1" [picnic.c:214]   --->   Operation 111 'load' 'sk_data_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%sk_data_addr_2 = getelementptr [32 x i8]* %sk_data, i64 0, i64 %zext_ln212_2" [picnic.c:214]   --->   Operation 112 'getelementptr' 'sk_data_addr_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 113 [2/2] (1.75ns)   --->   "%sk_data_load_2 = load i8* %sk_data_addr_2, align 1" [picnic.c:214]   --->   Operation 113 'load' 'sk_data_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 114 [1/1] (0.00ns)   --->   "%sk_data_addr_3 = getelementptr [32 x i8]* %sk_data, i64 0, i64 %zext_ln212_3" [picnic.c:214]   --->   Operation 114 'getelementptr' 'sk_data_addr_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 115 [2/2] (1.75ns)   --->   "%sk_data_load_3 = load i8* %sk_data_addr_3, align 1" [picnic.c:214]   --->   Operation 115 'load' 'sk_data_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 10 <SV = 9> <Delay = 3.51>
+ST_10 : Operation 116 [1/2] (1.75ns)   --->   "%pk_ciphertext_load_2 = load i8* %pk_ciphertext_addr_2, align 1" [picnic.c:212]   --->   Operation 116 'load' 'pk_ciphertext_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 117 [1/2] (1.75ns)   --->   "%pk_ciphertext_load_3 = load i8* %pk_ciphertext_addr_3, align 1" [picnic.c:212]   --->   Operation 117 'load' 'pk_ciphertext_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 118 [1/1] (0.00ns)   --->   "%or_ln212_5 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %pk_ciphertext_load_3, i8 %pk_ciphertext_load_2, i8 %pk_ciphertext_load_1, i8 %pk_ciphertext_load)" [picnic.c:212]   --->   Operation 118 'bitconcatenate' 'or_ln212_5' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 119 [1/1] (0.00ns)   --->   "%zext_ln212_4 = zext i3 %trunc_ln212_1 to i64" [picnic.c:212]   --->   Operation 119 'zext' 'zext_ln212_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 120 [1/1] (0.00ns)   --->   "%temp_addr_1 = getelementptr inbounds [8 x i32]* %temp, i64 0, i64 %zext_ln212_4" [picnic.c:212]   --->   Operation 120 'getelementptr' 'temp_addr_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 121 [1/1] (1.75ns)   --->   "store i32 %or_ln212_5, i32* %temp_addr_1, align 4" [picnic.c:212]   --->   Operation 121 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 122 [1/2] (1.75ns)   --->   "%pk_plaintext_load_2 = load i8* %pk_plaintext_addr_2, align 1" [picnic.c:213]   --->   Operation 122 'load' 'pk_plaintext_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 123 [1/2] (1.75ns)   --->   "%pk_plaintext_load_3 = load i8* %pk_plaintext_addr_3, align 1" [picnic.c:213]   --->   Operation 123 'load' 'pk_plaintext_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%or_ln213_2 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %pk_plaintext_load_3, i8 %pk_plaintext_load_2, i8 %pk_plaintext_load_1, i8 %pk_plaintext_load)" [picnic.c:213]   --->   Operation 124 'bitconcatenate' 'or_ln213_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 125 [1/1] (0.00ns)   --->   "%temp2_addr_1 = getelementptr inbounds [8 x i32]* %temp2, i64 0, i64 %zext_ln212_4" [picnic.c:213]   --->   Operation 125 'getelementptr' 'temp2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (1.75ns)   --->   "store i32 %or_ln213_2, i32* %temp2_addr_1, align 4" [picnic.c:213]   --->   Operation 126 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 127 [1/2] (1.75ns)   --->   "%sk_data_load_2 = load i8* %sk_data_addr_2, align 1" [picnic.c:214]   --->   Operation 127 'load' 'sk_data_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 128 [1/2] (1.75ns)   --->   "%sk_data_load_3 = load i8* %sk_data_addr_3, align 1" [picnic.c:214]   --->   Operation 128 'load' 'sk_data_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%or_ln214_2 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %sk_data_load_3, i8 %sk_data_load_2, i8 %sk_data_load_1, i8 %sk_data_load)" [picnic.c:214]   --->   Operation 129 'bitconcatenate' 'or_ln214_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%temp3_addr_1 = getelementptr inbounds [8 x i32]* %temp3, i64 0, i64 %zext_ln212_4" [picnic.c:214]   --->   Operation 130 'getelementptr' 'temp3_addr_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 131 [1/1] (1.75ns)   --->   "store i32 %or_ln214_2, i32* %temp3_addr_1, align 4" [picnic.c:214]   --->   Operation 131 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 132 [1/1] (0.00ns)   --->   "br label %.preheader" [picnic.c:211]   --->   Operation 132 'br' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 8> <Delay = 1.35>
+ST_11 : Operation 133 [1/2] (0.00ns)   --->   "call fastcc void @LowMCEnc([8 x i32]* %temp2, [8 x i32]* %temp, [8 x i32]* %temp3)" [picnic.c:219]   --->   Operation 133 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 134 [1/1] (1.35ns)   --->   "br label %3" [picnic.c:221]   --->   Operation 134 'br' <Predicate = true> <Delay = 1.35>
+
+State 12 <SV = 9> <Delay = 1.75>
+ST_12 : Operation 135 [1/1] (0.00ns)   --->   "%loop_1 = phi i6 [ 0, %2 ], [ %loop_3, %4 ]"   --->   Operation 135 'phi' 'loop_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 136 [1/1] (1.22ns)   --->   "%icmp_ln221 = icmp eq i6 %loop_1, -32" [picnic.c:221]   --->   Operation 136 'icmp' 'icmp_ln221' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 137 [1/1] (0.00ns)   --->   "%empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 137 'speclooptripcount' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 138 [1/1] (1.60ns)   --->   "%loop_3 = add i6 %loop_1, 1" [picnic.c:221]   --->   Operation 138 'add' 'loop_3' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 139 [1/1] (0.00ns)   --->   "br i1 %icmp_ln221, label %.preheader33.preheader, label %4" [picnic.c:221]   --->   Operation 139 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 140 [1/1] (0.00ns)   --->   "%trunc_ln222_2 = call i3 @_ssdm_op_PartSelect.i3.i6.i32.i32(i6 %loop_1, i32 2, i32 4)" [picnic.c:222]   --->   Operation 140 'partselect' 'trunc_ln222_2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_12 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln222 = zext i3 %trunc_ln222_2 to i64" [picnic.c:222]   --->   Operation 141 'zext' 'zext_ln222' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_12 : Operation 142 [1/1] (0.00ns)   --->   "%temp_addr_2 = getelementptr inbounds [8 x i32]* %temp, i64 0, i64 %zext_ln222" [picnic.c:222]   --->   Operation 142 'getelementptr' 'temp_addr_2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_12 : Operation 143 [2/2] (1.75ns)   --->   "%temp_load = load i32* %temp_addr_2, align 4" [picnic.c:222]   --->   Operation 143 'load' 'temp_load' <Predicate = (!icmp_ln221)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_12 : Operation 144 [1/1] (1.35ns)   --->   "br label %.preheader33" [picnic.c:230]   --->   Operation 144 'br' <Predicate = (icmp_ln221)> <Delay = 1.35>
+
+State 13 <SV = 10> <Delay = 3.51>
+ST_13 : Operation 145 [1/2] (1.75ns)   --->   "%temp_load = load i32* %temp_addr_2, align 4" [picnic.c:222]   --->   Operation 145 'load' 'temp_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_13 : Operation 146 [1/1] (0.00ns)   --->   "%trunc_ln222 = trunc i32 %temp_load to i8" [picnic.c:222]   --->   Operation 146 'trunc' 'trunc_ln222' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 147 [1/1] (0.00ns)   --->   "%zext_ln222_1 = zext i6 %loop_1 to i64" [picnic.c:222]   --->   Operation 147 'zext' 'zext_ln222_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 148 [1/1] (0.00ns)   --->   "%pk_ciphertext_addr_4 = getelementptr [32 x i8]* %pk_ciphertext, i64 0, i64 %zext_ln222_1" [picnic.c:222]   --->   Operation 148 'getelementptr' 'pk_ciphertext_addr_4' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 149 [1/1] (1.75ns)   --->   "store i8 %trunc_ln222, i8* %pk_ciphertext_addr_4, align 1" [picnic.c:222]   --->   Operation 149 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_13 : Operation 150 [1/1] (0.00ns)   --->   "%lshr_ln = call i24 @_ssdm_op_PartSelect.i24.i32.i32.i32(i32 %temp_load, i32 8, i32 31)" [picnic.c:223]   --->   Operation 150 'partselect' 'lshr_ln' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 151 [1/1] (0.00ns)   --->   "%zext_ln223 = zext i24 %lshr_ln to i32" [picnic.c:223]   --->   Operation 151 'zext' 'zext_ln223' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 152 [1/1] (1.75ns)   --->   "store i32 %zext_ln223, i32* %temp_addr_2, align 4" [picnic.c:223]   --->   Operation 152 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_13 : Operation 153 [1/1] (0.00ns)   --->   "br label %3" [picnic.c:221]   --->   Operation 153 'br' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 10> <Delay = 1.75>
+ST_14 : Operation 154 [1/1] (0.00ns)   --->   "%loop_2 = phi i6 [ %loop_4, %5 ], [ 0, %.preheader33.preheader ]"   --->   Operation 154 'phi' 'loop_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 155 [1/1] (1.22ns)   --->   "%icmp_ln230 = icmp eq i6 %loop_2, -32" [picnic.c:230]   --->   Operation 155 'icmp' 'icmp_ln230' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 156 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 156 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 157 [1/1] (1.60ns)   --->   "%loop_4 = add i6 %loop_2, 1" [picnic.c:230]   --->   Operation 157 'add' 'loop_4' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 158 [1/1] (0.00ns)   --->   "br i1 %icmp_ln230, label %.loopexit.loopexit, label %5" [picnic.c:230]   --->   Operation 158 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 159 [1/1] (0.00ns)   --->   "%zext_ln231 = zext i6 %loop_2 to i64" [picnic.c:231]   --->   Operation 159 'zext' 'zext_ln231' <Predicate = (!icmp_ln230)> <Delay = 0.00>
+ST_14 : Operation 160 [1/1] (0.00ns)   --->   "%pk_ciphertext_addr_5 = getelementptr [32 x i8]* %pk_ciphertext, i64 0, i64 %zext_ln231" [picnic.c:231]   --->   Operation 160 'getelementptr' 'pk_ciphertext_addr_5' <Predicate = (!icmp_ln230)> <Delay = 0.00>
+ST_14 : Operation 161 [2/2] (1.75ns)   --->   "%pk_ciphertext_load_4 = load i8* %pk_ciphertext_addr_5, align 1" [picnic.c:231]   --->   Operation 161 'load' 'pk_ciphertext_load_4' <Predicate = (!icmp_ln230)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_14 : Operation 162 [1/1] (0.00ns)   --->   "%pk_plaintext_addr_4 = getelementptr [32 x i8]* %pk_plaintext, i64 0, i64 %zext_ln231" [picnic.c:232]   --->   Operation 162 'getelementptr' 'pk_plaintext_addr_4' <Predicate = (!icmp_ln230)> <Delay = 0.00>
+ST_14 : Operation 163 [2/2] (1.75ns)   --->   "%pk_plaintext_load_4 = load i8* %pk_plaintext_addr_4, align 1" [picnic.c:232]   --->   Operation 163 'load' 'pk_plaintext_load_4' <Predicate = (!icmp_ln230)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_14 : Operation 164 [1/1] (1.35ns)   --->   "br label %.loopexit"   --->   Operation 164 'br' <Predicate = (icmp_ln230)> <Delay = 1.35>
+
+State 15 <SV = 11> <Delay = 3.51>
+ST_15 : Operation 165 [1/2] (1.75ns)   --->   "%pk_ciphertext_load_4 = load i8* %pk_ciphertext_addr_5, align 1" [picnic.c:231]   --->   Operation 165 'load' 'pk_ciphertext_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_15 : Operation 166 [1/1] (0.00ns)   --->   "%sk_pk_ciphertext_add = getelementptr [32 x i8]* %sk_pk_ciphertext, i64 0, i64 %zext_ln231" [picnic.c:231]   --->   Operation 166 'getelementptr' 'sk_pk_ciphertext_add' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 167 [1/1] (1.75ns)   --->   "store i8 %pk_ciphertext_load_4, i8* %sk_pk_ciphertext_add, align 1" [picnic.c:231]   --->   Operation 167 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_15 : Operation 168 [1/2] (1.75ns)   --->   "%pk_plaintext_load_4 = load i8* %pk_plaintext_addr_4, align 1" [picnic.c:232]   --->   Operation 168 'load' 'pk_plaintext_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_15 : Operation 169 [1/1] (0.00ns)   --->   "%sk_pk_plaintext_addr = getelementptr [32 x i8]* %sk_pk_plaintext, i64 0, i64 %zext_ln231" [picnic.c:232]   --->   Operation 169 'getelementptr' 'sk_pk_plaintext_addr' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 170 [1/1] (1.75ns)   --->   "store i8 %pk_plaintext_load_4, i8* %sk_pk_plaintext_addr, align 1" [picnic.c:232]   --->   Operation 170 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_15 : Operation 171 [1/1] (0.00ns)   --->   "br label %.preheader33" [picnic.c:230]   --->   Operation 171 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 11> <Delay = 0.81>
+ST_16 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node select_ln166)   --->   "%p_0 = phi i1 [ true, %._crit_edge7.i ], [ false, %.loopexit.loopexit ]"   --->   Operation 172 'phi' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 173 [1/1] (0.81ns) (out node of the LUT)   --->   "%select_ln166 = select i1 %p_0, i32 -1, i32 0" [picnic.c:166]   --->   Operation 173 'select' 'select_ln166' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 174 [1/1] (0.00ns)   --->   "%newret = insertvalue { i32, i4, i4 } undef, i32 %select_ln166, 0" [picnic.c:166]   --->   Operation 174 'insertvalue' 'newret' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 175 [1/1] (0.00ns)   --->   "%newret2 = insertvalue { i32, i4, i4 } %newret, i4 %parameters_read, 1" [picnic.c:166]   --->   Operation 175 'insertvalue' 'newret2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 176 [1/1] (0.00ns)   --->   "%newret4 = insertvalue { i32, i4, i4 } %newret2, i4 %parameters_read, 2" [picnic.c:166]   --->   Operation 176 'insertvalue' 'newret4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 177 [1/1] (0.00ns)   --->   "ret { i32, i4, i4 } %newret4" [picnic.c:166]   --->   Operation 177 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.81ns
+The critical path consists of the following:
+	wire read on port 'parameters' [23]  (0 ns)
+	'icmp' operation ('empty_27') [36]  (1.21 ns)
+	'or' operation ('empty_28') [37]  (0.8 ns)
+	'or' operation ('empty_30') [39]  (0.8 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.35ns
+The critical path consists of the following:
+	'call' operation ('call_ln204', picnic.c:204) to 'randombytes' [43]  (1.35 ns)
+
+ <State 4>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('phi_ln210', picnic.c:210) with incoming values : ('add_ln210', picnic.c:210) [46]  (1.35 ns)
+
+ <State 5>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('phi_ln210', picnic.c:210) with incoming values : ('add_ln210', picnic.c:210) [46]  (0 ns)
+	'getelementptr' operation ('temp_addr', picnic.c:210) [49]  (0 ns)
+	'store' operation ('store_ln210', picnic.c:210) of constant 0 on array 'temp', picnic.c:210 [50]  (1.75 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('phi_ln210_1', picnic.c:210) with incoming values : ('add_ln210_1', picnic.c:210) [58]  (0 ns)
+	'getelementptr' operation ('temp2_addr', picnic.c:210) [61]  (0 ns)
+	'store' operation ('store_ln210', picnic.c:210) of constant 0 on array 'temp2', picnic.c:210 [62]  (1.75 ns)
+
+ <State 7>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('phi_ln210_2', picnic.c:210) with incoming values : ('add_ln210_2', picnic.c:210) [70]  (0 ns)
+	'getelementptr' operation ('temp3_addr', picnic.c:210) [73]  (0 ns)
+	'store' operation ('store_ln210', picnic.c:210) of constant 0 on array 'temp3', picnic.c:210 [74]  (1.75 ns)
+
+ <State 8>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('loop') with incoming values : ('loop', picnic.c:211) [82]  (0 ns)
+	'getelementptr' operation ('pk_ciphertext_addr', picnic.c:212) [88]  (0 ns)
+	'load' operation ('pk_ciphertext_load', picnic.c:212) on array 'pk_ciphertext' [89]  (1.75 ns)
+
+ <State 9>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('pk_ciphertext_load', picnic.c:212) on array 'pk_ciphertext' [89]  (1.75 ns)
+
+ <State 10>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('pk_ciphertext_load_2', picnic.c:212) on array 'pk_ciphertext' [98]  (1.75 ns)
+	'store' operation ('store_ln212', picnic.c:212) of variable 'or_ln212_5', picnic.c:212 on array 'temp', picnic.c:210 [107]  (1.75 ns)
+
+ <State 11>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('loop') with incoming values : ('loop', picnic.c:221) [136]  (1.35 ns)
+
+ <State 12>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('loop') with incoming values : ('loop', picnic.c:221) [136]  (0 ns)
+	'getelementptr' operation ('temp_addr_2', picnic.c:222) [144]  (0 ns)
+	'load' operation ('temp_load', picnic.c:222) on array 'temp', picnic.c:210 [145]  (1.75 ns)
+
+ <State 13>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('temp_load', picnic.c:222) on array 'temp', picnic.c:210 [145]  (1.75 ns)
+	'store' operation ('store_ln222', picnic.c:222) of variable 'trunc_ln222', picnic.c:222 on array 'pk_ciphertext' [149]  (1.75 ns)
+
+ <State 14>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('loop') with incoming values : ('loop', picnic.c:230) [157]  (0 ns)
+	'getelementptr' operation ('pk_ciphertext_addr_5', picnic.c:231) [164]  (0 ns)
+	'load' operation ('pk_ciphertext_load_4', picnic.c:231) on array 'pk_ciphertext' [165]  (1.75 ns)
+
+ <State 15>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('pk_ciphertext_load_4', picnic.c:231) on array 'pk_ciphertext' [165]  (1.75 ns)
+	'store' operation ('store_ln231', picnic.c:231) of variable 'pk_ciphertext_load_4', picnic.c:231 on array 'sk_pk_ciphertext' [167]  (1.75 ns)
+
+ <State 16>: 0.813ns
+The critical path consists of the following:
+	'phi' operation ('p_0') [178]  (0 ns)
+	'select' operation ('select_ln166', picnic.c:166) [179]  (0.813 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
