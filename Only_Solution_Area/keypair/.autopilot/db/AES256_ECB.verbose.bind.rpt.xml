@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'AES256_ECB'" level="0">
+<item name = "Date">Thu May 14 22:22:18 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">picnic1</item>
+<item name = "Solution">keypair</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200t-fbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.344 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3298, 4598, 32.980 us, 45.980 us, 3298, 4598, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_KeyExpansion_fu_143">KeyExpansion, 1382, 2682, 13.820 us, 26.820 us, 1382, 2682, none</column>
+<column name="grp_Cipher_fu_155">Cipher, 1832, 1832, 18.320 us, 18.320 us, 1832, 1832, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">40, 40, 10, -, -, 4, no</column>
+<column name=" + Loop 1.1">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 2">40, 40, 10, -, -, 4, no</column>
+<column name=" + Loop 2.1">8, 8, 2, -, -, 4, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

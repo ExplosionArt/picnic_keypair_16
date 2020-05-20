@@ -1,0 +1,497 @@
+
+
+================================================================
+== Vivado HLS Report for 'randombytes'
+================================================================
+* Date:           Sat May  9 23:49:05 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.344 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4359|     4419| 43.590 us | 44.190 us |  4359|  4419|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 27
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 18 
+3 --> 4 18 
+4 --> 5 18 
+5 --> 6 18 
+6 --> 7 18 
+7 --> 8 18 
+8 --> 9 18 
+9 --> 10 18 
+10 --> 11 18 
+11 --> 12 18 
+12 --> 13 18 
+13 --> 14 18 
+14 --> 15 18 
+15 --> 16 18 
+16 --> 17 18 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.75>
+ST_1 : Operation 28 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 15), align 1" [NIST-KATs/rng.c:228]   --->   Operation 28 'load' 'DRBG_ctx_V_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 2 <SV = 1> <Delay = 4.97>
+ST_2 : Operation 29 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 15), align 1" [NIST-KATs/rng.c:228]   --->   Operation 29 'load' 'DRBG_ctx_V_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_2 : Operation 30 [1/1] (1.24ns)   --->   "%icmp_ln228 = icmp eq i8 %DRBG_ctx_V_load, -1" [NIST-KATs/rng.c:228]   --->   Operation 30 'icmp' 'icmp_ln228' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228, label %2, label %1" [NIST-KATs/rng.c:228]   --->   Operation 31 'br' <Predicate = true> <Delay = 1.97>
+ST_2 : Operation 32 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_1 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 14), align 1" [NIST-KATs/rng.c:228]   --->   Operation 32 'load' 'DRBG_ctx_V_load_1' <Predicate = (icmp_ln228)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 3 <SV = 2> <Delay = 4.97>
+ST_3 : Operation 33 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 15), align 1" [NIST-KATs/rng.c:229]   --->   Operation 33 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_3 : Operation 34 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_1 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 14), align 1" [NIST-KATs/rng.c:228]   --->   Operation 34 'load' 'DRBG_ctx_V_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_3 : Operation 35 [1/1] (1.24ns)   --->   "%icmp_ln228_1 = icmp eq i8 %DRBG_ctx_V_load_1, -1" [NIST-KATs/rng.c:228]   --->   Operation 35 'icmp' 'icmp_ln228_1' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_1, label %3, label %1" [NIST-KATs/rng.c:228]   --->   Operation 36 'br' <Predicate = true> <Delay = 1.97>
+ST_3 : Operation 37 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_2 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 13), align 1" [NIST-KATs/rng.c:228]   --->   Operation 37 'load' 'DRBG_ctx_V_load_2' <Predicate = (icmp_ln228_1)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 4 <SV = 3> <Delay = 4.97>
+ST_4 : Operation 38 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 14), align 1" [NIST-KATs/rng.c:229]   --->   Operation 38 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_4 : Operation 39 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_2 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 13), align 1" [NIST-KATs/rng.c:228]   --->   Operation 39 'load' 'DRBG_ctx_V_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_4 : Operation 40 [1/1] (1.24ns)   --->   "%icmp_ln228_2 = icmp eq i8 %DRBG_ctx_V_load_2, -1" [NIST-KATs/rng.c:228]   --->   Operation 40 'icmp' 'icmp_ln228_2' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_2, label %4, label %1" [NIST-KATs/rng.c:228]   --->   Operation 41 'br' <Predicate = true> <Delay = 1.97>
+ST_4 : Operation 42 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_3 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 12), align 1" [NIST-KATs/rng.c:228]   --->   Operation 42 'load' 'DRBG_ctx_V_load_3' <Predicate = (icmp_ln228_2)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 5 <SV = 4> <Delay = 4.97>
+ST_5 : Operation 43 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 13), align 1" [NIST-KATs/rng.c:229]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 44 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_3 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 12), align 1" [NIST-KATs/rng.c:228]   --->   Operation 44 'load' 'DRBG_ctx_V_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 45 [1/1] (1.24ns)   --->   "%icmp_ln228_3 = icmp eq i8 %DRBG_ctx_V_load_3, -1" [NIST-KATs/rng.c:228]   --->   Operation 45 'icmp' 'icmp_ln228_3' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 46 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_3, label %5, label %1" [NIST-KATs/rng.c:228]   --->   Operation 46 'br' <Predicate = true> <Delay = 1.97>
+ST_5 : Operation 47 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_4 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 11), align 1" [NIST-KATs/rng.c:228]   --->   Operation 47 'load' 'DRBG_ctx_V_load_4' <Predicate = (icmp_ln228_3)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 6 <SV = 5> <Delay = 4.97>
+ST_6 : Operation 48 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 12), align 1" [NIST-KATs/rng.c:229]   --->   Operation 48 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_6 : Operation 49 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_4 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 11), align 1" [NIST-KATs/rng.c:228]   --->   Operation 49 'load' 'DRBG_ctx_V_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_6 : Operation 50 [1/1] (1.24ns)   --->   "%icmp_ln228_4 = icmp eq i8 %DRBG_ctx_V_load_4, -1" [NIST-KATs/rng.c:228]   --->   Operation 50 'icmp' 'icmp_ln228_4' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 51 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_4, label %6, label %1" [NIST-KATs/rng.c:228]   --->   Operation 51 'br' <Predicate = true> <Delay = 1.97>
+ST_6 : Operation 52 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_5 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 10), align 1" [NIST-KATs/rng.c:228]   --->   Operation 52 'load' 'DRBG_ctx_V_load_5' <Predicate = (icmp_ln228_4)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 7 <SV = 6> <Delay = 4.97>
+ST_7 : Operation 53 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 11), align 1" [NIST-KATs/rng.c:229]   --->   Operation 53 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_7 : Operation 54 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_5 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 10), align 1" [NIST-KATs/rng.c:228]   --->   Operation 54 'load' 'DRBG_ctx_V_load_5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_7 : Operation 55 [1/1] (1.24ns)   --->   "%icmp_ln228_5 = icmp eq i8 %DRBG_ctx_V_load_5, -1" [NIST-KATs/rng.c:228]   --->   Operation 55 'icmp' 'icmp_ln228_5' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 56 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_5, label %7, label %1" [NIST-KATs/rng.c:228]   --->   Operation 56 'br' <Predicate = true> <Delay = 1.97>
+ST_7 : Operation 57 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_6 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 9), align 1" [NIST-KATs/rng.c:228]   --->   Operation 57 'load' 'DRBG_ctx_V_load_6' <Predicate = (icmp_ln228_5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 8 <SV = 7> <Delay = 4.97>
+ST_8 : Operation 58 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 10), align 1" [NIST-KATs/rng.c:229]   --->   Operation 58 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 59 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_6 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 9), align 1" [NIST-KATs/rng.c:228]   --->   Operation 59 'load' 'DRBG_ctx_V_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 60 [1/1] (1.24ns)   --->   "%icmp_ln228_6 = icmp eq i8 %DRBG_ctx_V_load_6, -1" [NIST-KATs/rng.c:228]   --->   Operation 60 'icmp' 'icmp_ln228_6' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 61 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_6, label %8, label %1" [NIST-KATs/rng.c:228]   --->   Operation 61 'br' <Predicate = true> <Delay = 1.97>
+ST_8 : Operation 62 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_7 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 8), align 1" [NIST-KATs/rng.c:228]   --->   Operation 62 'load' 'DRBG_ctx_V_load_7' <Predicate = (icmp_ln228_6)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 9 <SV = 8> <Delay = 4.97>
+ST_9 : Operation 63 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 9), align 1" [NIST-KATs/rng.c:229]   --->   Operation 63 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 64 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_7 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 8), align 1" [NIST-KATs/rng.c:228]   --->   Operation 64 'load' 'DRBG_ctx_V_load_7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 65 [1/1] (1.24ns)   --->   "%icmp_ln228_7 = icmp eq i8 %DRBG_ctx_V_load_7, -1" [NIST-KATs/rng.c:228]   --->   Operation 65 'icmp' 'icmp_ln228_7' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 66 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_7, label %9, label %1" [NIST-KATs/rng.c:228]   --->   Operation 66 'br' <Predicate = true> <Delay = 1.97>
+ST_9 : Operation 67 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_8 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 7), align 1" [NIST-KATs/rng.c:228]   --->   Operation 67 'load' 'DRBG_ctx_V_load_8' <Predicate = (icmp_ln228_7)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 10 <SV = 9> <Delay = 4.97>
+ST_10 : Operation 68 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 8), align 1" [NIST-KATs/rng.c:229]   --->   Operation 68 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 69 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_8 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 7), align 1" [NIST-KATs/rng.c:228]   --->   Operation 69 'load' 'DRBG_ctx_V_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 70 [1/1] (1.24ns)   --->   "%icmp_ln228_8 = icmp eq i8 %DRBG_ctx_V_load_8, -1" [NIST-KATs/rng.c:228]   --->   Operation 70 'icmp' 'icmp_ln228_8' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 71 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_8, label %10, label %1" [NIST-KATs/rng.c:228]   --->   Operation 71 'br' <Predicate = true> <Delay = 1.97>
+ST_10 : Operation 72 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_9 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 6), align 1" [NIST-KATs/rng.c:228]   --->   Operation 72 'load' 'DRBG_ctx_V_load_9' <Predicate = (icmp_ln228_8)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 11 <SV = 10> <Delay = 4.97>
+ST_11 : Operation 73 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 7), align 1" [NIST-KATs/rng.c:229]   --->   Operation 73 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_11 : Operation 74 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_9 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 6), align 1" [NIST-KATs/rng.c:228]   --->   Operation 74 'load' 'DRBG_ctx_V_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_11 : Operation 75 [1/1] (1.24ns)   --->   "%icmp_ln228_9 = icmp eq i8 %DRBG_ctx_V_load_9, -1" [NIST-KATs/rng.c:228]   --->   Operation 75 'icmp' 'icmp_ln228_9' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 76 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_9, label %11, label %1" [NIST-KATs/rng.c:228]   --->   Operation 76 'br' <Predicate = true> <Delay = 1.97>
+ST_11 : Operation 77 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_10 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 5), align 1" [NIST-KATs/rng.c:228]   --->   Operation 77 'load' 'DRBG_ctx_V_load_10' <Predicate = (icmp_ln228_9)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 12 <SV = 11> <Delay = 4.97>
+ST_12 : Operation 78 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 6), align 1" [NIST-KATs/rng.c:229]   --->   Operation 78 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_12 : Operation 79 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_10 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 5), align 1" [NIST-KATs/rng.c:228]   --->   Operation 79 'load' 'DRBG_ctx_V_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_12 : Operation 80 [1/1] (1.24ns)   --->   "%icmp_ln228_10 = icmp eq i8 %DRBG_ctx_V_load_10, -1" [NIST-KATs/rng.c:228]   --->   Operation 80 'icmp' 'icmp_ln228_10' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 81 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_10, label %12, label %1" [NIST-KATs/rng.c:228]   --->   Operation 81 'br' <Predicate = true> <Delay = 1.97>
+ST_12 : Operation 82 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_11 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 4), align 1" [NIST-KATs/rng.c:228]   --->   Operation 82 'load' 'DRBG_ctx_V_load_11' <Predicate = (icmp_ln228_10)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 13 <SV = 12> <Delay = 4.97>
+ST_13 : Operation 83 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 5), align 1" [NIST-KATs/rng.c:229]   --->   Operation 83 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_13 : Operation 84 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_11 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 4), align 1" [NIST-KATs/rng.c:228]   --->   Operation 84 'load' 'DRBG_ctx_V_load_11' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_13 : Operation 85 [1/1] (1.24ns)   --->   "%icmp_ln228_11 = icmp eq i8 %DRBG_ctx_V_load_11, -1" [NIST-KATs/rng.c:228]   --->   Operation 85 'icmp' 'icmp_ln228_11' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 86 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_11, label %13, label %1" [NIST-KATs/rng.c:228]   --->   Operation 86 'br' <Predicate = true> <Delay = 1.97>
+ST_13 : Operation 87 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_12 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 3), align 1" [NIST-KATs/rng.c:228]   --->   Operation 87 'load' 'DRBG_ctx_V_load_12' <Predicate = (icmp_ln228_11)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 14 <SV = 13> <Delay = 4.97>
+ST_14 : Operation 88 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 4), align 1" [NIST-KATs/rng.c:229]   --->   Operation 88 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_14 : Operation 89 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_12 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 3), align 1" [NIST-KATs/rng.c:228]   --->   Operation 89 'load' 'DRBG_ctx_V_load_12' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_14 : Operation 90 [1/1] (1.24ns)   --->   "%icmp_ln228_12 = icmp eq i8 %DRBG_ctx_V_load_12, -1" [NIST-KATs/rng.c:228]   --->   Operation 90 'icmp' 'icmp_ln228_12' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 91 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_12, label %14, label %1" [NIST-KATs/rng.c:228]   --->   Operation 91 'br' <Predicate = true> <Delay = 1.97>
+ST_14 : Operation 92 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_13 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 2), align 1" [NIST-KATs/rng.c:228]   --->   Operation 92 'load' 'DRBG_ctx_V_load_13' <Predicate = (icmp_ln228_12)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 15 <SV = 14> <Delay = 4.97>
+ST_15 : Operation 93 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 3), align 1" [NIST-KATs/rng.c:229]   --->   Operation 93 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_15 : Operation 94 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_13 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 2), align 1" [NIST-KATs/rng.c:228]   --->   Operation 94 'load' 'DRBG_ctx_V_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_15 : Operation 95 [1/1] (1.24ns)   --->   "%icmp_ln228_13 = icmp eq i8 %DRBG_ctx_V_load_13, -1" [NIST-KATs/rng.c:228]   --->   Operation 95 'icmp' 'icmp_ln228_13' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 96 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_13, label %15, label %1" [NIST-KATs/rng.c:228]   --->   Operation 96 'br' <Predicate = true> <Delay = 1.97>
+ST_15 : Operation 97 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_14 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 1), align 1" [NIST-KATs/rng.c:228]   --->   Operation 97 'load' 'DRBG_ctx_V_load_14' <Predicate = (icmp_ln228_13)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 16 <SV = 15> <Delay = 4.97>
+ST_16 : Operation 98 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 2), align 1" [NIST-KATs/rng.c:229]   --->   Operation 98 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_16 : Operation 99 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_14 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 1), align 1" [NIST-KATs/rng.c:228]   --->   Operation 99 'load' 'DRBG_ctx_V_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_16 : Operation 100 [1/1] (1.24ns)   --->   "%icmp_ln228_14 = icmp eq i8 %DRBG_ctx_V_load_14, -1" [NIST-KATs/rng.c:228]   --->   Operation 100 'icmp' 'icmp_ln228_14' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 101 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_14, label %16, label %1" [NIST-KATs/rng.c:228]   --->   Operation 101 'br' <Predicate = true> <Delay = 1.97>
+ST_16 : Operation 102 [2/2] (1.75ns)   --->   "%DRBG_ctx_V_load_15 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 0), align 1" [NIST-KATs/rng.c:228]   --->   Operation 102 'load' 'DRBG_ctx_V_load_15' <Predicate = (icmp_ln228_14)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 17 <SV = 16> <Delay = 4.97>
+ST_17 : Operation 103 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 1), align 1" [NIST-KATs/rng.c:229]   --->   Operation 103 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_17 : Operation 104 [1/2] (1.75ns)   --->   "%DRBG_ctx_V_load_15 = load i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 0), align 1" [NIST-KATs/rng.c:228]   --->   Operation 104 'load' 'DRBG_ctx_V_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_17 : Operation 105 [1/1] (1.24ns)   --->   "%icmp_ln228_15 = icmp eq i8 %DRBG_ctx_V_load_15, -1" [NIST-KATs/rng.c:228]   --->   Operation 105 'icmp' 'icmp_ln228_15' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 106 [1/1] (1.97ns)   --->   "br i1 %icmp_ln228_15, label %.loopexit.loopexit, label %1" [NIST-KATs/rng.c:228]   --->   Operation 106 'br' <Predicate = true> <Delay = 1.97>
+ST_17 : Operation 107 [1/1] (1.75ns)   --->   "store i8 0, i8* getelementptr inbounds ([16 x i8]* @DRBG_ctx_V, i64 0, i64 0), align 1" [NIST-KATs/rng.c:229]   --->   Operation 107 'store' <Predicate = (icmp_ln228_15)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_17 : Operation 108 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 108 'br' <Predicate = (icmp_ln228_15)> <Delay = 0.00>
+
+State 18 <SV = 17> <Delay = 3.47>
+ST_18 : Operation 109 [1/1] (0.00ns)   --->   "%DRBG_ctx_V_load_lcss = phi i8 [ %DRBG_ctx_V_load, %0 ], [ %DRBG_ctx_V_load_1, %2 ], [ %DRBG_ctx_V_load_2, %3 ], [ %DRBG_ctx_V_load_3, %4 ], [ %DRBG_ctx_V_load_4, %5 ], [ %DRBG_ctx_V_load_5, %6 ], [ %DRBG_ctx_V_load_6, %7 ], [ %DRBG_ctx_V_load_7, %8 ], [ %DRBG_ctx_V_load_8, %9 ], [ %DRBG_ctx_V_load_9, %10 ], [ %DRBG_ctx_V_load_10, %11 ], [ %DRBG_ctx_V_load_11, %12 ], [ %DRBG_ctx_V_load_12, %13 ], [ %DRBG_ctx_V_load_13, %14 ], [ %DRBG_ctx_V_load_14, %15 ], [ %DRBG_ctx_V_load_15, %16 ]" [NIST-KATs/rng.c:228]   --->   Operation 109 'phi' 'DRBG_ctx_V_load_lcss' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 0.00>
+ST_18 : Operation 110 [1/1] (0.00ns)   --->   "%DRBG_ctx_V_addr_lcss = phi i4 [ -1, %0 ], [ -2, %2 ], [ -3, %3 ], [ -4, %4 ], [ -5, %5 ], [ -6, %6 ], [ -7, %7 ], [ -8, %8 ], [ 7, %9 ], [ 6, %10 ], [ 5, %11 ], [ 4, %12 ], [ 3, %13 ], [ 2, %14 ], [ 1, %15 ], [ 0, %16 ]"   --->   Operation 110 'phi' 'DRBG_ctx_V_addr_lcss' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 0.00>
+ST_18 : Operation 111 [1/1] (0.00ns)   --->   "%DRBG_ctx_V_addr_lcss_1 = zext i4 %DRBG_ctx_V_addr_lcss to i64"   --->   Operation 111 'zext' 'DRBG_ctx_V_addr_lcss_1' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 0.00>
+ST_18 : Operation 112 [1/1] (0.00ns)   --->   "%DRBG_ctx_V_addr = getelementptr [16 x i8]* @DRBG_ctx_V, i64 0, i64 %DRBG_ctx_V_addr_lcss_1"   --->   Operation 112 'getelementptr' 'DRBG_ctx_V_addr' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 0.00>
+ST_18 : Operation 113 [1/1] (1.71ns)   --->   "%add_ln232 = add i8 %DRBG_ctx_V_load_lcss, 1" [NIST-KATs/rng.c:232]   --->   Operation 113 'add' 'add_ln232' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 114 [1/1] (1.75ns)   --->   "store i8 %add_ln232, i8* %DRBG_ctx_V_addr, align 1" [NIST-KATs/rng.c:232]   --->   Operation 114 'store' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_18 : Operation 115 [1/1] (0.00ns)   --->   "br label %.loopexit" [NIST-KATs/rng.c:233]   --->   Operation 115 'br' <Predicate = (!icmp_ln228_15) | (!icmp_ln228_14) | (!icmp_ln228_13) | (!icmp_ln228_12) | (!icmp_ln228_11) | (!icmp_ln228_10) | (!icmp_ln228_9) | (!icmp_ln228_8) | (!icmp_ln228_7) | (!icmp_ln228_6) | (!icmp_ln228_5) | (!icmp_ln228_4) | (!icmp_ln228_3) | (!icmp_ln228_2) | (!icmp_ln228_1) | (!icmp_ln228)> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 116 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } @AES256_ECB.1([32 x i8]* @DRBG_ctx_Key, [16 x i8]* @DRBG_ctx_V)" [NIST-KATs/rng.c:236]   --->   Operation 116 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 3.51>
+ST_20 : Operation 117 [1/2] (1.75ns)   --->   "%call_ret = call fastcc { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } @AES256_ECB.1([32 x i8]* @DRBG_ctx_Key, [16 x i8]* @DRBG_ctx_V)" [NIST-KATs/rng.c:236]   --->   Operation 117 'call' 'call_ret' <Predicate = true> <Delay = 1.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 118 [1/1] (0.00ns)   --->   "%block = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 0" [NIST-KATs/rng.c:236]   --->   Operation 118 'extractvalue' 'block' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 119 [1/1] (0.00ns)   --->   "%block_1 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 1" [NIST-KATs/rng.c:236]   --->   Operation 119 'extractvalue' 'block_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 120 [1/1] (0.00ns)   --->   "%block_2 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 2" [NIST-KATs/rng.c:236]   --->   Operation 120 'extractvalue' 'block_2' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 121 [1/1] (0.00ns)   --->   "%block_3 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 3" [NIST-KATs/rng.c:236]   --->   Operation 121 'extractvalue' 'block_3' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 122 [1/1] (0.00ns)   --->   "%block_4 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 4" [NIST-KATs/rng.c:236]   --->   Operation 122 'extractvalue' 'block_4' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 123 [1/1] (0.00ns)   --->   "%block_5 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 5" [NIST-KATs/rng.c:236]   --->   Operation 123 'extractvalue' 'block_5' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 124 [1/1] (0.00ns)   --->   "%block_6 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 6" [NIST-KATs/rng.c:236]   --->   Operation 124 'extractvalue' 'block_6' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 125 [1/1] (0.00ns)   --->   "%block_7 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 7" [NIST-KATs/rng.c:236]   --->   Operation 125 'extractvalue' 'block_7' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 126 [1/1] (0.00ns)   --->   "%block_8 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 8" [NIST-KATs/rng.c:236]   --->   Operation 126 'extractvalue' 'block_8' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 127 [1/1] (0.00ns)   --->   "%block_9 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 9" [NIST-KATs/rng.c:236]   --->   Operation 127 'extractvalue' 'block_9' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 128 [1/1] (0.00ns)   --->   "%block_s = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 10" [NIST-KATs/rng.c:236]   --->   Operation 128 'extractvalue' 'block_s' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 129 [1/1] (0.00ns)   --->   "%block_10 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 11" [NIST-KATs/rng.c:236]   --->   Operation 129 'extractvalue' 'block_10' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 130 [1/1] (0.00ns)   --->   "%block_11 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 12" [NIST-KATs/rng.c:236]   --->   Operation 130 'extractvalue' 'block_11' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 131 [1/1] (0.00ns)   --->   "%block_12 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 13" [NIST-KATs/rng.c:236]   --->   Operation 131 'extractvalue' 'block_12' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 132 [1/1] (0.00ns)   --->   "%block_13 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 14" [NIST-KATs/rng.c:236]   --->   Operation 132 'extractvalue' 'block_13' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 133 [1/1] (0.00ns)   --->   "%block_14 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 15" [NIST-KATs/rng.c:236]   --->   Operation 133 'extractvalue' 'block_14' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 134 [1/1] (0.00ns)   --->   "%x_addr = getelementptr [32 x i8]* %x, i64 0, i64 0" [NIST-KATs/rng.c:251]   --->   Operation 134 'getelementptr' 'x_addr' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 135 [1/1] (1.75ns)   --->   "store i8 %block, i8* %x_addr, align 1" [NIST-KATs/rng.c:251]   --->   Operation 135 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_20 : Operation 136 [1/1] (0.00ns)   --->   "%x_addr_1 = getelementptr [32 x i8]* %x, i64 0, i64 1" [NIST-KATs/rng.c:251]   --->   Operation 136 'getelementptr' 'x_addr_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 137 [1/1] (1.75ns)   --->   "store i8 %block_1, i8* %x_addr_1, align 1" [NIST-KATs/rng.c:251]   --->   Operation 137 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 21 <SV = 20> <Delay = 1.75>
+ST_21 : Operation 138 [1/1] (0.00ns)   --->   "%x_addr_2 = getelementptr [32 x i8]* %x, i64 0, i64 2" [NIST-KATs/rng.c:251]   --->   Operation 138 'getelementptr' 'x_addr_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 139 [1/1] (1.75ns)   --->   "store i8 %block_2, i8* %x_addr_2, align 1" [NIST-KATs/rng.c:251]   --->   Operation 139 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_21 : Operation 140 [1/1] (0.00ns)   --->   "%x_addr_3 = getelementptr [32 x i8]* %x, i64 0, i64 3" [NIST-KATs/rng.c:251]   --->   Operation 140 'getelementptr' 'x_addr_3' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 141 [1/1] (1.75ns)   --->   "store i8 %block_3, i8* %x_addr_3, align 1" [NIST-KATs/rng.c:251]   --->   Operation 141 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 22 <SV = 21> <Delay = 1.75>
+ST_22 : Operation 142 [1/1] (0.00ns)   --->   "%x_addr_4 = getelementptr [32 x i8]* %x, i64 0, i64 4" [NIST-KATs/rng.c:251]   --->   Operation 142 'getelementptr' 'x_addr_4' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 143 [1/1] (1.75ns)   --->   "store i8 %block_4, i8* %x_addr_4, align 1" [NIST-KATs/rng.c:251]   --->   Operation 143 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_22 : Operation 144 [1/1] (0.00ns)   --->   "%x_addr_5 = getelementptr [32 x i8]* %x, i64 0, i64 5" [NIST-KATs/rng.c:251]   --->   Operation 144 'getelementptr' 'x_addr_5' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 145 [1/1] (1.75ns)   --->   "store i8 %block_5, i8* %x_addr_5, align 1" [NIST-KATs/rng.c:251]   --->   Operation 145 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 23 <SV = 22> <Delay = 1.75>
+ST_23 : Operation 146 [1/1] (0.00ns)   --->   "%x_addr_6 = getelementptr [32 x i8]* %x, i64 0, i64 6" [NIST-KATs/rng.c:251]   --->   Operation 146 'getelementptr' 'x_addr_6' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 147 [1/1] (1.75ns)   --->   "store i8 %block_6, i8* %x_addr_6, align 1" [NIST-KATs/rng.c:251]   --->   Operation 147 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_23 : Operation 148 [1/1] (0.00ns)   --->   "%x_addr_7 = getelementptr [32 x i8]* %x, i64 0, i64 7" [NIST-KATs/rng.c:251]   --->   Operation 148 'getelementptr' 'x_addr_7' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 149 [1/1] (1.75ns)   --->   "store i8 %block_7, i8* %x_addr_7, align 1" [NIST-KATs/rng.c:251]   --->   Operation 149 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 24 <SV = 23> <Delay = 1.75>
+ST_24 : Operation 150 [1/1] (0.00ns)   --->   "%x_addr_8 = getelementptr [32 x i8]* %x, i64 0, i64 8" [NIST-KATs/rng.c:251]   --->   Operation 150 'getelementptr' 'x_addr_8' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 151 [1/1] (1.75ns)   --->   "store i8 %block_8, i8* %x_addr_8, align 1" [NIST-KATs/rng.c:251]   --->   Operation 151 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_24 : Operation 152 [1/1] (0.00ns)   --->   "%x_addr_9 = getelementptr [32 x i8]* %x, i64 0, i64 9" [NIST-KATs/rng.c:251]   --->   Operation 152 'getelementptr' 'x_addr_9' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 153 [1/1] (1.75ns)   --->   "store i8 %block_9, i8* %x_addr_9, align 1" [NIST-KATs/rng.c:251]   --->   Operation 153 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 25 <SV = 24> <Delay = 1.75>
+ST_25 : Operation 154 [1/1] (0.00ns)   --->   "%x_addr_10 = getelementptr [32 x i8]* %x, i64 0, i64 10" [NIST-KATs/rng.c:251]   --->   Operation 154 'getelementptr' 'x_addr_10' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 155 [1/1] (1.75ns)   --->   "store i8 %block_s, i8* %x_addr_10, align 1" [NIST-KATs/rng.c:251]   --->   Operation 155 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_25 : Operation 156 [1/1] (0.00ns)   --->   "%x_addr_11 = getelementptr [32 x i8]* %x, i64 0, i64 11" [NIST-KATs/rng.c:251]   --->   Operation 156 'getelementptr' 'x_addr_11' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 157 [1/1] (1.75ns)   --->   "store i8 %block_10, i8* %x_addr_11, align 1" [NIST-KATs/rng.c:251]   --->   Operation 157 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+
+State 26 <SV = 25> <Delay = 1.75>
+ST_26 : Operation 158 [1/1] (0.00ns)   --->   "%x_addr_12 = getelementptr [32 x i8]* %x, i64 0, i64 12" [NIST-KATs/rng.c:251]   --->   Operation 158 'getelementptr' 'x_addr_12' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 159 [1/1] (1.75ns)   --->   "store i8 %block_11, i8* %x_addr_12, align 1" [NIST-KATs/rng.c:251]   --->   Operation 159 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_26 : Operation 160 [1/1] (0.00ns)   --->   "%x_addr_13 = getelementptr [32 x i8]* %x, i64 0, i64 13" [NIST-KATs/rng.c:251]   --->   Operation 160 'getelementptr' 'x_addr_13' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 161 [1/1] (1.75ns)   --->   "store i8 %block_12, i8* %x_addr_13, align 1" [NIST-KATs/rng.c:251]   --->   Operation 161 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_26 : Operation 162 [2/2] (0.00ns)   --->   "call fastcc void @AES256_CTR_DRBG_Upda([16 x i8]* @DRBG_ctx_V)" [NIST-KATs/rng.c:262]   --->   Operation 162 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 2.18>
+ST_27 : Operation 163 [1/1] (0.00ns)   --->   "%x_addr_14 = getelementptr [32 x i8]* %x, i64 0, i64 14" [NIST-KATs/rng.c:251]   --->   Operation 163 'getelementptr' 'x_addr_14' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 164 [1/1] (1.75ns)   --->   "store i8 %block_13, i8* %x_addr_14, align 1" [NIST-KATs/rng.c:251]   --->   Operation 164 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_27 : Operation 165 [1/1] (0.00ns)   --->   "%x_addr_15 = getelementptr [32 x i8]* %x, i64 0, i64 15" [NIST-KATs/rng.c:251]   --->   Operation 165 'getelementptr' 'x_addr_15' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 166 [1/1] (1.75ns)   --->   "store i8 %block_14, i8* %x_addr_15, align 1" [NIST-KATs/rng.c:251]   --->   Operation 166 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_27 : Operation 167 [1/2] (0.00ns)   --->   "call fastcc void @AES256_CTR_DRBG_Upda([16 x i8]* @DRBG_ctx_V)" [NIST-KATs/rng.c:262]   --->   Operation 167 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 168 [1/1] (0.00ns)   --->   "%DRBG_ctx_reseed_coun = load i32* @DRBG_ctx_reseed_counter, align 4" [NIST-KATs/rng.c:263]   --->   Operation 168 'load' 'DRBG_ctx_reseed_coun' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 169 [1/1] (2.18ns)   --->   "%add_ln263 = add nsw i32 %DRBG_ctx_reseed_coun, 1" [NIST-KATs/rng.c:263]   --->   Operation 169 'add' 'add_ln263' <Predicate = true> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 170 [1/1] (0.00ns)   --->   "store i32 %add_ln263, i32* @DRBG_ctx_reseed_counter, align 4" [NIST-KATs/rng.c:263]   --->   Operation 170 'store' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 171 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 171 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [10]  (1.75 ns)
+
+ <State 2>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [10]  (1.75 ns)
+	'icmp' operation ('icmp_ln228', NIST-KATs/rng.c:228) [11]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 3>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [15]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_1', NIST-KATs/rng.c:228) [16]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 4>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [20]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_2', NIST-KATs/rng.c:228) [21]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 5>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [25]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_3', NIST-KATs/rng.c:228) [26]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 6>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [30]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_4', NIST-KATs/rng.c:228) [31]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 7>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [35]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_5', NIST-KATs/rng.c:228) [36]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 8>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [40]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_6', NIST-KATs/rng.c:228) [41]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 9>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [45]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_7', NIST-KATs/rng.c:228) [46]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 10>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [50]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_8', NIST-KATs/rng.c:228) [51]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 11>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [55]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_9', NIST-KATs/rng.c:228) [56]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 12>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [60]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_10', NIST-KATs/rng.c:228) [61]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 13>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [65]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_11', NIST-KATs/rng.c:228) [66]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 14>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [70]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_12', NIST-KATs/rng.c:228) [71]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 15>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [75]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_13', NIST-KATs/rng.c:228) [76]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 16>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [80]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_14', NIST-KATs/rng.c:228) [81]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 17>: 4.98ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) on array 'DRBG_ctx_V' [85]  (1.75 ns)
+	'icmp' operation ('icmp_ln228_15', NIST-KATs/rng.c:228) [86]  (1.25 ns)
+	multiplexor before 'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (1.97 ns)
+
+ <State 18>: 3.47ns
+The critical path consists of the following:
+	'phi' operation ('DRBG_ctx_V_load_lcss', NIST-KATs/rng.c:228) with incoming values : ('DRBG_ctx_V_load', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_1', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_2', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_3', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_4', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_5', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_6', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_7', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_8', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_9', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_10', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_11', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_12', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_13', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_14', NIST-KATs/rng.c:228) ('DRBG_ctx_V_load_15', NIST-KATs/rng.c:228) [89]  (0 ns)
+	'add' operation ('add_ln232', NIST-KATs/rng.c:232) [93]  (1.72 ns)
+	'store' operation ('store_ln232', NIST-KATs/rng.c:232) of variable 'add_ln232', NIST-KATs/rng.c:232 on array 'DRBG_ctx_V' [94]  (1.75 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 3.51ns
+The critical path consists of the following:
+	'call' operation ('call_ret', NIST-KATs/rng.c:236) to 'AES256_ECB.1' [100]  (1.75 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block', NIST-KATs/rng.c:236 on array 'x' [118]  (1.75 ns)
+
+ <State 21>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_addr_2', NIST-KATs/rng.c:251) [121]  (0 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block_2', NIST-KATs/rng.c:236 on array 'x' [122]  (1.75 ns)
+
+ <State 22>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_addr_4', NIST-KATs/rng.c:251) [125]  (0 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block_4', NIST-KATs/rng.c:236 on array 'x' [126]  (1.75 ns)
+
+ <State 23>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_addr_6', NIST-KATs/rng.c:251) [129]  (0 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block_6', NIST-KATs/rng.c:236 on array 'x' [130]  (1.75 ns)
+
+ <State 24>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_addr_8', NIST-KATs/rng.c:251) [133]  (0 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block_8', NIST-KATs/rng.c:236 on array 'x' [134]  (1.75 ns)
+
+ <State 25>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_addr_10', NIST-KATs/rng.c:251) [137]  (0 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block_s', NIST-KATs/rng.c:236 on array 'x' [138]  (1.75 ns)
+
+ <State 26>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_addr_12', NIST-KATs/rng.c:251) [141]  (0 ns)
+	'store' operation ('store_ln251', NIST-KATs/rng.c:251) of variable 'block_11', NIST-KATs/rng.c:236 on array 'x' [142]  (1.75 ns)
+
+ <State 27>: 2.18ns
+The critical path consists of the following:
+	'load' operation ('DRBG_ctx_reseed_coun', NIST-KATs/rng.c:263) on global variable 'DRBG_ctx_reseed_counter' [150]  (0 ns)
+	'add' operation ('add_ln263', NIST-KATs/rng.c:263) [151]  (2.18 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

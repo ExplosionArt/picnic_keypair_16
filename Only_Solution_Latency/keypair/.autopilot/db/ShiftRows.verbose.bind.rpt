@@ -1,0 +1,1024 @@
+
+
+================================================================
+== Vivado HLS Report for 'ShiftRows'
+================================================================
+* Date:           Sat May  9 23:49:01 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        picnic1
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.510 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10| 0.100 us | 0.100 us |   10|   10|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.75>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 1" [NIST-KATs/aes.c:281]   --->   Operation 12 'getelementptr' 'state_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%state_addr_1 = getelementptr [16 x i8]* %state, i64 0, i64 5" [NIST-KATs/aes.c:282]   --->   Operation 13 'getelementptr' 'state_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (1.75ns)   --->   "%temp = load i8* %state_addr, align 1" [NIST-KATs/aes.c:281]   --->   Operation 14 'load' 'temp' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 15 [2/2] (1.75ns)   --->   "%state_load = load i8* %state_addr_1, align 1" [NIST-KATs/aes.c:282]   --->   Operation 15 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 3.51>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%state_addr_2 = getelementptr [16 x i8]* %state, i64 0, i64 9" [NIST-KATs/aes.c:283]   --->   Operation 16 'getelementptr' 'state_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%state_addr_3 = getelementptr [16 x i8]* %state, i64 0, i64 13" [NIST-KATs/aes.c:284]   --->   Operation 17 'getelementptr' 'state_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/2] (1.75ns)   --->   "%temp = load i8* %state_addr, align 1" [NIST-KATs/aes.c:281]   --->   Operation 18 'load' 'temp' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 19 [1/2] (1.75ns)   --->   "%state_load = load i8* %state_addr_1, align 1" [NIST-KATs/aes.c:282]   --->   Operation 19 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 20 [2/2] (1.75ns)   --->   "%state_load_1 = load i8* %state_addr_2, align 1" [NIST-KATs/aes.c:283]   --->   Operation 20 'load' 'state_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 21 [2/2] (1.75ns)   --->   "%state_load_2 = load i8* %state_addr_3, align 1" [NIST-KATs/aes.c:284]   --->   Operation 21 'load' 'state_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 22 [1/1] (1.75ns)   --->   "store i8 %temp, i8* %state_addr_3, align 1" [NIST-KATs/aes.c:285]   --->   Operation 22 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%state_addr_4 = getelementptr [16 x i8]* %state, i64 0, i64 2" [NIST-KATs/aes.c:288]   --->   Operation 23 'getelementptr' 'state_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%state_addr_5 = getelementptr [16 x i8]* %state, i64 0, i64 10" [NIST-KATs/aes.c:289]   --->   Operation 24 'getelementptr' 'state_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/2] (1.75ns)   --->   "%state_load_1 = load i8* %state_addr_2, align 1" [NIST-KATs/aes.c:283]   --->   Operation 25 'load' 'state_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 26 [1/2] (1.75ns)   --->   "%state_load_2 = load i8* %state_addr_3, align 1" [NIST-KATs/aes.c:284]   --->   Operation 26 'load' 'state_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 27 [2/2] (1.75ns)   --->   "%temp_1 = load i8* %state_addr_4, align 1" [NIST-KATs/aes.c:288]   --->   Operation 27 'load' 'temp_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 28 [2/2] (1.75ns)   --->   "%state_load_4 = load i8* %state_addr_5, align 1" [NIST-KATs/aes.c:289]   --->   Operation 28 'load' 'state_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%state_addr_6 = getelementptr [16 x i8]* %state, i64 0, i64 6" [NIST-KATs/aes.c:292]   --->   Operation 29 'getelementptr' 'state_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%state_addr_7 = getelementptr [16 x i8]* %state, i64 0, i64 14" [NIST-KATs/aes.c:293]   --->   Operation 30 'getelementptr' 'state_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/2] (1.75ns)   --->   "%temp_1 = load i8* %state_addr_4, align 1" [NIST-KATs/aes.c:288]   --->   Operation 31 'load' 'temp_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 32 [1/2] (1.75ns)   --->   "%state_load_4 = load i8* %state_addr_5, align 1" [NIST-KATs/aes.c:289]   --->   Operation 32 'load' 'state_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 33 [2/2] (1.75ns)   --->   "%temp_2 = load i8* %state_addr_6, align 1" [NIST-KATs/aes.c:292]   --->   Operation 33 'load' 'temp_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 34 [2/2] (1.75ns)   --->   "%state_load_6 = load i8* %state_addr_7, align 1" [NIST-KATs/aes.c:293]   --->   Operation 34 'load' 'state_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 5 <SV = 4> <Delay = 1.75>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%state_addr_8 = getelementptr [16 x i8]* %state, i64 0, i64 3" [NIST-KATs/aes.c:297]   --->   Operation 35 'getelementptr' 'state_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%state_addr_9 = getelementptr [16 x i8]* %state, i64 0, i64 15" [NIST-KATs/aes.c:298]   --->   Operation 36 'getelementptr' 'state_addr_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/2] (1.75ns)   --->   "%temp_2 = load i8* %state_addr_6, align 1" [NIST-KATs/aes.c:292]   --->   Operation 37 'load' 'temp_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 38 [1/2] (1.75ns)   --->   "%state_load_6 = load i8* %state_addr_7, align 1" [NIST-KATs/aes.c:293]   --->   Operation 38 'load' 'state_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 39 [2/2] (1.75ns)   --->   "%temp_3 = load i8* %state_addr_8, align 1" [NIST-KATs/aes.c:297]   --->   Operation 39 'load' 'temp_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 40 [2/2] (1.75ns)   --->   "%state_load_8 = load i8* %state_addr_9, align 1" [NIST-KATs/aes.c:298]   --->   Operation 40 'load' 'state_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 6 <SV = 5> <Delay = 3.51>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%state_addr_10 = getelementptr [16 x i8]* %state, i64 0, i64 11" [NIST-KATs/aes.c:299]   --->   Operation 41 'getelementptr' 'state_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%state_addr_11 = getelementptr [16 x i8]* %state, i64 0, i64 7" [NIST-KATs/aes.c:300]   --->   Operation 42 'getelementptr' 'state_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/2] (1.75ns)   --->   "%temp_3 = load i8* %state_addr_8, align 1" [NIST-KATs/aes.c:297]   --->   Operation 43 'load' 'temp_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 44 [1/2] (1.75ns)   --->   "%state_load_8 = load i8* %state_addr_9, align 1" [NIST-KATs/aes.c:298]   --->   Operation 44 'load' 'state_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 45 [2/2] (1.75ns)   --->   "%state_load_9 = load i8* %state_addr_10, align 1" [NIST-KATs/aes.c:299]   --->   Operation 45 'load' 'state_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 46 [2/2] (1.75ns)   --->   "%state_load_10 = load i8* %state_addr_11, align 1" [NIST-KATs/aes.c:300]   --->   Operation 46 'load' 'state_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 47 [1/1] (1.75ns)   --->   "store i8 %temp_3, i8* %state_addr_11, align 1" [NIST-KATs/aes.c:301]   --->   Operation 47 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 7 <SV = 6> <Delay = 1.75>
+ST_7 : Operation 48 [1/1] (1.75ns)   --->   "store i8 %state_load, i8* %state_addr, align 1" [NIST-KATs/aes.c:282]   --->   Operation 48 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 49 [1/1] (1.75ns)   --->   "store i8 %state_load_1, i8* %state_addr_1, align 1" [NIST-KATs/aes.c:283]   --->   Operation 49 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 50 [1/2] (1.75ns)   --->   "%state_load_9 = load i8* %state_addr_10, align 1" [NIST-KATs/aes.c:299]   --->   Operation 50 'load' 'state_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 51 [1/2] (1.75ns)   --->   "%state_load_10 = load i8* %state_addr_11, align 1" [NIST-KATs/aes.c:300]   --->   Operation 51 'load' 'state_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 8 <SV = 7> <Delay = 1.75>
+ST_8 : Operation 52 [1/1] (1.75ns)   --->   "store i8 %state_load_2, i8* %state_addr_2, align 1" [NIST-KATs/aes.c:284]   --->   Operation 52 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 53 [1/1] (1.75ns)   --->   "store i8 %state_load_4, i8* %state_addr_4, align 1" [NIST-KATs/aes.c:289]   --->   Operation 53 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 9 <SV = 8> <Delay = 1.75>
+ST_9 : Operation 54 [1/1] (1.75ns)   --->   "store i8 %temp_1, i8* %state_addr_5, align 1" [NIST-KATs/aes.c:290]   --->   Operation 54 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 55 [1/1] (1.75ns)   --->   "store i8 %state_load_6, i8* %state_addr_6, align 1" [NIST-KATs/aes.c:293]   --->   Operation 55 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 10 <SV = 9> <Delay = 1.75>
+ST_10 : Operation 56 [1/1] (1.75ns)   --->   "store i8 %temp_2, i8* %state_addr_7, align 1" [NIST-KATs/aes.c:294]   --->   Operation 56 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_10 : Operation 57 [1/1] (1.75ns)   --->   "store i8 %state_load_8, i8* %state_addr_8, align 1" [NIST-KATs/aes.c:298]   --->   Operation 57 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 11 <SV = 10> <Delay = 1.75>
+ST_11 : Operation 58 [1/1] (1.75ns)   --->   "store i8 %state_load_9, i8* %state_addr_9, align 1" [NIST-KATs/aes.c:299]   --->   Operation 58 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_11 : Operation 59 [1/1] (1.75ns)   --->   "store i8 %state_load_10, i8* %state_addr_10, align 1" [NIST-KATs/aes.c:300]   --->   Operation 59 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "ret void" [NIST-KATs/aes.c:302]   --->   Operation 60 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ state]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+state_addr    (getelementptr) [ 001111110000]
+state_addr_1  (getelementptr) [ 001111110000]
+state_addr_2  (getelementptr) [ 000111111000]
+state_addr_3  (getelementptr) [ 000100000000]
+temp          (load         ) [ 000000000000]
+state_load    (load         ) [ 000111110000]
+store_ln285   (store        ) [ 000000000000]
+state_addr_4  (getelementptr) [ 000011111000]
+state_addr_5  (getelementptr) [ 000011111100]
+state_load_1  (load         ) [ 000011110000]
+state_load_2  (load         ) [ 000011111000]
+state_addr_6  (getelementptr) [ 000001111100]
+state_addr_7  (getelementptr) [ 000001111110]
+temp_1        (load         ) [ 000001111100]
+state_load_4  (load         ) [ 000001111000]
+state_addr_8  (getelementptr) [ 000000111110]
+state_addr_9  (getelementptr) [ 000000111111]
+temp_2        (load         ) [ 000000111110]
+state_load_6  (load         ) [ 000000111100]
+state_addr_10 (getelementptr) [ 000000011111]
+state_addr_11 (getelementptr) [ 000000010000]
+temp_3        (load         ) [ 000000000000]
+state_load_8  (load         ) [ 000000011110]
+store_ln301   (store        ) [ 000000000000]
+store_ln282   (store        ) [ 000000000000]
+store_ln283   (store        ) [ 000000000000]
+state_load_9  (load         ) [ 000000001111]
+state_load_10 (load         ) [ 000000001111]
+store_ln284   (store        ) [ 000000000000]
+store_ln289   (store        ) [ 000000000000]
+store_ln290   (store        ) [ 000000000000]
+store_ln293   (store        ) [ 000000000000]
+store_ln294   (store        ) [ 000000000000]
+store_ln298   (store        ) [ 000000000000]
+store_ln299   (store        ) [ 000000000000]
+store_ln300   (store        ) [ 000000000000]
+ret_ln302     (ret          ) [ 000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="state">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="state"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1004" name="state_addr_gep_fu_28">
+<pin_list>
+<pin id="29" dir="0" index="0" bw="8" slack="0"/>
+<pin id="30" dir="0" index="1" bw="1" slack="0"/>
+<pin id="31" dir="0" index="2" bw="1" slack="0"/>
+<pin id="32" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="state_addr_1_gep_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="8" slack="0"/>
+<pin id="38" dir="0" index="1" bw="1" slack="0"/>
+<pin id="39" dir="0" index="2" bw="4" slack="0"/>
+<pin id="40" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="grp_access_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="4" slack="0"/>
+<pin id="46" dir="0" index="1" bw="8" slack="4"/>
+<pin id="47" dir="0" index="2" bw="0" slack="0"/>
+<pin id="50" dir="0" index="4" bw="4" slack="0"/>
+<pin id="51" dir="0" index="5" bw="8" slack="2147483647"/>
+<pin id="52" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="48" dir="1" index="3" bw="8" slack="0"/>
+<pin id="53" dir="1" index="7" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="temp/1 state_load/1 state_load_1/2 state_load_2/2 store_ln285/2 temp_1/3 state_load_4/3 temp_2/4 state_load_6/4 temp_3/5 state_load_8/5 state_load_9/6 state_load_10/6 store_ln301/6 store_ln282/7 store_ln283/7 store_ln284/8 store_ln289/8 store_ln290/9 store_ln293/9 store_ln294/10 store_ln298/10 store_ln299/11 store_ln300/11 "/>
+</bind>
+</comp>
+
+<comp id="55" class="1004" name="state_addr_2_gep_fu_55">
+<pin_list>
+<pin id="56" dir="0" index="0" bw="8" slack="0"/>
+<pin id="57" dir="0" index="1" bw="1" slack="0"/>
+<pin id="58" dir="0" index="2" bw="5" slack="0"/>
+<pin id="59" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_2/2 "/>
+</bind>
+</comp>
+
+<comp id="63" class="1004" name="state_addr_3_gep_fu_63">
+<pin_list>
+<pin id="64" dir="0" index="0" bw="8" slack="0"/>
+<pin id="65" dir="0" index="1" bw="1" slack="0"/>
+<pin id="66" dir="0" index="2" bw="5" slack="0"/>
+<pin id="67" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_3/2 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="state_addr_4_gep_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="8" slack="0"/>
+<pin id="76" dir="0" index="1" bw="1" slack="0"/>
+<pin id="77" dir="0" index="2" bw="3" slack="0"/>
+<pin id="78" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_4/3 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="state_addr_5_gep_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="8" slack="0"/>
+<pin id="84" dir="0" index="1" bw="1" slack="0"/>
+<pin id="85" dir="0" index="2" bw="5" slack="0"/>
+<pin id="86" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_5/3 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="state_addr_6_gep_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="8" slack="0"/>
+<pin id="94" dir="0" index="1" bw="1" slack="0"/>
+<pin id="95" dir="0" index="2" bw="4" slack="0"/>
+<pin id="96" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_6/4 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="state_addr_7_gep_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="8" slack="0"/>
+<pin id="102" dir="0" index="1" bw="1" slack="0"/>
+<pin id="103" dir="0" index="2" bw="5" slack="0"/>
+<pin id="104" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_7/4 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1004" name="state_addr_8_gep_fu_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="8" slack="0"/>
+<pin id="112" dir="0" index="1" bw="1" slack="0"/>
+<pin id="113" dir="0" index="2" bw="3" slack="0"/>
+<pin id="114" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_8/5 "/>
+</bind>
+</comp>
+
+<comp id="118" class="1004" name="state_addr_9_gep_fu_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="8" slack="0"/>
+<pin id="120" dir="0" index="1" bw="1" slack="0"/>
+<pin id="121" dir="0" index="2" bw="5" slack="0"/>
+<pin id="122" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_9/5 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="state_addr_10_gep_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="8" slack="0"/>
+<pin id="130" dir="0" index="1" bw="1" slack="0"/>
+<pin id="131" dir="0" index="2" bw="5" slack="0"/>
+<pin id="132" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_10/6 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1004" name="state_addr_11_gep_fu_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="8" slack="0"/>
+<pin id="138" dir="0" index="1" bw="1" slack="0"/>
+<pin id="139" dir="0" index="2" bw="4" slack="0"/>
+<pin id="140" dir="1" index="3" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="state_addr_11/6 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1005" name="reg_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="8" slack="4"/>
+<pin id="148" dir="1" index="1" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opset="state_load state_load_9 "/>
+</bind>
+</comp>
+
+<comp id="152" class="1005" name="reg_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="8" slack="4"/>
+<pin id="154" dir="1" index="1" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opset="state_load_1 state_load_10 "/>
+</bind>
+</comp>
+
+<comp id="158" class="1005" name="state_addr_reg_158">
+<pin_list>
+<pin id="159" dir="0" index="0" bw="4" slack="1"/>
+<pin id="160" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr "/>
+</bind>
+</comp>
+
+<comp id="163" class="1005" name="state_addr_1_reg_163">
+<pin_list>
+<pin id="164" dir="0" index="0" bw="4" slack="1"/>
+<pin id="165" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1005" name="state_addr_2_reg_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="4" slack="1"/>
+<pin id="170" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="173" class="1005" name="state_addr_3_reg_173">
+<pin_list>
+<pin id="174" dir="0" index="0" bw="4" slack="1"/>
+<pin id="175" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="178" class="1005" name="state_addr_4_reg_178">
+<pin_list>
+<pin id="179" dir="0" index="0" bw="4" slack="1"/>
+<pin id="180" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_4 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1005" name="state_addr_5_reg_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="4" slack="1"/>
+<pin id="186" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_5 "/>
+</bind>
+</comp>
+
+<comp id="190" class="1005" name="state_load_2_reg_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="8" slack="5"/>
+<pin id="192" dir="1" index="1" bw="8" slack="5"/>
+</pin_list>
+<bind>
+<opset="state_load_2 "/>
+</bind>
+</comp>
+
+<comp id="195" class="1005" name="state_addr_6_reg_195">
+<pin_list>
+<pin id="196" dir="0" index="0" bw="4" slack="1"/>
+<pin id="197" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_6 "/>
+</bind>
+</comp>
+
+<comp id="201" class="1005" name="state_addr_7_reg_201">
+<pin_list>
+<pin id="202" dir="0" index="0" bw="4" slack="1"/>
+<pin id="203" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_7 "/>
+</bind>
+</comp>
+
+<comp id="207" class="1005" name="temp_1_reg_207">
+<pin_list>
+<pin id="208" dir="0" index="0" bw="8" slack="5"/>
+<pin id="209" dir="1" index="1" bw="8" slack="5"/>
+</pin_list>
+<bind>
+<opset="temp_1 "/>
+</bind>
+</comp>
+
+<comp id="212" class="1005" name="state_load_4_reg_212">
+<pin_list>
+<pin id="213" dir="0" index="0" bw="8" slack="4"/>
+<pin id="214" dir="1" index="1" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opset="state_load_4 "/>
+</bind>
+</comp>
+
+<comp id="217" class="1005" name="state_addr_8_reg_217">
+<pin_list>
+<pin id="218" dir="0" index="0" bw="4" slack="1"/>
+<pin id="219" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_8 "/>
+</bind>
+</comp>
+
+<comp id="223" class="1005" name="state_addr_9_reg_223">
+<pin_list>
+<pin id="224" dir="0" index="0" bw="4" slack="1"/>
+<pin id="225" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_9 "/>
+</bind>
+</comp>
+
+<comp id="229" class="1005" name="temp_2_reg_229">
+<pin_list>
+<pin id="230" dir="0" index="0" bw="8" slack="5"/>
+<pin id="231" dir="1" index="1" bw="8" slack="5"/>
+</pin_list>
+<bind>
+<opset="temp_2 "/>
+</bind>
+</comp>
+
+<comp id="234" class="1005" name="state_load_6_reg_234">
+<pin_list>
+<pin id="235" dir="0" index="0" bw="8" slack="4"/>
+<pin id="236" dir="1" index="1" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opset="state_load_6 "/>
+</bind>
+</comp>
+
+<comp id="239" class="1005" name="state_addr_10_reg_239">
+<pin_list>
+<pin id="240" dir="0" index="0" bw="4" slack="1"/>
+<pin id="241" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_10 "/>
+</bind>
+</comp>
+
+<comp id="245" class="1005" name="state_addr_11_reg_245">
+<pin_list>
+<pin id="246" dir="0" index="0" bw="4" slack="1"/>
+<pin id="247" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="state_addr_11 "/>
+</bind>
+</comp>
+
+<comp id="250" class="1005" name="state_load_8_reg_250">
+<pin_list>
+<pin id="251" dir="0" index="0" bw="8" slack="4"/>
+<pin id="252" dir="1" index="1" bw="8" slack="4"/>
+</pin_list>
+<bind>
+<opset="state_load_8 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="33"><net_src comp="0" pin="0"/><net_sink comp="28" pin=0"/></net>
+
+<net id="34"><net_src comp="2" pin="0"/><net_sink comp="28" pin=1"/></net>
+
+<net id="35"><net_src comp="4" pin="0"/><net_sink comp="28" pin=2"/></net>
+
+<net id="41"><net_src comp="0" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="42"><net_src comp="2" pin="0"/><net_sink comp="36" pin=1"/></net>
+
+<net id="43"><net_src comp="6" pin="0"/><net_sink comp="36" pin=2"/></net>
+
+<net id="49"><net_src comp="28" pin="3"/><net_sink comp="44" pin=0"/></net>
+
+<net id="54"><net_src comp="36" pin="3"/><net_sink comp="44" pin=2"/></net>
+
+<net id="60"><net_src comp="0" pin="0"/><net_sink comp="55" pin=0"/></net>
+
+<net id="61"><net_src comp="2" pin="0"/><net_sink comp="55" pin=1"/></net>
+
+<net id="62"><net_src comp="8" pin="0"/><net_sink comp="55" pin=2"/></net>
+
+<net id="68"><net_src comp="0" pin="0"/><net_sink comp="63" pin=0"/></net>
+
+<net id="69"><net_src comp="2" pin="0"/><net_sink comp="63" pin=1"/></net>
+
+<net id="70"><net_src comp="10" pin="0"/><net_sink comp="63" pin=2"/></net>
+
+<net id="71"><net_src comp="55" pin="3"/><net_sink comp="44" pin=0"/></net>
+
+<net id="72"><net_src comp="63" pin="3"/><net_sink comp="44" pin=2"/></net>
+
+<net id="73"><net_src comp="44" pin="3"/><net_sink comp="44" pin=4"/></net>
+
+<net id="79"><net_src comp="0" pin="0"/><net_sink comp="74" pin=0"/></net>
+
+<net id="80"><net_src comp="2" pin="0"/><net_sink comp="74" pin=1"/></net>
+
+<net id="81"><net_src comp="12" pin="0"/><net_sink comp="74" pin=2"/></net>
+
+<net id="87"><net_src comp="0" pin="0"/><net_sink comp="82" pin=0"/></net>
+
+<net id="88"><net_src comp="2" pin="0"/><net_sink comp="82" pin=1"/></net>
+
+<net id="89"><net_src comp="14" pin="0"/><net_sink comp="82" pin=2"/></net>
+
+<net id="90"><net_src comp="74" pin="3"/><net_sink comp="44" pin=0"/></net>
+
+<net id="91"><net_src comp="82" pin="3"/><net_sink comp="44" pin=2"/></net>
+
+<net id="97"><net_src comp="0" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="98"><net_src comp="2" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="99"><net_src comp="16" pin="0"/><net_sink comp="92" pin=2"/></net>
+
+<net id="105"><net_src comp="0" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="106"><net_src comp="2" pin="0"/><net_sink comp="100" pin=1"/></net>
+
+<net id="107"><net_src comp="18" pin="0"/><net_sink comp="100" pin=2"/></net>
+
+<net id="108"><net_src comp="92" pin="3"/><net_sink comp="44" pin=0"/></net>
+
+<net id="109"><net_src comp="100" pin="3"/><net_sink comp="44" pin=2"/></net>
+
+<net id="115"><net_src comp="0" pin="0"/><net_sink comp="110" pin=0"/></net>
+
+<net id="116"><net_src comp="2" pin="0"/><net_sink comp="110" pin=1"/></net>
+
+<net id="117"><net_src comp="20" pin="0"/><net_sink comp="110" pin=2"/></net>
+
+<net id="123"><net_src comp="0" pin="0"/><net_sink comp="118" pin=0"/></net>
+
+<net id="124"><net_src comp="2" pin="0"/><net_sink comp="118" pin=1"/></net>
+
+<net id="125"><net_src comp="22" pin="0"/><net_sink comp="118" pin=2"/></net>
+
+<net id="126"><net_src comp="110" pin="3"/><net_sink comp="44" pin=0"/></net>
+
+<net id="127"><net_src comp="118" pin="3"/><net_sink comp="44" pin=2"/></net>
+
+<net id="133"><net_src comp="0" pin="0"/><net_sink comp="128" pin=0"/></net>
+
+<net id="134"><net_src comp="2" pin="0"/><net_sink comp="128" pin=1"/></net>
+
+<net id="135"><net_src comp="24" pin="0"/><net_sink comp="128" pin=2"/></net>
+
+<net id="141"><net_src comp="0" pin="0"/><net_sink comp="136" pin=0"/></net>
+
+<net id="142"><net_src comp="2" pin="0"/><net_sink comp="136" pin=1"/></net>
+
+<net id="143"><net_src comp="26" pin="0"/><net_sink comp="136" pin=2"/></net>
+
+<net id="144"><net_src comp="128" pin="3"/><net_sink comp="44" pin=0"/></net>
+
+<net id="145"><net_src comp="136" pin="3"/><net_sink comp="44" pin=2"/></net>
+
+<net id="149"><net_src comp="44" pin="7"/><net_sink comp="146" pin=0"/></net>
+
+<net id="150"><net_src comp="146" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="151"><net_src comp="44" pin="3"/><net_sink comp="146" pin=0"/></net>
+
+<net id="155"><net_src comp="44" pin="3"/><net_sink comp="152" pin=0"/></net>
+
+<net id="156"><net_src comp="152" pin="1"/><net_sink comp="44" pin=4"/></net>
+
+<net id="157"><net_src comp="44" pin="7"/><net_sink comp="152" pin=0"/></net>
+
+<net id="161"><net_src comp="28" pin="3"/><net_sink comp="158" pin=0"/></net>
+
+<net id="162"><net_src comp="158" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="166"><net_src comp="36" pin="3"/><net_sink comp="163" pin=0"/></net>
+
+<net id="167"><net_src comp="163" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="171"><net_src comp="55" pin="3"/><net_sink comp="168" pin=0"/></net>
+
+<net id="172"><net_src comp="168" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="176"><net_src comp="63" pin="3"/><net_sink comp="173" pin=0"/></net>
+
+<net id="177"><net_src comp="173" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="181"><net_src comp="74" pin="3"/><net_sink comp="178" pin=0"/></net>
+
+<net id="182"><net_src comp="178" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="183"><net_src comp="178" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="187"><net_src comp="82" pin="3"/><net_sink comp="184" pin=0"/></net>
+
+<net id="188"><net_src comp="184" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="189"><net_src comp="184" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="193"><net_src comp="44" pin="7"/><net_sink comp="190" pin=0"/></net>
+
+<net id="194"><net_src comp="190" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="198"><net_src comp="92" pin="3"/><net_sink comp="195" pin=0"/></net>
+
+<net id="199"><net_src comp="195" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="200"><net_src comp="195" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="204"><net_src comp="100" pin="3"/><net_sink comp="201" pin=0"/></net>
+
+<net id="205"><net_src comp="201" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="206"><net_src comp="201" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="210"><net_src comp="44" pin="3"/><net_sink comp="207" pin=0"/></net>
+
+<net id="211"><net_src comp="207" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="215"><net_src comp="44" pin="7"/><net_sink comp="212" pin=0"/></net>
+
+<net id="216"><net_src comp="212" pin="1"/><net_sink comp="44" pin=4"/></net>
+
+<net id="220"><net_src comp="110" pin="3"/><net_sink comp="217" pin=0"/></net>
+
+<net id="221"><net_src comp="217" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="222"><net_src comp="217" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="226"><net_src comp="118" pin="3"/><net_sink comp="223" pin=0"/></net>
+
+<net id="227"><net_src comp="223" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="228"><net_src comp="223" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="232"><net_src comp="44" pin="3"/><net_sink comp="229" pin=0"/></net>
+
+<net id="233"><net_src comp="229" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="237"><net_src comp="44" pin="7"/><net_sink comp="234" pin=0"/></net>
+
+<net id="238"><net_src comp="234" pin="1"/><net_sink comp="44" pin=4"/></net>
+
+<net id="242"><net_src comp="128" pin="3"/><net_sink comp="239" pin=0"/></net>
+
+<net id="243"><net_src comp="239" pin="1"/><net_sink comp="44" pin=0"/></net>
+
+<net id="244"><net_src comp="239" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="248"><net_src comp="136" pin="3"/><net_sink comp="245" pin=0"/></net>
+
+<net id="249"><net_src comp="245" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="253"><net_src comp="44" pin="7"/><net_sink comp="250" pin=0"/></net>
+
+<net id="254"><net_src comp="250" pin="1"/><net_sink comp="44" pin=4"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: state | {2 6 7 8 9 10 11 }
+ - Input state : 
+	Port: ShiftRows : state | {1 2 3 4 5 6 7 }
+  - Chain level:
+	State 1
+		temp : 1
+		state_load : 1
+	State 2
+		state_load_1 : 1
+		state_load_2 : 1
+		store_ln285 : 1
+	State 3
+		temp_1 : 1
+		state_load_4 : 1
+	State 4
+		temp_2 : 1
+		state_load_6 : 1
+	State 5
+		temp_3 : 1
+		state_load_8 : 1
+	State 6
+		state_load_9 : 1
+		state_load_10 : 1
+		store_ln301 : 1
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------|
+| Operation| Functional Unit|
+|----------|----------------|
+|   Total  |                |
+|----------|----------------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------+--------+
+|                     |   FF   |
++---------------------+--------+
+|       reg_146       |    8   |
+|       reg_152       |    8   |
+|state_addr_10_reg_239|    4   |
+|state_addr_11_reg_245|    4   |
+| state_addr_1_reg_163|    4   |
+| state_addr_2_reg_168|    4   |
+| state_addr_3_reg_173|    4   |
+| state_addr_4_reg_178|    4   |
+| state_addr_5_reg_184|    4   |
+| state_addr_6_reg_195|    4   |
+| state_addr_7_reg_201|    4   |
+| state_addr_8_reg_217|    4   |
+| state_addr_9_reg_223|    4   |
+|  state_addr_reg_158 |    4   |
+| state_load_2_reg_190|    8   |
+| state_load_4_reg_212|    8   |
+| state_load_6_reg_234|    8   |
+| state_load_8_reg_250|    8   |
+|    temp_1_reg_207   |    8   |
+|    temp_2_reg_229   |    8   |
++---------------------+--------+
+|        Total        |   112  |
++---------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_44 |  p0  |  15  |   4  |   60   ||    62   |
+| grp_access_fu_44 |  p1  |   4  |   8  |   32   ||    21   |
+| grp_access_fu_44 |  p2  |  16  |   0  |    0   ||    65   |
+| grp_access_fu_44 |  p4  |   5  |   4  |   20   ||    27   |
+|      reg_146     |  p0  |   2  |   8  |   16   ||    9    |
+|      reg_152     |  p0  |   2  |   8  |   16   ||    9    |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   144  || 9.83505 ||   193   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    -   |    -   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    9   |    -   |   193  |
+|  Register |    -   |   112  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    9   |   112  |   193  |
++-----------+--------+--------+--------+
